@@ -14,15 +14,15 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
+
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        
+
 
 
         <!-- Navbar & Hero Start -->
@@ -53,12 +53,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="/" class="nav-item nav-link active">Acceuil</a>
-                      <a href="/webmagazine" class="nav-item nav-link">Web Magazine</a>
-                      <a href="/apropos" class="nav-item nav-link ">A propos</a>
+                        <a href="/" class="nav-item nav-link active"> <i class="fa fa-home"></i> &nbsp; Acceuil</a>
+                      <a href="/webmagazine" class="nav-item nav-link"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
+                      <a href="/apropos" class="nav-item nav-link "><i class="fa fa-info-circle"></i> &nbsp; A propos</a>
                         <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
                         <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
-                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                        <a href="/contact" class="nav-item nav-link"><i class="fa fa-phone"></i> &nbsp; Contact</a>
                     </div>
                 </div>
             </nav>
@@ -71,8 +71,8 @@
                             <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets révolutionnaires tout en vous en apprenant le
 plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
 web magazine pour élargir votre culture. </p>
-                            <a href="webmag.html" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;">Web Magazine</a>
-                            <a data-bs-toggle="modal" data-bs-target="#adhererAlitcha" href="" class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white" style="background-color: #F77B1E;">Adhérer Alitcha</a>
+                            <a href="webmag.html" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
+                            <a data-bs-toggle="modal" data-bs-target="#adhererAlitcha" href="" class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white" style="background-color: #F77B1E;"><i class="fa fa-user-plus"></i> &nbsp; Adhérer Alitcha</a>
 
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
@@ -91,7 +91,7 @@ web magazine pour élargir votre culture. </p>
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item bg-light rounded text-center p-4">
-                            
+
                             <i class="fa fa-3x fa-user-astronaut mb-4" style="color:#F77B1E;"></i>
                             <h5 class="mb-3">Technologie</h5>
                             <p class="m-0">Composée d'amoureux de l'ingénierie innovante, l'équipe technologique de
@@ -99,11 +99,11 @@ Alitcha s'occupe de la mise en œuvre des projets relevant de son ressort. Avec 
 rencontre des technologies futures.</p>
 
                         </div>
-                        
+
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item bg-light rounded text-center p-4">
-                            
+
                             <i class="fa fa-3x fa-leaf mb-4" style="color:#F77B1E;"></i>
                             <h5 class="mb-3">Écologie</h5>
                             <p class="m-0">Conscient des exigences environnementales liées à un développement durable, la
@@ -126,8 +126,8 @@ informatique...) pour réaliser des projets innovants.
         </div>
         <!-- Feature End -->
 
-       
-   
+
+
 
 
         <!-- Newsletter Start -->
@@ -229,7 +229,7 @@ informatique...) pour réaliser des projets innovants.
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden"> 
+                            <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" ><i class="fa fa-eye"></i></a>
@@ -263,34 +263,34 @@ informatique...) pour réaliser des projets innovants.
         <!-- Projects End -->
 
 
-        
+
 
         <!-- Footer Start -->
-           
+
         <footer class="footer-07">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center">
 						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
 						<p class="menu">
-							<a href="/">Accueil</a>
-							<a href="/webmagazine">Web Magazine</a>
-							<a href="/apropos">A propos</a>
-							
-							<a href="/contact">Contact</a>
-							
+							<a href="/"><i class="fa fa-home"></i> Accueil</a>
+							<a href="/webmagazine"><i class="fa fa-newspaper"></i> Web Magazine</a>
+							<a href="/apropos"><i class="fa fa-info-circle"></i> A propos</a>
+
+							<a href="/contact"><i class="fa fa-phone"></i> Contact</a>
+
 						</p>
 
-		<ul class="ftco-footer-social p-0">			
-              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" data-toggle="tooltip" data-placement="top" title="Twitter">
-				
-				  <span class="fab fa-twitter"></span> 
+		<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+
+				  <span class="fab fa-twitter"></span>
 				</a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294/!" data-toggle="tooltip" data-placement="top" title="Facebook">
+              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
 				<span class="fab fa-facebook"></span>
-				 
+
 				</a></li>
-              <li class="ftco-animate"><a href="https://instagram.com/alitcha00?utm_medium=copy_link!" data-toggle="tooltip" data-placement="top" title="Instagram">
+              <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
 				<span class="fab fa-instagram"></span></a></li>
             </ul>
 					</div>
@@ -310,8 +310,8 @@ informatique...) pour réaliser des projets innovants.
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-    
-  
+
+
     <!-- Modal Adhérer Alitcha -->
     <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
@@ -343,13 +343,13 @@ informatique...) pour réaliser des projets innovants.
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Annuler</button>
-            <button  style="background-color: #F77B1E;" type="button" class="btn btn-secondary text-white">Adhérer</button>
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="fa fa-times"></i> &nbsp; Annuler</button>
+            <button  style="background-color: #F77B1E;" type="button" class="btn btn-secondary text-white"><i class="fa fa-user-plus"></i> &nbsp; Adhérer</button>
             </div>
         </div>
         </div>
     </div>
-  
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
