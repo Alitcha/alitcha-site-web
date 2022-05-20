@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('commentaire', function (Blueprint $table) {
-            $table->increments('id');
-            $table->foreignId('article_id');
+        Schema::create('commentaires', function (Blueprint $table) {
+            $table->id();
+
+            $table->unsignedBigInteger('article_id');
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
+
             $table->string('author');
             $table->string('comment');
             $table->timestamps();
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commentaire');
+        Schema::dropIfExists('commentaires');
     }
 };

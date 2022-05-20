@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/webmagazine', [App\Http\Controllers\ArticleController::class, 'showMagazine']);
-Route::get('/article', [App\Http\Controllers\ArticleController::class, 'showArticle']);
+Route::get('/webmagazine', [ArticleController::class, 'showMagazine']);
+Route::get('/article', [ArticleController::class, 'showArticle']);
