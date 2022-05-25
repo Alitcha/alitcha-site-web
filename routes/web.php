@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentaireController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::get('/contact', function () {
 
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
+Route::post('/commentaire/{id}', [CommentaireController::class, 'store'])->whereNumber('id')->name('addComment');

@@ -33,9 +33,6 @@
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
 
-    <!-- Commentaire Stylesheet -->
-    <link href="../css/commentStyle.css" rel="stylesheet">
-
 
      <!-- CSS Global Compulsory (Do not remove)-->
      <link rel="stylesheet" href="../css/font-awesome/all.min.css" />
@@ -100,67 +97,96 @@
           <div class="blog-post">
             <div class="blog-content pb-2 ps-0">
               <div class="blog-post-title">
-                <h1 class="mb-0"><a href="#">{{ $article->title }}</a></h1>
-                <h4 class="mb-0"><a href="#">{{ $article->subtitle }}</a></h4>
+                <h5 class="mb-0"><a href="#">Does Your Life Lack Meaning</a></h5>
               </div>
               <div class="blog-post-footer blog-post-categorise justify-content-start">
                 <div class="blog-post-author">
-                  <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">{{ $article->author->firstname }} {{ $article->author->lastname }}</a></span>
+                  <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">Michael</a></span>
                 </div>
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-clock"></i> {{ $article->created_at }}</a>
+                  <a href="#"><i class="far fa-clock"></i>25 Mar 2021</a>
                 </div>
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-comment"></i>({{ $article->totalCommentaires() }})</a>
+                  <a href="#"><i class="far fa-comment"></i>(4)</a>
                 </div>
                 <div class="blog-post-share">
                   <div class="share-box">
                     <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                    <ul class="list-unstyled share-box-social" style="min-width : 120px !important;">
-                      <li> <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
-                      <li> <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-twitter"></i></a> </li>
-                      <li> <a href="https://www.linkedin.com/shareArticle?url=http://127.0.0.1:8000/article/{{ $article->id }}&title=" target="_blank"><i class="fab fa-linkedin"></i></a> </li>
+                    <ul class="list-unstyled share-box-social">
+                      <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
+                      <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
+                      <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
                       <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                      {{-- <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li> --}}
+                      <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <img class="img-fluid mb-3" src="../{{ $article->image }}" alt="">
-
-          <h5 class="mb-20"><a href="#">{{ $article->description }}</a></h5>
-
+          <img class="img-fluid mb-3" src="../img/blog/05.jpg" alt="">
           <div class="blog-post mb-4">
             <div class="blog-content ps-0 pe-0">
+              <p class="mb-3">Success isn’t really that difficult. There is a significant portion of the population here in North America, that actually want and need success to be hard! Why? So they then have a built-in excuse when things don’t go their way! Pretty sad situation, to say the least. For those of you who are serious about having more, doing more, giving more and being more, success is achievable with some understanding of what to do, some discipline around planning and execution of those plans and belief that you can achieve your desires.</p>
+              <b class="my-3 d-block">Let success motivate you. Find a picture of what epitomizes success to you and then pull it out when you are in need of motivation.</b>
+              <p class="mb-3">Success isn’t really that difficult. There is a significant portion of the population here in North America, that actually want and need success to be hard! Why? So they then have a built-in excuse when things don’t go their way! Pretty sad situation, to say the least. For those of you who are serious about having more, doing more, giving more and being more, success is achievable with some understanding of what to do, some discipline around planning and execution of those plans and belief that you can achieve your desires.</p>
+              <b class="my-3 d-block">Let success motivate you. Find a picture of what epitomizes success to you and then pull it out when you are in need of motivation.</b>
+              <p class="mb-3">Success isn’t really that difficult. There is a significant portion of the population here in North America, that actually want and need success to be hard! Why? So they then have a built-in excuse when things don’t go their way! Pretty sad situation, to say the least. For those of you who are serious about having more, doing more, giving more and being more, success is achievable with some understanding of what to do, some discipline around planning and execution of those plans and belief that you can achieve your desires.</p>
+              <b class="my-3 d-block">Let success motivate you. Find a picture of what epitomizes success to you and then pull it out when you are in need of motivation.</b>
 
-              <p class="mb-3 d-block text-justify" style="text-align : justify">
-                {{ $article->content }}
-              </p>
+              <p>The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people.</p>
+              <div class="row">
+                <div class="col-lg-7">
 
+                  <blockquote class="blockquote">
+                    <p>Without clarity, you send a very garbled message out to the Universe. We know that the Law of Attraction says that we will attract what we focus on.</p>
+                    <cite class="font-weight-bold">– Anthony Bourdain</cite>
+                  </blockquote>
+                </div>
+                <div class="col-lg-5">
+                  <img class="img-fluid" src="../img/blog/01.jpg" alt="">
+                </div>
+              </div>
+              <h3 class="mt-5">Taking Action</h3>
+              <p>Focus is having the unwavering attention to complete what you set out to do. There are a million distractions in every facet of our lives. Telephones and e-mail, clients and managers, spouses and kids, TV, newspapers and radio. Everyone wants a piece of us and the result can be totally overwhelming.</p>
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="list-unstyled">
+                    <li class="mb-2">1) Making the decision</li>
+                    <li class="mb-2">2) Clarity – developing the Vision</li>
+                    <li>3) Focus – having a plan</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="list-unstyled">
+                  <li class="mb-2">4) Commitment – understanding the price and having the willingness to pay that price</li>
+                  <li class="mb-2">5) Belief – believing in yourself and those around you</li>
+                  <li>6) Taking action – practice Ready, Fire, Aim…</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="mt-2">The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people.</p>
+              <div class="popup-video my-4">
+                <img class="img-fluid" src="../img/blog/04.jpg" alt="">
+              </div>
+              <h3 class="mt-5">They’re wrong – it’s not!</h3>
+              <p>The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals? Make the plan as detailed as possible. Try to visualize and then plan for, every possible setback.</p>
+              <p>Commit the plan to paper and then keep it with you at all times. Review it regularly and ensure that every step takes you closer to your Vision and Goals. If the plan doesn’t support the vision then change it!</p>
               <div class="blog-post-share-box d-flex flex-wrap justify-content-between align-items-center mt-5">
                   <div class="blog-post-share">
                   <div class="share-box">
                     <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                    <ul class="list-unstyled share-box-social" style="min-width : 120px !important;">
-                      <li> <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
-                      <li> <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-twitter"></i></a> </li>
-                      <li> <a href="https://www.linkedin.com/shareArticle?url=http://127.0.0.1:8000/article/{{ $article->id }}&title=" target="_blank"><i class="fab fa-linkedin"></i></a> </li>
+                    <ul class="list-unstyled share-box-social">
+                      <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
+                      <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
+                      <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
                       <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                      {{-- <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li> --}}
+                      <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
                     </ul>
                   </div>
                 </div>
                 <div>
-                     <i class="fas fa-like"></i>
-                     <span class="ps-2">{{ $article->nb_like }}
-                        @if ($article->nb_like > 1)
-                         likes
-                         @else
-                         like
-                        @endif
-                     </span>
+                     <i class="fas fa-like"></i><span class="ps-2">23 likes</span>
 
                 </div>
                 <div class="badges">
@@ -205,79 +231,22 @@
                 <h6 class="widget-title text-uppercase fw-bolder">Laisser un commentaire</h6>
                 <div class="blog-sidebar-post-divider mb-4">
                 </div>
-                <form class="row" action="{{ route('addComment', $article->id) }}" method="post">
-                  @csrf
+                <form class="row">
                   <div class="col-lg-4 mb-3">
-                    <input type="text" class="form-control" placeholder="Votre Nom" name="nom" name="comment" style="border-radius : 5px !important;">
+                    <input type="text" class="form-control" placeholder="Nom">
                   </div>
-                  {{-- <div class="col-lg-4 mb-3">
-                    <input type="text" class="form-control" placeholder="Email" name="email">
-                  </div> --}}
+                  <div class="col-lg-4 mb-3">
+                    <input type="text" class="form-control" placeholder="Email">
+                  </div>
 
                   <div class="col-lg-12 mb-3">
-                    <textarea class="form-control" rows="5" placeholder="Votre Commentaire" name="comment" style="border-radius : 5px !important;"></textarea>
+                    <textarea class="form-control" rows="2" placeholder="Comment"></textarea>
                   </div>
                   <div class="col-lg-12 mb-3">
-                    <input type="submit" class="btn btn-primary" value="Publier" />
+                    <a class="btn btn-primary" href="#">Publier</a>
                   </div>
                 </form>
-
-                <h6 class="widget-title text-uppercase fw-bolder">Commentaires ...</h6>
-                <div class="blog-sidebar-post-divider mb-4">
-                </div>
-
-                <div class="topics">
-                    @foreach ($article->commentaires() as $commentaire)
-
-                        <div class="topic topic--comment" style="margin-bottom : 20px; background-color: #f0f0f0;">
-                            <div class="topic__head" style="align-items: center;">
-                                <div class="topic__avatar">
-                                    <a href="#" class="avatar"><img src="" alt="avatar"></a>
-                                </div>
-                                <div class="topic__caption">
-                                    <div class="topic__name">
-                                        <a href="#" style="">{{ $commentaire->author }}</a>
-                                    </div>
-                                    <div class="topic__date" style="margin-right: 10px;"><i class="fa fa-calendar"></i>
-                                        {{ $commentaire->created_at }}
-                                        <i class="fa fa-clock" style="margin-left: 14px;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="topic__content">
-                                <div class="topic__text">
-                                    <p style="word-break : break-word; text-align : justify;">{{ $commentaire->comment }}</p>
-                                </div>
-
-                                {{-- <div>
-                                    <div class="topic__footer" style="margin-top : 20px;">
-                                        <div class="topic__footer-likes d-flex">
-                                            <div>
-                                                <a href="http://fast-shore-82505.herokuapp.com/like-comment/1" >
-                                                    <i class="fa fa-thumbs-up"></i>
-                                                                                        1
-                                                    Likes
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <a href="http://fast-shore-82505.herokuapp.com/dislike-comment/1" >
-                                                    <i class="fa fa-thumbs-down"></i>
-                                                                                        0
-                                                    dislikes
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> --}}
-                            </div>
-                        </div>
-
-
-                    @endforeach
-
-
-                    </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -289,45 +258,80 @@
     <!--=================================
     Article fin  -->
 
-@if ($article->articlesSimilaires()->count() > 0)
-<!--================================= blog  -->
-    <section class="space-pb bg-light">
-        <div class="container">
-            <div class="col-md-12">
-                <div class="bg-white p-4">
-                    <h6 class="widget-title text-uppercase fw-bolder">Vous pourriez aussi aimer</h6>
-                    <div class="blog-sidebar-post-divider mb-4">
-                    </div>
-                    <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-nav-dots="false" data-items="3" data-md-items="2" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="15">
-                        @foreach ($article->articlesSimilaires() as $articleSimilaire)
-                            <div class="item">
-                                <div class="blog-post text-center p-0">
-                                    <div class="blog-post-image">
-                                        <img class="img-fluid" src="../{{ $articleSimilaire->image }}" alt="">
-                                    </div>
-                                    <div class="blog-content">
-                                        {{-- <a class="badge" href="#">Télécharger</a> --}}
-                                        <div class="blog-post-title">
-                                            <h6 class="mb-0"><a href="{{ route('article', $articleSimilaire->id) }}">{{ $articleSimilaire->title }} </a></h6>
-                                        </div>
-                                        <div class="blog-post-footer blog-post-categorise">
-                                            <div class="blog-post-time">
-                                                <a href="#"><i class="far fa-clock"></i> {{ $articleSimilaire->created_at }} </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
+<!--=================================
+ blog  -->
+<section class="space-pb bg-light">
+  <div class="container">
+
+      <div class="col-md-12">
+        <div class="bg-white p-4">
+          <h6 class="widget-title text-uppercase fw-bolder">Vous pourriez aussi aimer</h6>
+          <div class="blog-sidebar-post-divider mb-4">
+          </div>
+          <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-nav-dots="false" data-items="3" data-md-items="2" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="15">
+            <div class="item">
+              <div class="blog-post text-center p-0">
+                <div class="blog-post-image">
+                  <img class="img-fluid" src="../img/blog/01.jpg" alt="">
                 </div>
+                <div class="blog-content">
+                  <a class="badge" href="#">Télécharger</a>
+                  <div class="blog-post-title">
+                    <h6 class="mb-0"><a href="#">Velit auctor aliquet Aenean nibh vel</a></h6>
+                  </div>
+                  <div class="blog-post-footer blog-post-categorise">
+                    <div class="blog-post-time">
+                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="item">
+              <div class="blog-post text-center p-0">
+                <div class="blog-post-image">
+                  <img class="img-fluid" src="../img/blog/05.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                  <a class="badge" href="#">Télécharger</a>
+                  <div class="blog-post-title">
+                    <h6 class="mb-0"><a href="#">Aenean auctor alique Nibh vel velit </a></h6>
+                  </div>
+                  <div class="blog-post-footer blog-post-categorise">
+                    <div class="blog-post-time">
+                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="blog-post text-center p-0">
+                <div class="blog-post-image">
+                  <img class="img-fluid" src="../img/blog/04.jpg" alt="">
+                </div>
+                <div class="blog-content">
+                  <a class="badge" href="#">Télécharger</a>
+                  <div class="blog-post-title">
+                    <h6 class="mb-0"><a href="#">Does your life lack meaning</a></h6>
+                  </div>
+                  <div class="blog-post-footer blog-post-categorise">
+                    <div class="blog-post-time">
+                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+
+  </div>
+</section>
 
 <!--=================================
  blog -->
-@endif
 
 
         <!-- Footer Start -->
