@@ -16,15 +16,15 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('/apropos', function () {
     return view('apropos');
-});
+})->name('apropos');
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
-Route::get('/webmagazine', [ArticleController::class, 'showMagazine']);
-Route::get('/article', [ArticleController::class, 'showArticle']);
+Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
+Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');

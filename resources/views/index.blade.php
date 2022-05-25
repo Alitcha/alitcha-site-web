@@ -45,7 +45,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" >
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
-                <a href="/" class="navbar-brand p-0">
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="Logo" >
                 </a>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -53,12 +53,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="/" class="nav-item nav-link active"> <i class="fa fa-home"></i> &nbsp; Acceuil</a>
-                      <a href="/webmagazine" class="nav-item nav-link"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
-                      <a href="/apropos" class="nav-item nav-link "><i class="fa fa-info-circle"></i> &nbsp; A propos</a>
+                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i> &nbsp; Acceuil</a>
+                      <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
+                      <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i> &nbsp; A propos</a>
                         <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
                         <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
-                        <a href="/contact" class="nav-item nav-link"><i class="fa fa-phone"></i> &nbsp; Contact</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i> &nbsp; Contact</a>
                     </div>
                 </div>
             </nav>
@@ -172,7 +172,7 @@ informatique...) pour réaliser des projets innovants.
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" ><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" ><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-download"></i></a>
                                 </div>
                             </div>
@@ -187,7 +187,7 @@ informatique...) pour réaliser des projets innovants.
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg" ><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg" ><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-download"></i></a>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@ informatique...) pour réaliser des projets innovants.
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" ><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" ><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-download"></i></a>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@ informatique...) pour réaliser des projets innovants.
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" ><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" ><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-download"></i></a>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@ informatique...) pour réaliser des projets innovants.
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" ><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" ><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-download"></i></a>
                                 </div>
                             </div>
@@ -247,7 +247,7 @@ informatique...) pour réaliser des projets innovants.
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="/article" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" ><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" ><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-download"></i></a>
                                 </div>
                             </div>
@@ -273,11 +273,10 @@ informatique...) pour réaliser des projets innovants.
 					<div class="col-md-12 text-center">
 						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
 						<p class="menu">
-							<a href="/"><i class="fa fa-home"></i> Accueil</a>
-							<a href="/webmagazine"><i class="fa fa-newspaper"></i> Web Magazine</a>
-							<a href="/apropos"><i class="fa fa-info-circle"></i> A propos</a>
-
-							<a href="/contact"><i class="fa fa-phone"></i> Contact</a>
+							<a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
+							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Web Magazine</a>
+							<a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
+							<a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
 
 						</p>
 
