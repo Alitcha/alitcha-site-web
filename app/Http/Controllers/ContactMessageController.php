@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ContactMessage;
 use Illuminate\Http\Request;
+use App\Models\ContactMessage;
+use Illuminate\Support\Facades\Mail;
+// use Mail;
 
 class ContactMessageController extends Controller
 {
@@ -24,7 +26,13 @@ class ContactMessageController extends Controller
          'message' => $request->message,
         ]);
 
+            // Mail::send('mail', $data, function($message) {
+            //     $message->to($request->email, 'Tutorials Point')->subject($request->subject);
+            //     $message->from('xyz@gmail.com',$request->name);
+            // });
+
         return redirect()->route('contact')->with('success', 'Message envoyé !');
 
     }
+
 }
