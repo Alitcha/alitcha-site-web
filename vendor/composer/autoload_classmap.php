@@ -25,6 +25,7 @@ return array(
     'App\\Models\\Article' => $baseDir . '/app/Models/Article.php',
     'App\\Models\\Categorie' => $baseDir . '/app/Models/Categorie.php',
     'App\\Models\\Commentaire' => $baseDir . '/app/Models/Commentaire.php',
+    'App\\Models\\ContactMessage' => $baseDir . '/app/Models/ContactMessage.php',
     'App\\Models\\NewsletterUser' => $baseDir . '/app/Models/NewsletterUser.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
