@@ -143,10 +143,17 @@ $('.back-to-top').click(function () {
 				.then((resp) => resp.json())
 				.then((resp) => {
                     if(resp.success == true) {
+                        $('#champs_requis').css("display", "none");
                         $('#add_success').css("display", "block");
                         $('#add_error').css("display", "none");
                         $('#add_error1').css("display", "none");
+						$('#nameForm').val("");
+						$('#emailForm').val("");
+						$('#numForm').val("");
+						$('#competenceForm').val("");
+						$('#motivationForm').val("");
                     } else {
+                        $('#champs_requis').css("display", "none");
                         $('#add_success').css("display", "none");
                         $('#add_error').css("display", "block");
                         $('#add_error1').css("display", "none");
@@ -164,4 +171,17 @@ $('.back-to-top').click(function () {
 		e.preventDefault();
 	};
 	$('.AdhesionUser').submit(adhesionUser);
+
+	var annuleradhesion = function() {
+        $('#champs_requis').css("display", "none");
+        $('#add_success').css("display", "none");
+        $('#add_error').css("display", "none");
+        $('#add_error1').css("display", "none");
+        $('#nameForm').val("");
+        $('#emailForm').val("");
+        $('#numForm').val("");
+        $('#competenceForm').val("");
+        $('#motivationForm').val("");
+	};
+	$('#AnnulerAdhesion').click(annuleradhesion);
 })(jQuery);

@@ -320,7 +320,7 @@ informatique...) pour réaliser des projets innovants.
             <div class="modal-content">
                 <div class="modal-header " style="background-color: #F77B1E;">
                     <h5 class="modal-title text-white" id="adhererAlitchaLabel" >Adhérer Alitcha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="AnnulerAdhesion"></button>
                 </div>
                 <div class="modal-body">
                     <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les champs</p>
@@ -349,13 +349,16 @@ informatique...) pour réaliser des projets innovants.
                     <div>
                         <p class="text-success" id="add_success" style="display:none;">Vos informations sont envoyés avec succès. Les administrateurs traiteront votre demande et vous recevrez un mail...</p>
                         <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré, soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
-                        <p class="text-warning" id="add_error1" style="display:none;">Vérifiez que tout les champs sont bien remplit et rééssayez...</p>
+                        <p class="text-primary" id="add_error1" style="display:none;">Vérifiez que tout les champs sont bien remplit et rééssayez...</p>
                     </div>
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="fa fa-times"></i> &nbsp; Annuler</button>
-                <button  style="background-color: #F77B1E;" type="submit" class="btn btn-secondary text-white">
-                    <i class="fa fa-user-plus"></i>
-                    &nbsp; Adhérer
-                </button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="AnnulerAdhesion">
+                        <i class="fa fa-times"></i>
+                        &nbsp; Annuler
+                    </button>
+                    <button  style="background-color: #F77B1E;" type="submit" class="btn btn-secondary text-white">
+                        <i class="fa fa-user-plus"></i>
+                        &nbsp; Adhérer
+                    </button>
                 </div>
             </div>
             </div>
