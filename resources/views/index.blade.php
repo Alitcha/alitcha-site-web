@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -56,8 +57,6 @@
                         <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i> &nbsp; Acceuil</a>
                       <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
                       <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i> &nbsp; A propos</a>
-                        <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
-                        <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i> &nbsp; Contact</a>
                     </div>
                 </div>
@@ -71,8 +70,11 @@
                             <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets révolutionnaires tout en vous en apprenant le
 plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
 web magazine pour élargir votre culture. </p>
-                            <a href="webmag.html" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
-                            <a data-bs-toggle="modal" data-bs-target="#adhererAlitcha" href="" class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white" style="background-color: #F77B1E;"><i class="fa fa-user-plus"></i> &nbsp; Adhérer Alitcha</a>
+                            <a href="/webmagazine" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
+                            <a data-bs-toggle="modal" data-bs-target="#adhererAlitcha" href="" class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white" style="background-color: #F77B1E;">
+                                <i class="fa fa-user-plus"></i> &nbsp;
+                                Adhérer Alitcha
+                            </a>
 
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
@@ -312,42 +314,53 @@ informatique...) pour réaliser des projets innovants.
 
 
     <!-- Modal Adhérer Alitcha -->
-    <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header " style="background-color: #F77B1E;">
-                <h5 class="modal-title text-white" id="adhererAlitchaLabel" >Adhérer Alitcha</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <form class="AdhesionUser">
+        <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header " style="background-color: #F77B1E;">
+                    <h5 class="modal-title text-white" id="adhererAlitchaLabel" >Adhérer Alitcha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les champs</p>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
+                        <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" id="emailForm" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de téléphone</label>
+                        <input type="tel" class="form-control" id="numForm" placeholder="229********">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos compétences, dans le domaine du numérique surtout ?</label>
+                        <textarea class="form-control" id="competenceForm" rows="3"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour l'adhésion</label>
+                        <textarea class="form-control" id="motivationForm" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <p class="text-success" id="add_success" style="display:none;">Vos informations sont envoyés avec succès. Les administrateurs traiteront votre demande et vous recevrez un mail...</p>
+                        <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré, soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
+                        <p class="text-warning" id="add_error1" style="display:none;">Vérifiez que tout les champs sont bien remplit et rééssayez...</p>
+                    </div>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="fa fa-times"></i> &nbsp; Annuler</button>
+                <button  style="background-color: #F77B1E;" type="submit" class="btn btn-secondary text-white">
+                    <i class="fa fa-user-plus"></i>
+                    &nbsp; Adhérer
+                </button>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="mb-4">
-                    <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre nom et prénoms">
-                </div>
-                <div class="mb-4">
-                    <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="mb-4">
-                    <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de téléphone</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Entrez votre numero">
-                </div>
-                <div class="mb-4">
-                    <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos compétences, dans le domaine du numérique surtout ?</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-4">
-                    <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour l'adhésion</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="fa fa-times"></i> &nbsp; Annuler</button>
-            <button  style="background-color: #F77B1E;" type="button" class="btn btn-secondary text-white"><i class="fa fa-user-plus"></i> &nbsp; Adhérer</button>
             </div>
         </div>
-        </div>
-    </div>
+    </form>
 
 
     <!-- JavaScript Libraries -->

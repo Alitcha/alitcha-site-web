@@ -51,17 +51,17 @@ $('.back-to-top').click(function () {
 					message: "Please enter a message"
 				},
 				/* submit via ajax */
-				
-				submitHandler: function(form) {		
+
+				submitHandler: function(form) {
 					var $submit = $('.submitting'),
 						waitText = 'Submitting...';
 
-					$.ajax({   	
+					$.ajax({
 				      type: "POST",
 				      url: "php/sendEmail.php",
 				      data: $(form).serialize(),
 
-				      beforeSend: function() { 
+				      beforeSend: function() {
 				      	$submit.css('display', 'block').text(waitText);
 				      },
 				      success: function(msg) {
@@ -71,15 +71,15 @@ $('.back-to-top').click(function () {
 		               		$('#contactForm').fadeIn();
 		               	}, 1000);
 				            setTimeout(function(){
-				               $('#form-message-success').fadeIn();   
+				               $('#form-message-success').fadeIn();
 		               	}, 1400);
 
 		               	setTimeout(function(){
-				               $('#form-message-success').fadeOut();   
+				               $('#form-message-success').fadeOut();
 		               	}, 8000);
 
 		               	setTimeout(function(){
-				               $submit.css('display', 'none').text(waitText);  
+				               $submit.css('display', 'none').text(waitText);
 		               	}, 1400);
 
 		               	setTimeout(function(){
@@ -87,7 +87,7 @@ $('.back-to-top').click(function () {
 											    this.reset();
 											});
 		               	}, 1400);
-			               
+
 			            } else {
 			               $('#form-message-warning').html(msg);
 				            $('#form-message-warning').fadeIn();
@@ -99,7 +99,7 @@ $('.back-to-top').click(function () {
 				         $('#form-message-warning').fadeIn();
 				         $submit.css('display', 'none');
 				      }
-			      });    		
+			      });
 		  		} // end submitHandler
 
 			});
@@ -107,4 +107,61 @@ $('.back-to-top').click(function () {
 	};
 	contactForm();
 
+	//l'url prévu pour l'adhesion
+	let url = "/user/adhesion";
+	let token = document
+		.querySelector('meta[name="csrf-token"]')
+		.getAttribute("content");
+
+	var adhesionUser = function(e) {
+		if(
+			$('#nameForm').val().length > 0
+			&& $('#emailForm').val().length > 0
+			&& $('#numForm').val().length > 0
+			&& $('#competenceForm').val().length > 0
+			&& $('#motivationForm').val().length > 0
+		) {
+			$('#champs_requis').css("display", "none");
+			var options = {
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json, text-plain, */*",
+					"X-Requested-With": "XMLHttpRequest",
+					"X-CSRF-TOKEN": token,
+				},
+				method: 'POST',
+				credentials: "same-origin",
+				body: JSON.stringify({
+					nom_prenom: $('#nameForm').val(),
+					email: $('#emailForm').val(),
+					numeroTel: $('#numForm').val(),
+					competences: $('#competenceForm').val(),
+					motivations: $('#motivationForm').val(),
+				}),
+			};
+			fetch(url, options)
+				.then((resp) => resp.json())
+				.then((resp) => {
+                    if(resp.success == true) {
+                        $('#add_success').css("display", "block");
+                        $('#add_error').css("display", "none");
+                        $('#add_error1').css("display", "none");
+                    } else {
+                        $('#add_success').css("display", "none");
+                        $('#add_error').css("display", "block");
+                        $('#add_error1').css("display", "none");
+                    }
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		}else {
+            $('#champs_requis').css("display", "block");
+            $('#add_error1').css("display", "block");
+            $('#add_success').css("display", "none");
+            $('#add_error').css("display", "none");
+        }
+		e.preventDefault();
+	};
+	$('.AdhesionUser').submit(adhesionUser);
 })(jQuery);
