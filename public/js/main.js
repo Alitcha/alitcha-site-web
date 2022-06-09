@@ -113,6 +113,8 @@ $('.back-to-top').click(function () {
 		.querySelector('meta[name="csrf-token"]')
 		.getAttribute("content");
 
+
+    // Début de la gestion de l'adhesion
 	var adhesionUser = function(e) {
 		if(
 			$('#nameForm').val().length > 0
@@ -184,4 +186,7 @@ $('.back-to-top').click(function () {
         $('#motivationForm').val("");
 	};
 	$('#AnnulerAdhesion').click(annuleradhesion);
+//Fin de la gestion de l'adhesion
+
+
 })(jQuery);
