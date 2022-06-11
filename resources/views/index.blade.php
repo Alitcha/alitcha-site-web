@@ -326,23 +326,23 @@ informatique...) pour réaliser des projets innovants.
                     <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les champs</p>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
-                        <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms">
+                        <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms" style="color: #000000;">
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
-                        <input type="email" class="form-control" id="emailForm" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="emailForm" placeholder="name@example.com" style="color: #000000;">
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de téléphone</label>
-                        <input type="tel" class="form-control" id="numForm" placeholder="229********">
+                        <input type="tel" class="form-control" id="numForm" placeholder="229********" style="color: #000000;">
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos compétences, dans le domaine du numérique surtout ?</label>
-                        <textarea class="form-control" id="competenceForm" rows="3"></textarea>
+                        <textarea class="form-control" id="competenceForm" rows="3" style="color: #000000;"></textarea>
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour l'adhésion</label>
-                        <textarea class="form-control" id="motivationForm" rows="3"></textarea>
+                        <textarea class="form-control" id="motivationForm" rows="3" style="color: #000000;"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">

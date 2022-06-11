@@ -30,4 +30,5 @@ Route::get('/contact', function () {
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
 
+//Routes de l'adhesion
 Route::post('/user/adhesion', [UserController::class, 'adhesion']) -> name('adhesion_user');

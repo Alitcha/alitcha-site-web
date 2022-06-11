@@ -188,5 +188,4 @@ $('.back-to-top').click(function () {
 	$('#AnnulerAdhesion').click(annuleradhesion);
 //Fin de la gestion de l'adhesion
 
-
 })(jQuery);
