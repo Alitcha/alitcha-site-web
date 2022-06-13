@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function adhesion(Request $request){
         try {
-            /*$this -> validate($request, [
+            $this -> validate($request, [
                 'nom_prenom' => 'bail|required|between:6,35',
                 'email' => 'bail|required|email',
                 'numeroTel' => 'bail|required|numeric|regex:/(229)[0-9]{8}/',
@@ -25,11 +25,16 @@ class UserController extends Controller
                 'numeroTel' => $request -> json('numeroTel'),
                 'competences' => $request -> json('competences'),
                 'motivations' => $request -> json('motivations'),
-            ]);*/
+            ]);
 
             //Envoi de l'e-mail à l'admin
             Mail::to('alitcha.admin@gmail.com')
-                ->queue(new AdhesionMail($request->all()));
+                ->queue(new AdhesionMail([
+                    'nom_prenom' => $request->nom_prenom,
+                    'email' => $request->email,
+                    'numeroTel' => $request->numeroTel,
+                    'link' => url('http://127.0.0.1:8000/')
+                ]));
 
             return response() -> json([
                 'success' => true

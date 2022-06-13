@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('numeroTel')->unique();
             $table->text('competences');
             $table->text('motivations');
-            $table->rememberToken();
+            $table->unsignedInteger('adherer')->default(0);
             $table->timestamps();
         });
     }

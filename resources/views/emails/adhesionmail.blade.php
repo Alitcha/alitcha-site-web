@@ -22,7 +22,7 @@
                 <li><strong>Numero de téléphone : </strong> {{ $adhesion_mail['numeroTel'] }} </li>
             </ul>
         </p>
-        <p>Pour en savoir plus, cliquez <a href="">ici</a>.</p>
+        <p>Pour en savoir plus, cliquez <a href={{ $adhesion_mail['link'] }}>ici</a>.</p>
     </div>
 </body>
 
