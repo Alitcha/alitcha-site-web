@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,13 @@ Route::get('/contact', function () {
 
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
+
+Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create')->middleware('can:admin');
+Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
+
+//Admin
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard')->middleware('can:access-dashboard');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
