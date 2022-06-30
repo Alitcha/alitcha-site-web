@@ -95,7 +95,7 @@
                                 <div class="blog-content">
                                     <div class="row">
                                         <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                        <div class="col"> <a class="badge" href="/article">Lire</a></div>
+                                        <div class="col"> <a class="badge" href="/article/1">Lire</a></div>
                                     
                                     </div>
                                 
@@ -718,30 +718,30 @@
 
        
         <!-- Footer Start -->
-       <footer class="footer-07">
+
+        <footer class="footer-07">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center">
-						<h2 class="footer-heading"><a href="index.html" class="logo">&nbsp;</a></h2>
+						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
 						<p class="menu">
-							<a href="index.html">Accueil</a>
-							<a href="webmag.html">Web Magazine</a>
-							<a href="apropos.html">A propos</a>
-							
-							<a href="contact.html">Contact</a>
-							
+							<a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
+							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Web Magazine</a>
+							<a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
+							<a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
+
 						</p>
 
-		<ul class="ftco-footer-social p-0">			
-              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" data-toggle="tooltip" data-placement="top" title="Twitter">
-				
-				  <span class="fab fa-twitter"></span> 
+		<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+
+				  <span class="fab fa-twitter"></span>
 				</a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294/!" data-toggle="tooltip" data-placement="top" title="Facebook">
+              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
 				<span class="fab fa-facebook"></span>
-				 
+
 				</a></li>
-              <li class="ftco-animate"><a href="https://instagram.com/alitcha00?utm_medium=copy_link!" data-toggle="tooltip" data-placement="top" title="Instagram">
+              <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
 				<span class="fab fa-instagram"></span></a></li>
             </ul>
 					</div>
@@ -749,7 +749,7 @@
 				<div class="row mt-5">
 					<div class="col-md-12 text-center">
 						<p class="copyright">
-					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa-solid fa-heart" ></i> by <a href="index.html" target="_blank">Alitcha Community</a>
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa-solid fa-heart" ></i> by <a href="/" target="_blank">Alitcha Community</a>
 					  </p>
 					</div>
 				</div>

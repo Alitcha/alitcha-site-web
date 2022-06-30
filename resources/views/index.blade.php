@@ -56,6 +56,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
+<<<<<<< HEAD
                         <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
                             &nbsp; Acceuil</a>
                         <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
@@ -66,6 +67,12 @@
                         <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
                             &nbsp; Contact</a>
+=======
+                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i> &nbsp; Acceuil</a>
+                      <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
+                      <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i> &nbsp; A propos</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i> &nbsp; Contact</a>
+>>>>>>> feature-adhesion
                     </div>
                 </div>
             </nav>
@@ -75,6 +82,7 @@
                     <div class="row g-5 align-items-end">
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="mb-4 animated slideInDow">Une communauté de jeunes entreprenants & créatifs</h1>
+<<<<<<< HEAD
                             <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets
                                 révolutionnaires tout en vous en apprenant le
                                 plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
@@ -87,6 +95,16 @@
                                 class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white"
                                 style="background-color: #F77B1E;"><i class="fa fa-user-plus"></i> &nbsp; Adhérer
                                 Alitcha</a>
+=======
+                            <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets révolutionnaires tout en vous en apprenant le
+plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
+web magazine pour élargir votre culture. </p>
+                            <a href="/webmagazine" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
+                            <a data-bs-toggle="modal" data-bs-target="#adhererAlitcha" href="" class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white" style="background-color: #F77B1E;">
+                                <i class="fa fa-user-plus"></i> &nbsp;
+                                Adhérer Alitcha
+                            </a>
+>>>>>>> feature-adhesion
 
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
@@ -363,6 +381,7 @@
 
 
     <!-- Modal Adhérer Alitcha -->
+<<<<<<< HEAD
     <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
@@ -407,6 +426,58 @@
             </div>
         </div>
     </div>
+=======
+    <form class="AdhesionUser">
+        <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header " style="background-color: #F77B1E;">
+                    <h5 class="modal-title text-white" id="adhererAlitchaLabel" >Adhérer Alitcha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="AnnulerAdhesion"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les champs</p>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
+                        <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms" style="color: #000000;">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" id="emailForm" placeholder="name@example.com" style="color: #000000;">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de téléphone</label>
+                        <input type="tel" class="form-control" id="numForm" placeholder="229********" style="color: #000000;">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos compétences, dans le domaine du numérique surtout ?</label>
+                        <textarea class="form-control" id="competenceForm" rows="3" style="color: #000000;"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour l'adhésion</label>
+                        <textarea class="form-control" id="motivationForm" rows="3" style="color: #000000;"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <p class="text-success" id="add_success" style="display:none;">Vos informations sont envoyés avec succès. Les administrateurs traiteront votre demande et vous recevrez un mail...</p>
+                        <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré, soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
+                        <p class="text-primary" id="add_error1" style="display:none;">Vérifiez que tout les champs sont bien remplit et rééssayez...</p>
+                    </div>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="AnnulerAdhesion">
+                        <i class="fa fa-times"></i>
+                        &nbsp; Annuler
+                    </button>
+                    <button  style="background-color: #F77B1E;" type="submit" class="btn btn-secondary text-white">
+                        <i class="fa fa-user-plus"></i>
+                        &nbsp; Adhérer
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </form>
+>>>>>>> feature-adhesion
 
 
     <!-- JavaScript Libraries -->

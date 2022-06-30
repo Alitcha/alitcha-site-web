@@ -44,7 +44,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
-                <a href="" class="navbar-brand p-0">
+                <a href="/" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -96,7 +96,7 @@
                     <div class="col-lg-6 text-center text-lg-start">
                         <h1 class="mb-4 animated slideInDow">À la fois communauté et incubateur,
                             </h1>
-                        <p class="pb-3 animated slideInDown"><a href="index.html">Alitcha</a> a été créé non seulement pour la
+                        <p class="pb-3 animated slideInDown"><a href="/">Alitcha</a> a été créé non seulement pour la
                             promotion du numérique, de la technologie et de l'écologie mais également pour la
                             réalisation d'innovants projets.</p>
                         
@@ -120,7 +120,7 @@
                             chargé principalement de la vulgarisation et de la promotion des projets de la
                             communauté.</p>
 
-                            <a href="webmag.html" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;">Web Magazine</a>
+                            <a href="/webmagazine" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;">Web Magazine</a>
 
                             <p class="text-black mb-4" style="margin-top: 20px;">Nous ciblons en particulier les jeunes afin de les pousser à se dépasser et à assurer
                                 ainsi l'avenir du Bénin en particulier et de l'Afrique en général en ce qui concerne la
@@ -191,31 +191,30 @@
 
 
         <!-- Footer Start -->
-        
+
         <footer class="footer-07">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center">
-						<h2 class="footer-heading"><a href="index.html" class="logo">&nbsp;</a></h2>
+						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
 						<p class="menu">
-							<a href="index.html">Accueil</a>
-							<a href="webmag.html">Web Magazine</a>
-							<a href="apropos.html">A propos</a>
-							
-							<a href="contact.html">Contact</a>
-							
+							<a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
+							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Web Magazine</a>
+							<a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
+							<a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
+
 						</p>
 
-		<ul class="ftco-footer-social p-0">			
-              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" data-toggle="tooltip" data-placement="top" title="Twitter">
-				
-				  <span class="fab fa-twitter"></span> 
+		<ul class="ftco-footer-social p-0">
+              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+
+				  <span class="fab fa-twitter"></span>
 				</a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294/!" data-toggle="tooltip" data-placement="top" title="Facebook">
+              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
 				<span class="fab fa-facebook"></span>
-				 
+
 				</a></li>
-              <li class="ftco-animate"><a href="https://instagram.com/alitcha00?utm_medium=copy_link!" data-toggle="tooltip" data-placement="top" title="Instagram">
+              <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
 				<span class="fab fa-instagram"></span></a></li>
             </ul>
 					</div>
@@ -223,7 +222,7 @@
 				<div class="row mt-5">
 					<div class="col-md-12 text-center">
 						<p class="copyright">
-					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa-solid fa-heart" ></i> by <a href="index.html" target="_blank">Alitcha Community</a>
+					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa-solid fa-heart" ></i> by <a href="/" target="_blank">Alitcha Community</a>
 					  </p>
 					</div>
 				</div>

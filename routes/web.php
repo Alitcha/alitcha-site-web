@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\NewsletterUserController;
 
@@ -36,6 +37,7 @@ Route::get('/contact', function () {
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
 
+<<<<<<< HEAD
 
 Route::post('/newsletter/member/add', [NewsletterUserController::class, 'store'])->name('newsletteradd');
 
@@ -43,3 +45,7 @@ Route::post('/contact', [ContactMessageController::class, 'sendMessage'])->where
 
 Route::post('/commentaire/{id}', [CommentaireController::class, 'store'])->whereNumber('id')->name('addComment');
 
+=======
+//Routes de l'adhesion
+Route::post('/user/adhesion', [UserController::class, 'adhesion']) -> name('adhesion_user');
+>>>>>>> feature-adhesion
