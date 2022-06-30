@@ -14,16 +14,16 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-	
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="css/ionicons.min.css">
-	
+
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -41,8 +41,9 @@
 </head>
 
 <body>
+
     <div class="container-xxl bg-white p-0">
- 
+
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
@@ -70,7 +71,7 @@
        <!-- Wrapper container -->
 <section class="ftco-section">
 		<div class="container">
-			
+
 			<div class="row justify-content-center">
 				<div class="col-md-12">
 					<div class="wrapper">
@@ -78,34 +79,35 @@
 							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
 								<div class="contact-wrap w-100 p-md-5 p-4">
 									<h3 class="mb-4">Contactez-nous !</h3>
-									<div id="form-message-warning" class="mb-4"></div> 
+									<div id="form-message-warning" class="mb-4"></div>
 				      		<div id="form-message-success" class="mb-4">
 				            Votre message a été envoyé. Merci !
 				      		</div>
-									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+									<form method="POST" action="{{ route('contactMessage') }}" id="contactForm" name="contactForm" class="contactForm">
+                                        @csrf
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="name">Nom & Prénom(s)</label>
-													<input type="text" class="form-control" name="name" id="name" placeholder="Votre nom et prénom(s)">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Votre nom et prénom(s)" required>
 												</div>
 											</div>
-											<div class="col-md-6"> 
+											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="email">Email</label>
-													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
 													<label class="label" for="subject">Objet</label>
-													<input type="text" class="form-control" name="subject" id="subject" placeholder="Objet">
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
 													<label class="label" for="#">Message</label>
-													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+													<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
 												</div>
 											</div>
 											<div class="col-md-12">
@@ -163,7 +165,7 @@
 		</div>
 	</section>
         <!-- Contact End -->
-        
+
 
         <!-- Footer Start -->
         <footer class="footer-07">
@@ -175,19 +177,19 @@
 							<a href="index.html">Accueil</a>
 							<a href="webmag.html">Web Magazine</a>
 							<a href="apropos.html">A propos</a>
-							
+
 							<a href="contact.html">Contact</a>
-							
+
 						</p>
 
-		<ul class="ftco-footer-social p-0">			
+		<ul class="ftco-footer-social p-0">
               <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" data-toggle="tooltip" data-placement="top" title="Twitter">
-				
-				  <span class="fab fa-twitter"></span> 
+
+				  <span class="fab fa-twitter"></span>
 				</a></li>
               <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294/!" data-toggle="tooltip" data-placement="top" title="Facebook">
 				<span class="fab fa-facebook"></span>
-				 
+
 				</a></li>
               <li class="ftco-animate"><a href="https://instagram.com/alitcha00?utm_medium=copy_link!" data-toggle="tooltip" data-placement="top" title="Instagram">
 				<span class="fab fa-instagram"></span></a></li>
@@ -226,8 +228,36 @@
     <script src="js/jquery.validate.min.js"></script>
 
 
+    <link rel="stylesheet" href="js/toastify/toastify.css">
+    <script src="js/toastify.js"></script>
+
+    <script src="js/toastify/toastify.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+@if (session('success'))
+    <script>
+        Toastify({
+            text: "{{ session('success') }}",
+            duration: 3000,
+            close:true,
+            backgroundColor: "#4fbe87",
+        }).showToast();
+    </script>
+@endif
+
+@if (session('error'))
+    <script>
+        Toastify({
+            text: "{{ session('error') }}",
+            duration: 3000,
+            close:true,
+            backgroundColor: "#FF2020",
+        }).showToast();
+    </script>
+@endif
+
+
 </body>
 
 </html>
