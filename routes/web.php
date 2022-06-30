@@ -2,15 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 use App\Http\Controllers\NewsletterUserController;
-=======
+
 use App\Http\Controllers\ContactMessageController;
->>>>>>> feature-contactPage
-=======
+
 use App\Http\Controllers\CommentaireController;
->>>>>>> feature-article
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,13 +35,11 @@ Route::get('/contact', function () {
 
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 Route::post('/newsletter/member/add', [NewsletterUserController::class, 'store'])->name('newsletteradd');
-=======
+
 Route::post('/contact', [ContactMessageController::class, 'sendMessage'])->whereNumber('id')->name('contactMessage');
->>>>>>> feature-contactPage
-=======
+
 Route::post('/commentaire/{id}', [CommentaireController::class, 'store'])->whereNumber('id')->name('addComment');
->>>>>>> feature-article
+
