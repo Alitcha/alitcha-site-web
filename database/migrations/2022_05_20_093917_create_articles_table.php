@@ -17,14 +17,17 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->text('content');
             $table->string('image');
 
             $table->unsignedBigInteger('postBy');
             $table->foreign('postBy')->references('id')->on('users')->onDelete('cascade');
 
-            $table->integer('nb_like');
+            $table->unsignedBigInteger('categorie_id');
+            $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade');
+
+            $table->integer('nb_like')->default(0);
             $table->timestamps();
         });
     }
