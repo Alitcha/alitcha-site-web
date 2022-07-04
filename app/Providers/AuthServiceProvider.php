@@ -26,17 +26,22 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //Juste un test à modifier
+        //Juste un test, à modifier
+        Gate::define('root', function (User $user) {
+            return $user->isRoot();
+        });
+
+        //Juste un test, à modifier
         Gate::define('admin', function (User $user) {
             return $user->isAdmin();
         });
-        //Juste un test à modifier
+        //Juste un test, à modifier
         Gate::define('editor', function (User $user) {
             return $user->isEditor();
         });
-        //Juste un test à modifier
+        //Juste un test, à modifier
         Gate::define('access-dashboard', function (User $user) {
-            return $user->isEditor() || $user->isAdmin();
+            return  $user->isEditor() || $user->isAdmin();
         });
     }
 }

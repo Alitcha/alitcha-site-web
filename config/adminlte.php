@@ -85,8 +85,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -129,7 +129,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-white navbar-info',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -225,111 +225,109 @@ return [
     */
 
     'menu' => [
+        
+
         // Navbar items:
-        [
+        /*[
             'type'         => 'navbar-search',
             'text'         => 'search',
             'topnav_right' => true,
-        ],
+        ],*/
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
-        [
+        /*[
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+            'text' => 'Recherche',
+        ],*/
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+
+
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        [
-            'text' => 'Créer article',
-            'route' => 'article.create',
-            'can' => 'editor'
+            'text' => 'Statistique',
+            'url'  => 'dashboard',
+            'icon' => 'fa  fa-bar-chart',
+            'can' => 'access-dashboard'
         ],
 
         [
-            'text' => 'Users',
-            'route' => 'article.create',
+            'text' => 'Administrateurs',
+            'route'  => 'showadmin',
+            'label'       => 3,
+            'icon' => 'fa-solid fa-lock-keyhole',
+            'label_color' => 'success',
             'can' => 'admin'
         ],
+        [
+            'text' => 'Users',
+            'route'  => 'users.list',
+            'icon' => 'far fa-fw fa-file',
+            'can' => 'admin'
+        ],
+        [
+            'text' => 'Editeurs',
+            'route'  => 'editor.index',
+            'icon' => 'fa-solid fa-pen-to-square',
+            'can' => 'access-dashboard'
+        ],
+       
+        [
+            'text' => 'Articles',
+            'route'  => 'article.index',
+            'label'       => 4,
+            'icon' => 'far fa-fw fa-file',
+            'can' => 'access-dashboard'
+        ],
 
-        ['header' => 'account_settings'],
+        
         [
-            'text' => 'profile',
+            'text' => 'Magazine',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'far fa-fw fa-file',
+            'can' => 'access-dashboard'
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Adhésion',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
+            'icon' => 'far fa-fw fa-file',
+            'can' => 'admin',
+            'submenu' =>[
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Demandes',
+                    'url'  => 'admin/settings',
+                    'icon' => 'far fa-fw fa-file',
+                    'can' => 'admin',
+                    'label'       => 4,
+                    'shift'   => 'ml-3'
+
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Adhérants',
+                    'url'  => 'admin/settings',
+                    'icon' => 'far fa-fw fa-file',
+                    'can' => 'admin',
+                    'shift'   => 'ml-3'
                 ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            ]
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Newletter',
+            'url'  => 'admin/settings',
+            'icon' => 'far fa-fw fa-file',
+            'can' => 'admin'
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        
+
+        
+
+       
     ],
 
     /*

@@ -59,12 +59,25 @@ class User extends Authenticatable
         return $this->roles()->where('name',$role)->exists();
     }
 
+    public function isRoot()
+    {
+        return $this->hasRole("root");
+    }
+
     public function isAdmin()
     {
-        return $this->hasRole("admin");
+        return $this->hasRole("admin") or $this->hasRole("root");
     }
     public function isEditor()
     {
         return $this->hasRole("editor");
+    }
+
+    public function role(){
+        return $this->isRoot() ? 'root' : (
+         $this->isAdmin()?'admin': (
+              $this->isEditor()?'editor':''
+         )
+        ); 
     }
 }
