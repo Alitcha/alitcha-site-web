@@ -175,27 +175,17 @@
 					<div class="col-md-12 text-center">
 						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
 						<p class="menu">
-<<<<<<< HEAD
 							<a href="index.html">Accueil</a>
 							<a href="webmag.html">Web Magazine</a>
 							<a href="apropos.html">A propos</a>
 
 							<a href="contact.html">Contact</a>
-=======
-							<a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Web Magazine</a>
-							<a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
-							<a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
->>>>>>> feature-adhesion
 
 						</p>
 
 		<ul class="ftco-footer-social p-0">
-<<<<<<< HEAD
               <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" data-toggle="tooltip" data-placement="top" title="Twitter">
-=======
               <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
->>>>>>> feature-adhesion
 
 				  <span class="fab fa-twitter"></span>
 				</a></li>

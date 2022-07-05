@@ -743,3 +743,16 @@ footer h2{
 .ftco-footer-social li a:hover {
       color: #000; 
 }
+
+.first{
+    height: 27pc !important;
+    width: 20pc !important;
+    margin-right:2em;
+}
+
+@media screen and (min-width: 363px) {
+    .first{
+        width:35em !important;
+        margin: auto !important;
+    }
+}

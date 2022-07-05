@@ -85,141 +85,35 @@
                     <div class="widget">
                         <!--<h6 class="widget-title text-uppercase fw-bolder"> You May also Like </h6> 
                         <div class="blog-sidebar-post-divider mb-4"> -->
-                        </div>
-                        <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-xx-items="1" data-space="15">
-                            <div class="item">
+                      </div>
+                      <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-xx-items="1" data-space="15">
+                      @foreach ($articles_P as $article)
+                          <div class="item">
                             <div class="blog-post text-center">
                                 <div class="blog-post-image">
-                                <img class="img-fluid" src="../img/blog/08.jpg" alt="">
+                                <img class="img-fluid first" src="<?php echo $article->image; ?>" alt="">
                                 </div>
                                 <div class="blog-content">
                                     <div class="row">
                                         <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                        <div class="col"> <a class="badge" href="/article/1">Lire</a></div>
+                                        <div class="col"> <a class="badge" href="/article/<?php echo $article->id; ?>">Lire</a></div>
                                     
                                     </div>
                                 
                                 <div class="blog-post-title">
-                                <h6 class="mb-0"><a href="#">Auctor aliquet Aenean auctor alique Nibh vel velit </a></h6>
+                                <h6 class="mb-0"><a href="#">{{$article->title}}</a></h6>
                                 </div>
                                 <div class="blog-post-footer blog-post-categorise">
                                 <div class="blog-post-time">
-                                <a href="#"><i class="far fa-clock"></i>24 Aug 2021</a>
+                                <a href="#"><i class="far fa-clock"></i>{{$article->created_at}}</a>
                                 </div>
                                 </div>
                                 </div>
                                 </div>
                             </div>
-                            <div class="item">
-                            <div class="blog-post text-center">
-                            <div class="blog-post-image">
-                                <img class="img-fluid" src="../img/blog/09.jpg" alt="">
-                            </div>
-                            <div class="blog-content">
-                                <div class="row">
-                                    <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                    <div class="col"> <a class="badge" href="#">Lire</a></div>
-                                
-                                </div>
-                                <div class="blog-post-title">
-                                <h6 class="mb-0"><a href="#">Velit auctor aliquet Aenean auctor alique Nibh vel </a></h6>
-                                </div>
-                            <div class="blog-post-footer blog-post-categorise">
-                                <div class="blog-post-time">
-                                <a href="#"><i class="far fa-clock"></i>14 Sep 2021</a>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                        <div class="item">
-                        <div class="blog-post text-center">
-                            <div class="blog-post-image">
-                            <img class="img-fluid" src="../img/blog/10.jpg" alt="">
-                            </div>
-                            <div class="blog-content">
-                                <div class="row">
-                                    <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                    <div class="col"> <a class="badge" href="#">Lire</a></div>
-                                
-                                </div>
-                            <div class="blog-post-title">
-                            <h6 class="mb-0"><a href="#">Aenean auctor alique Nibh vel velit auctor aliquet </a></h6>
-                            </div>
-                            <div class="blog-post-footer blog-post-categorise">
-                            <div class="blog-post-time">
-                            <a href="#"><i class="far fa-clock"></i>14 may 2021</a>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                        <div class="blog-post text-center">
-                            <div class="blog-post-image">
-                            <img class="img-fluid" src="../img/blog/08.jpg" alt="">
-                            </div>
-                            <div class="blog-content">
-                                <div class="row">
-                                    <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                    <div class="col"> <a class="badge" href="#">Lire</a></div>
-                                
-                                </div>
-                            <div class="blog-post-title">
-                            <h6 class="mb-0"><a href="#">Aliquet Aenean auctor alique Nibh vel velit auctor </a></h6>
-                            </div>
-                            <div class="blog-post-footer blog-post-categorise">
-                            <div class="blog-post-time">
-                            <a href="#"><i class="far fa-clock"></i>21 jun 2021</a>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-post text-center">
-                            <div class="blog-post-image">
-                            <img class="img-fluid" src="../img/blog/09.jpg" alt="">
-                            </div>
-                            <div class="blog-content">
-                                <div class="row">
-                                    <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                    <div class="col"> <a class="badge" href="#">Lire</a></div>
-                                
-                                </div>
-                            <div class="blog-post-title">
-                                <h6 class="mb-0"><a href="#">Aliquet Aenean auctor alique Nibh vel velit auctor </a></h6>
-                            </div>
-                            <div class="blog-post-footer blog-post-categorise">
-                            <div class="blog-post-time">
-                                <a href="#"><i class="far fa-clock"></i>21 jun 2021</a>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            <div class="item">
-                                <div class="blog-post text-center">
-                                <div class="blog-post-image">
-                                <img class="img-fluid" src="../img/blog/10.jpg" alt="">
-                                </div>
-                                <div class="blog-content">
-                                    <div class="row">
-                                        <div class="col"> <a class="badge" href="#">Télécharger</a></div>
-                                        <div class="col"> <a class="badge" href="#">Lire</a></div>
-                                    
-                                    </div>
-                                <div class="blog-post-title">
-                                    <h6 class="mb-0"><a href="#">Aliquet Aenean auctor alique Nibh vel velit auctor </a></h6>
-                                </div>
-                                <div class="blog-post-footer blog-post-categorise">
-                                <div class="blog-post-time">
-                                    <a href="#"><i class="far fa-clock"></i>21 jun 2021</a>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
+                      @endforeach
+                           
+
                         </div>
                     </div>
                 </div>
@@ -363,12 +257,12 @@
             <a href="article.html" class="btn btn-link text-dark p-1">Continuer la lecture</a>
         </div>
         </div>
-        <div class="blog-post text-center mb-4">
+        <!--div class="blog-post text-center mb-4">
           <div class="blog-post-image">
             <img class="img-fluid" src="../img/blog/01.jpg" alt="">
           </div>
           <div class="blog-content">
-            <!-- <a class="badge" href="#">Télécharger</a> -->
+           <a class="badge" href="#">Télécharger</a> 
           <div class="blog-post-title mt-1">
             <h5 class="mb-0"><a href="#">Are You Famous Or Focused</a></h5>
           </div>
@@ -400,7 +294,7 @@
           <p class="mt-2 mb-0 p-4">Every time he made a fault, he made a mark in the appropriate column. Each week he focused his attention on a different virtue. Over time, through .</p>
           <a href="article.html" class="btn btn-link text-dark p-1">Continuer la lecture</a>
         </div>
-        </div>
+        </div-->
         
         
       </div>
@@ -424,45 +318,22 @@
             <div class="blog-sidebar-post-divider">
             </div>
             <div class="widget-content mt-4">
+            @foreach ($articles_R as $article)
               <div class="d-flex mb-3 align-items-top">
                 <div class="avatar avatar-xll h-auto">
-                  <img class="img-fluid" src="../img/blog/01.jpg" alt="">
+                  <img class="img-fluid" src="<?php echo $article->image; ?>" alt="">
                 </div>
                 <div class="ms-3">
                   <div class="tag">
                      <a class="btn btn-link p-0" href="#">INSPIRATION,</a>
                      <a class="btn btn-link p-0" href="#">Fashion</a>
                   </div>
-                  <h6 class="text-dark"><a href="blog-single-01.html"> Nibh Vel Velit Auctor Aliquet Aenean </a></h6>
-                   <span class="small"><i class="far fa-clock text-primary me-1"></i>25 Mar 2021</span>
+                  <h6 class="text-dark"><a href="blog-single-01.html"> {{$article->title}}</a></h6>
+                   <span class="small"><i class="far fa-clock text-primary me-1"></i>{{$article->created_at}}</span>
                 </div>
               </div>
-              <div class="d-flex mb-3 align-items-top">
-                <div class="avatar avatar-xll h-auto">
-                  <img class="img-fluid" src="../img/blog/05.jpg" alt="">
-                </div>
-                <div class="ms-3">
-                 <div class="tag">
-                     <a class="btn btn-link p-0" href="#">Fashion,</a>
-                     <a class="btn btn-link p-0" href="#">Travel</a>
-                  </div>
-                  <h6 class="text-dark"><a href="blog-single-01.html"> Aenean Auctor Alique Nibh Vel Velit </a></h6>
-                 <span class="small"><i class="far fa-clock text-primary me-1"></i>14 Sep 2021</span>
-                </div>
-              </div>
-              <div class="d-flex mb-3 align-items-top">
-                <div class="avatar avatar-xll h-auto">
-                  <img class="img-fluid" src="../img/blog/01.jpg" alt="">
-                </div>
-                <div class="ms-3">
-                 <div class="tag">
-                     <a class="btn btn-link p-0" href="#">Trend,</a>
-                     <a class="btn btn-link p-0" href="#">Travel</a>
-                  </div>
-                  <h6 class="text-dark"><a href="blog-single-01.html"> Auctor Aliquet Aenean Nibh Vel Velit </a></h6>
-                  <span class="small"><i class="far fa-clock text-primary me-1"></i>30 Aug 2021</span>
-                </div>
-              </div>
+              @endforeach
+              
             </div>
           </div>
           

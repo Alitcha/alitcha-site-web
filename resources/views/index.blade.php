@@ -56,7 +56,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-<<<<<<< HEAD
                         <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
                             &nbsp; Acceuil</a>
                         <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
@@ -67,12 +66,6 @@
                         <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
                             &nbsp; Contact</a>
-=======
-                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i> &nbsp; Acceuil</a>
-                      <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
-                      <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i> &nbsp; A propos</a>
-                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i> &nbsp; Contact</a>
->>>>>>> feature-adhesion
                     </div>
                 </div>
             </nav>
@@ -82,7 +75,6 @@
                     <div class="row g-5 align-items-end">
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="mb-4 animated slideInDow">Une communauté de jeunes entreprenants & créatifs</h1>
-<<<<<<< HEAD
                             <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets
                                 révolutionnaires tout en vous en apprenant le
                                 plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
@@ -95,16 +87,7 @@
                                 class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white"
                                 style="background-color: #F77B1E;"><i class="fa fa-user-plus"></i> &nbsp; Adhérer
                                 Alitcha</a>
-=======
-                            <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets révolutionnaires tout en vous en apprenant le
-plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
-web magazine pour élargir votre culture. </p>
-                            <a href="/webmagazine" class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white" style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web Magazine</a>
-                            <a data-bs-toggle="modal" data-bs-target="#adhererAlitcha" href="" class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white" style="background-color: #F77B1E;">
-                                <i class="fa fa-user-plus"></i> &nbsp;
-                                Adhérer Alitcha
-                            </a>
->>>>>>> feature-adhesion
+                            
 
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
@@ -381,7 +364,6 @@ web magazine pour élargir votre culture. </p>
 
 
     <!-- Modal Adhérer Alitcha -->
-<<<<<<< HEAD
     <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
@@ -426,7 +408,6 @@ web magazine pour élargir votre culture. </p>
             </div>
         </div>
     </div>
-=======
     <form class="AdhesionUser">
         <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
@@ -477,7 +458,6 @@ web magazine pour élargir votre culture. </p>
             </div>
         </div>
     </form>
->>>>>>> feature-adhesion
 
 
     <!-- JavaScript Libraries -->

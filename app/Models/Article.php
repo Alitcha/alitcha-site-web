@@ -45,7 +45,7 @@ class Article extends Model
 
     public function articlesSimilaires()
     {
-        $article = Article::where('categorie_id', $this->categorie_id)->orderBy('id', 'desc')->take(4)->get();
+        $article = Article::where('id', $this->categorie_id)->orderBy('id', 'desc')->take(4)->get();
         if(count($article) == 0) {
             $article = Article::orderBy('id', 'desc')->take(4)->get();
         }

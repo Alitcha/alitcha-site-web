@@ -535,6 +535,7 @@ class ComposerStaticInit39924153d746970c7101e596f2665ba4
         'App\\Http\\Controllers\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleController.php',
         'App\\Http\\Controllers\\CategorieController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategorieController.php',
         'App\\Http\\Controllers\\CommentaireController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentaireController.php',
+        'App\\Http\\Controllers\\ContactMessageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactMessageController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\NewsletterUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsletterUserController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
@@ -547,14 +548,11 @@ class ComposerStaticInit39924153d746970c7101e596f2665ba4
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Mail\\AdhesionMail' => __DIR__ . '/../..' . '/app/Mail/AdhesionMail.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\Categorie' => __DIR__ . '/../..' . '/app/Models/Categorie.php',
         'App\\Models\\Commentaire' => __DIR__ . '/../..' . '/app/Models/Commentaire.php',
-<<<<<<< HEAD
         'App\\Models\\ContactMessage' => __DIR__ . '/../..' . '/app/Models/ContactMessage.php',
-=======
-        'App\\Models\\InfoAddUser' => __DIR__ . '/../..' . '/app/Models/InfoAddUser.php',
->>>>>>> feature-adhesion
         'App\\Models\\NewsletterUser' => __DIR__ . '/../..' . '/app/Models/NewsletterUser.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
