@@ -50,3 +50,25 @@ Route::post('/commentaire/{id}', [CommentaireController::class, 'store'])->where
 //Routes de l'adhesion
 Route::post('/user/adhesion', [UserController::class, 'adhesion']) -> name('adhesion_user');
 
+
+Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/{id}/show', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create')->middleware('can:access-dashboard');
+Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
+
+//Admin
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard')->middleware('can:access-dashboard');
+Route::get('/admin', [AdminController::class, 'showAdmin'])->name('showadmin')->middleware('can:admin');
+Route::get('/admin/add', [AdminController::class, 'addAdmin'])->name('addadmin')->middleware('can:admin');
+Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store')->middleware('can:admin');
+Route::post('/admin/romove/{id}', [AdminController::class, 'removeAdmin'])->name('admin.remove')->middleware('can:admin');
+Route::get('/users', [AdminController::class, 'users'])->name('users.list')->middleware('can:admin');
+
+
+//Editor
+Route::get('/editor', [EditorController::class, 'index'])->name('editor.index')->middleware('can:access-dashboard');
+Route::get('/editor/add', [EditorController::class, 'add'])->name('editor.add')->middleware('can:admin');
+Route::post('/editor/store', [EditorController::class, 'store'])->name('editor.store')->middleware('can:admin');
+Route::post('/editor/romove/{id}', [EditorController::class, 'remove'])->name('editor.remove')->middleware('can:admin');
+
