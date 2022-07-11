@@ -69,7 +69,29 @@
                         <a href="/" class="nav-item nav-link">Acceuil</a>
                         <a href="/webmagazine" class="nav-item nav-link active">Web Magazine</a>
                       <a href="/apropos" class="nav-item nav-link">A propos</a>
+                        <!--<a href="service.html" class=<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+                style="background-color: #F77B1E;">
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars" style="color: #FFFFFF;"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
+                            &nbsp; Acceuil</a>
+                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
+                            &nbsp; Web Magazine</a>
+                        <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i>
+                            &nbsp; A propos</a>
                         <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
+                        <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
+                            &nbsp; Contact</a>
+                    </div>
+                </div>
+            </nav>"nav-item nav-link">Service</a>-->
                         <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="/contact" class="nav-item nav-link">Contact</a>
                     </div>
@@ -137,167 +159,51 @@
 
     <!-- Aticles post -->
      <div class="row">
-      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="col-lg-12 mb-lg-0 populaire">
+        @foreach ($articles_A as $article_A)
+            <div class="blog-post text-center mb-4  ">
+                <div class="blog-post-image">
+                  <img class="img-fluid second" src="<?php echo $article_A->image; ?>" alt="">
+                </div>
+                <div class="blog-content">
+                    <!--<a class="badge" href="#">Télécharger</a>--> 
+                    <div class="blog-post-title mt-1">
+                    <h5 class="mb-0"><a href="#">{{$article_A->title}}</a></h5>
+                </div>
+                <div class="blog-post-footer blog-post-categorise">
+                    <div class="blog-post-author">
+                        <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">John</a></span>
+                    </div>
+                    <div class="blog-post-time">
+                        <a href="#"><i class="far fa-clock"></i>{{$article_A->created_at}}</a>
+                    </div>
+                    <div class="blog-post-time">
+                        <a href="#"><i class="far fa-heart"></i>({{$article_A->nb_like}})</a>
+                    </div>
+                    <div class="blog-post-share">
+                        <div class="share-box">
+                            <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
+                            <ul class="list-unstyled share-box-social">
+                              <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
+                              <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
+                              <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
+                              <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
+                              <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post-divider">
+                </div>
+                <p class="mt-2 mb-0 p-4">{{$article_A->subtitle}}</p>
+                <a href="/article/<?php echo $article_A->id; ?>" class="btn btn-link text-dark p-1">Continuer la lecture</a>
+              </div>
+          
+            </div>
+      @endforeach
         
-        <div class="blog-post text-center mb-4">
-          <div class="blog-post-image">
-            <img class="img-fluid" src="../img/blog/01.jpg" alt="">
-          </div>
-          <div class="blog-content">
-           <!--<a class="badge" href="#">Télécharger</a>--> 
-          <div class="blog-post-title mt-1">
-            <h5 class="mb-0"><a href="#">You will begin to realise</a></h5>
-          </div>
-          <div class="blog-post-footer blog-post-categorise">
-              <div class="blog-post-author">
-                <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">John</a></span>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-clock"></i>20 jun 2021</a>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-comment"></i>(1)</a>
-              </div>
-              <div class="blog-post-share">
-                <div class="share-box">
-                  <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                  <ul class="list-unstyled share-box-social">
-                    <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="blog-post-divider">
-              </div>
-          <p class="mt-2 mb-0 p-4">Along with your plans, you should consider developing an action orientation that will keep you motivated to move forward at all times.</p>
-          <a href="article.html" class="btn btn-link text-dark p-1">Continuer la lecture</a>
-        </div>
-        </div>
-        <div class="blog-post text-center mb-4">
-          <div class="blog-post-image">
-            <img class="img-fluid" src="../img/blog/04.jpg" alt="">
-          </div>
-          <div class="blog-content">
-         <!-- <a class="badge" href="#">Télécharger</a> -->
-          <div class="blog-post-title mt-1">
-            <h5 class="mb-0"><a href="#">Walk out 10 years into</a></h5>
-          </div>
-          <div class="blog-post-footer blog-post-categorise">
-              <div class="blog-post-author">
-                <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">Daniel</a></span>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-comment"></i>(1)</a>
-              </div>
-              <div class="blog-post-share">
-                <div class="share-box">
-                  <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                  <ul class="list-unstyled share-box-social">
-                    <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="blog-post-divider">
-            </div>
-          <p class="mt-2 mb-0 p-4">Commitment is something that comes from understanding that everything has its price and then having the willingness to pay that price.</p>
-          <a href="article.html" class="btn btn-link text-dark p-1">Continuer la lecture</a>
-        </div>
-        </div>
+      </div>
       
-      </div>
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <div class="blog-post text-center mb-4">
-          <div class="blog-post-image">
-            <img class="img-fluid" src="../img/blog/05.jpg" alt="">
-          </div>
-          <div class="blog-content">
-            <!-- <a class="badge" href="#">Télécharger</a> -->
-          <div class="blog-post-title mt-1">
-            <h5 class="mb-0"><a href="#">How I Lost The Secret </a></h5>
-          </div>
-          <div class="blog-post-footer blog-post-categorise">
-              <div class="blog-post-author">
-                <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">Felica</a></span>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-clock"></i>25 Feb 2021</a>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-comment"></i>(3)</a>
-              </div>
-              <div class="blog-post-share">
-                <div class="share-box">
-                  <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                  <ul class="list-unstyled share-box-social">
-                    <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="blog-post-divider">
-              </div>
-          <p class="mt-2 mb-0 p-4">For those of you who are serious about having more, doing more, giving more and being more, success is achievable </p> 
-        
-            <a href="article.html" class="btn btn-link text-dark p-1">Continuer la lecture</a>
-        </div>
-        </div>
-        <!--div class="blog-post text-center mb-4">
-          <div class="blog-post-image">
-            <img class="img-fluid" src="../img/blog/01.jpg" alt="">
-          </div>
-          <div class="blog-content">
-           <a class="badge" href="#">Télécharger</a> 
-          <div class="blog-post-title mt-1">
-            <h5 class="mb-0"><a href="#">Are You Famous Or Focused</a></h5>
-          </div>
-          <div class="blog-post-footer blog-post-categorise">
-              <div class="blog-post-author">
-                <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">Williams</a></span>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-clock"></i>25 Jul 2021</a>
-              </div>
-              <div class="blog-post-time">
-                <a href="#"><i class="far fa-comment"></i>(2)</a>
-              </div>
-              <div class="blog-post-share">
-                <div class="share-box">
-                  <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                  <ul class="list-unstyled share-box-social">
-                    <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                    <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="blog-post-divider">
-              </div>
-          <p class="mt-2 mb-0 p-4">Every time he made a fault, he made a mark in the appropriate column. Each week he focused his attention on a different virtue. Over time, through .</p>
-          <a href="article.html" class="btn btn-link text-dark p-1">Continuer la lecture</a>
-        </div>
-        </div-->
-        
-        
-      </div>
     </div>
     <!-- Articles post fin -->
 
@@ -321,7 +227,7 @@
             @foreach ($articles_R as $article)
               <div class="d-flex mb-3 align-items-top">
                 <div class="avatar avatar-xll h-auto">
-                  <img class="img-fluid" src="<?php echo $article->image; ?>" alt="">
+                  <img class="img-fluid post-recent-img" src="<?php echo $article->image; ?>" alt="">
                 </div>
                 <div class="ms-3">
                   <div class="tag">
@@ -346,7 +252,7 @@
                 <li>
                   <div class="blog-post blog-overlay blog-post-05">
                      <div class="blog-image">
-                        <img class="img-fluid" src="../img/blog/01.jpg" alt="">
+                        <img class="img-fluid" src="../img/blog/num.jpg" alt="">
                      </div>
                      <div class="blog-name">
                       <a href="#">Numérique <span class="ms-auto">(10)</span></a>
@@ -356,7 +262,7 @@
                 <li>
                   <div class="blog-post blog-overlay blog-post-05">
                      <div class="blog-image">
-                        <img class="img-fluid" src="../img/blog/04.jpg" alt="">
+                        <img class="img-fluid" src="../img/blog/tech.jpg" alt="">
                      </div>
                      <div class="blog-name">
                       <a href="#">Technologie <span class="ms-auto">(8)</span></a>
@@ -376,7 +282,7 @@
                 <li>
                   <div class="blog-post blog-overlay blog-post-05">
                      <div class="blog-image">
-                        <img class="img-fluid" src="../img/blog/01.jpg" alt="">
+                        <img class="img-fluid" src="../img/blog/divers.jpg" alt="">
                      </div>
                      <div class="blog-name">
                       <a href="#">Divers <span class="ms-auto">(10)</span></a>
@@ -523,25 +429,27 @@
           <div class="blog-sidebar-post-divider mb-4">
           </div>
           <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-nav-dots="false" data-items="2" data-md-items="2" data-sm-items="2" data-xs-items="1" data-xx-items="1" data-space="15">
+          @foreach ($articles_A as $article)
             <div class="item">
               <div class="blog-post text-center p-0">
                 <div class="blog-post-image">
-                  <img class="img-fluid" src="../img/blog/01.jpg" alt="">
+                  <img class="img-fluid second" src="<?php echo $article->image; ?>" alt="">
                 </div>
                 <div class="blog-content">
                   <a class="badge" href="#">Télécharger</a>
                   <div class="blog-post-title">
-                    <h6 class="mb-0"><a href="#">Velit auctor aliquet Aenean nibh vel</a></h6>
+                    <h6 class="mb-0"><a href="#">{{$article->title}}</a></h6>
                   </div>
                   <div class="blog-post-footer blog-post-categorise">
                     <div class="blog-post-time">
-                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
+                      <a href="#"><i class="far fa-clock"></i>{{$article->created_at}}</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
+          @endforeach
+            <!-- <div class="item">
               <div class="blog-post text-center p-0">
                 <div class="blog-post-image">
                   <img class="img-fluid" src="../img/blog/05.jpg" alt="">
@@ -579,7 +487,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
    
   </div>
 </section>

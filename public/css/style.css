@@ -749,6 +749,21 @@ footer h2{
     width: 20pc !important;
     margin-right:2em;
 }
+.second{
+    height: 20em !important;
+    width: 100% !important;
+}
+
+.populaire{
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap;
+}
+
+.post-recent-img{
+    height: 7em !important;
+    width: 7em !important;
+}
 
 @media screen and (min-width: 363px) {
     .first{

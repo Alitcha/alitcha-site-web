@@ -22,13 +22,12 @@ return new class extends Migration
             $table->string('image');
 
             $table->unsignedBigInteger('postBy');
-            $table->foreign('postBy')->references('id')->on('writers')->onDelete('cascade');
+            $table->foreign('postBy')->references('id')->on('users')->onDelete('cascade');
 
             $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade');
 
             $table->integer('nb_like')->default(0);
-
             $table->timestamps();
         });
     }

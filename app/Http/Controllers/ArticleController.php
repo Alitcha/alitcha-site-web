@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Writers;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -10,11 +11,15 @@ class ArticleController extends Controller
     public function showMagazine(){
         $articles = Article::all()->sortByDesc('id');
         $articles_P = Article::all()->sortByDesc('nb_like');
-        $articles_A = Article::all()->random(10);
+        $articles_A = Article::all()->random(4);
+        $writers = Writers::all();
+        
         return view('webmag', [
             'articles_R' => $articles,
             'articles_P' => $articles_P,
-            'art'
+            'articles_A' => $articles_A,
+            'writers' => $writers,
+
         ]);
     }
 
