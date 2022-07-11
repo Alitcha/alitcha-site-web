@@ -6,7 +6,6 @@ use App\Models\Article;
 use App\Models\Writers;
 use Illuminate\Http\Request;
 
-use App\Models\Article;
 
 class ArticleController extends Controller
 {

@@ -70,13 +70,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner carrousel-div">
               <div class="carousel-item active">
-                <img src="image1.jpg" class="d-block w-100" alt="...">
+                <img src="../img/blog/num.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="image2.jpg" class="d-block w-100" alt="...">
+                <img src="../img/image2.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="image1.jpg" class="d-block w-100" alt="...">
+                <img src="../img/image1.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
