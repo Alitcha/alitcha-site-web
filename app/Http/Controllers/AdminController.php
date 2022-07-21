@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Article;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\AdhesionMail;
 
 class AdminController extends Controller
 {
@@ -13,7 +16,9 @@ class AdminController extends Controller
     public function dashboard() 
     {
         $nbusers = count(User::all());
-        return view('admin.dashboard',compact('nbusers'));
+        $nbpub = Article::all()->where('published', true)->count();
+        $nbunpub = Article::all()->where('published', false)->count();
+        return view('admin.dashboard',compact('nbusers','nbpub','nbunpub'));
     }
 
     public function showAdmin() 
@@ -84,6 +89,17 @@ class AdminController extends Controller
         return view('admin.user',compact('users'));
     }
 
+
+    public function mail(Request $request){
+         //Envoi de l'e-mail à l'admin
+         Mail::to('dinyad456@gmail.com')
+         ->queue(new AdhesionMail([
+             'nom_prenom' => "kjkjjkjk",
+             'email' => "kjkjkjkj",
+             'numeroTel' => "jkjkjk",
+             'link' => url('http://127.0.0.1:8000/')
+         ]));
+    }
 
 
 

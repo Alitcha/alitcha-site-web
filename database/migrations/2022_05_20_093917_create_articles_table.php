@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->text('content');
             $table->string('image');
-
+            $table->boolean('published')->default(false);
             $table->unsignedBigInteger('postBy');
             $table->foreign('postBy')->references('id')->on('users')->onDelete('cascade');
 

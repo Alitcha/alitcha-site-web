@@ -18,11 +18,19 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
 
         $roles = ['root','admin','editor'];
+        $categogies = ['Informatique','Technologie','Ecologie'];
+
         array_map(function($role){
             DB::table('roles')->insert([
                 'name' => $role
             ]);
         },$roles);
+
+        array_map(function($cat){
+            DB::table('categories')->insert([
+                'name' => $cat
+            ]);
+        },$categogies);
 
         DB::table('role_user')->insert([
             'user_id' => 1,

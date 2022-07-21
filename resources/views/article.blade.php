@@ -104,8 +104,8 @@
                 <h4 class="mb-0"><a href="#">{{ $article->subtitle }}</a></h4>
               </div>
               <div class="blog-post-footer blog-post-categorise justify-content-start">
-                <div class="blog-post-author">
-                  <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">{{ $article->author->firstname }} {{ $article->author->lastname }}</a></span>
+              <div class="blog-post-author">
+                  <span>Par <a href="#"><!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</a></span>
                 </div>
                 <div class="blog-post-time">
                   <a href="#"><i class="far fa-clock"></i> {{ $article->created_at }}</a>
@@ -136,7 +136,7 @@
             <div class="blog-content ps-0 pe-0">
 
               <p class="mb-3 d-block text-justify" style="text-align : justify">
-                {{ $article->content }}
+                {!! $article->content !!}
               </p>
 
               <div class="blog-post-share-box d-flex flex-wrap justify-content-between align-items-center mt-5">
@@ -152,7 +152,7 @@
                     </ul>
                   </div>
                 </div>
-                <div>
+                <!--<div>
                      <i class="fas fa-like"></i>
                      <span class="ps-2">{{ $article->nb_like }}
                         @if ($article->nb_like > 1)
@@ -166,19 +166,18 @@
                 <div class="badges">
 
                   <a href="#" class="btn btn-outline-primary">Like</a>
-                </div>
+                </div>-->
               </div>
               <nav class="navigation post-navigation py-2 py-lg-3">
             <div class="nav-links d-sm-flex justify-content-between">
-              <div class="nav-previous float-left">
+             <!-- <div class="nav-previous float-left">
                 <a class="d-flex align-items-center" href="#">
                   <div class="align-self-center nav-left ml-2">
                     <span class="pagi-text d-inline-block btn btn-link px-0 p-1">
                       <i class="fas fa-chevron-left"></i>
                       Précédent
                     </span>
-                    <span class="nav-title d-block text-black font-weight-normal"> La programmation Web</span>
-
+                   
 
                   </div>
 
@@ -193,12 +192,11 @@
                       <i class="fas fa-chevron-right"></i>
                     </span>
 
-                    <span class="nav-title d-block text-black font-weight-normal"> L'informatique et l'environnement</span>
-
-
+                    
                   </div>
                 </a>
               </div>
+-->
             </div>
           </nav>
               <div class="bg-white mt-5">
@@ -300,13 +298,14 @@
                     </div>
                     <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-nav-dots="false" data-items="3" data-md-items="2" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="15">
                         @foreach ($article->articlesSimilaires() as $articleSimilaire)
+                        @if($articleSimilaire->id != $article->id)
                             <div class="item">
                                 <div class="blog-post text-center p-0">
                                     <div class="blog-post-image">
-                                        <img class="img-fluid" src="../{{ $articleSimilaire->image }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('images/'.$articleSimilaire->image) }}" alt="">
                                     </div>
                                     <div class="blog-content">
-                                        {{-- <a class="badge" href="#">Télécharger</a> --}}
+                                        <a class="badge" href="{{ route('article', $articleSimilaire->id) }}">Lire</a>
                                         <div class="blog-post-title">
                                             <h6 class="mb-0"><a href="{{ route('article', $articleSimilaire->id) }}">{{ $articleSimilaire->title }} </a></h6>
                                         </div>
@@ -318,6 +317,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>

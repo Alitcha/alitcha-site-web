@@ -24,31 +24,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
 
      <!-- CSS Global Compulsory (Do not remove)-->
-     <link rel="stylesheet" href="../css/font-awesome/all.min.css" />
+     <link rel="stylesheet" href="/css/font-awesome/all.min.css" />
 
 
      <!-- Page CSS Implementing Plugins -->
-     <link rel="stylesheet" href="../css/select2/select2.css" />
+     <link rel="stylesheet" href="/css/select2/select2.css" />
 
-     <link rel="stylesheet" href="../css/swiper/swiper.min.css" />
+     <link rel="stylesheet" href="/css/swiper/swiper.min.css" />
 
      <!-- Template Style -->
-     <link rel="stylesheet" href="../css/style.webzine.css" />
+     <link rel="stylesheet" href="/css/style.webzine.css" />
 
      <!-- Template Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -66,7 +66,7 @@
         <div class="container-xxl position-relative p-0" >
           <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
             <a href="index.html" class="navbar-brand p-0">
-              <img src="../img/logo.png" alt="Logo">
+              <img src="/img/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
               <span class="fa fa-bars" style="color: #FFFFFF;"></span>
@@ -102,13 +102,13 @@
               </div>
               <div class="blog-post-footer blog-post-categorise justify-content-start">
                 <div class="blog-post-author">
-                  <span>Par<a href="#"><img src="../img/avatar/03.jpg" alt="">Michael</a></span>
+                  <span>Par <a href="#"><!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</a></span>
                 </div>
                 <div class="blog-post-time">
                   <a href="#"><i class="far fa-clock"></i>{{ $article->created_at->format('d/m/Y') }}</a>
                 </div>
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-comment"></i>(4)</a>
+                  <a href="#"><i class="far fa-comment"></i>({{$article->totalCommentaires()}})</a>
                 </div>
                 <div class="blog-post-share">
                   <div class="share-box">
@@ -125,7 +125,7 @@
               </div>
             </div>
           </div>
-          <img class="img-fluid mb-3" src="../img/blog/05.jpg" alt="">
+          
           <div class="blog-post mb-4">
 
             <div class="blog-content ps-0 pe-0">
@@ -133,81 +133,12 @@
                     {!! $article->content !!}
               
               
-              <div class="blog-post-share-box d-flex flex-wrap justify-content-between align-items-center mt-5">
-                  <div class="blog-post-share">
-                  <div class="share-box">
-                    <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                    <ul class="list-unstyled share-box-social">
-                      <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                     <i class="fas fa-like"></i><span class="ps-2">23 likes</span>
-
-                </div>
-                <div class="badges">
-
-                  <a href="#" class="btn btn-outline-primary">Like</a>
-                </div>
+              
+                
+                
               </div>
-              <nav class="navigation post-navigation py-2 py-lg-3">
-            <div class="nav-links d-sm-flex justify-content-between">
-              <div class="nav-previous float-left">
-                <a class="d-flex align-items-center" href="#">
-                  <div class="align-self-center nav-left ml-2">
-                    <span class="pagi-text d-inline-block btn btn-link px-0 p-1">
-                      <i class="fas fa-chevron-left"></i>
-                      Précédent
-                    </span>
-                    <span class="nav-title d-block text-black font-weight-normal"> La programmation Web</span>
-
-
-                  </div>
-
-                </a>
-              </div>
-              <div class="nav-next float-right">
-                <a class="d-flex align-items-center" href="#">
-
-                  <div class="align-self-center text-right nav-right">
-                    <span class="pagi-text d-inline-block btn btn-link px-0 p-1">
-                      Suivant
-                      <i class="fas fa-chevron-right"></i>
-                    </span>
-
-                    <span class="nav-title d-block text-black font-weight-normal"> L'informatique et l'environnement</span>
-
-
-                  </div>
-                </a>
-              </div>
-            </div>
-          </nav>
-              <div class="bg-white mt-5">
-                <h6 class="widget-title text-uppercase fw-bolder">Laisser un commentaire</h6>
-                <div class="blog-sidebar-post-divider mb-4">
-                </div>
-                <form class="row">
-                  <div class="col-lg-4 mb-3">
-                    <input type="text" class="form-control" placeholder="Nom">
-                  </div>
-                  <div class="col-lg-4 mb-3">
-                    <input type="text" class="form-control" placeholder="Email">
-                  </div>
-
-                  <div class="col-lg-12 mb-3">
-                    <textarea class="form-control" rows="2" placeholder="Comment"></textarea>
-                  </div>
-                  <div class="col-lg-12 mb-3">
-                    <a class="btn btn-primary" href="#">Publier</a>
-                  </div>
-                </form>
-              </div>
+              
+              
             </div>
           </div>
         </div>
@@ -221,75 +152,7 @@
 
 <!--=================================
  blog  -->
-<section class="space-pb bg-light">
-  <div class="container">
 
-      <div class="col-md-12">
-        <div class="bg-white p-4">
-          <h6 class="widget-title text-uppercase fw-bolder">Vous pourriez aussi aimer</h6>
-          <div class="blog-sidebar-post-divider mb-4">
-          </div>
-          <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-nav-dots="false" data-items="3" data-md-items="2" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="15">
-            <div class="item">
-              <div class="blog-post text-center p-0">
-                <div class="blog-post-image">
-                  <img class="img-fluid" src="../img/blog/01.jpg" alt="">
-                </div>
-                <div class="blog-content">
-                  <a class="badge" href="#">Télécharger</a>
-                  <div class="blog-post-title">
-                    <h6 class="mb-0"><a href="#">Velit auctor aliquet Aenean nibh vel</a></h6>
-                  </div>
-                  <div class="blog-post-footer blog-post-categorise">
-                    <div class="blog-post-time">
-                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-post text-center p-0">
-                <div class="blog-post-image">
-                  <img class="img-fluid" src="../img/blog/05.jpg" alt="">
-                </div>
-                <div class="blog-content">
-                  <a class="badge" href="#">Télécharger</a>
-                  <div class="blog-post-title">
-                    <h6 class="mb-0"><a href="#">Aenean auctor alique Nibh vel velit </a></h6>
-                  </div>
-                  <div class="blog-post-footer blog-post-categorise">
-                    <div class="blog-post-time">
-                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="blog-post text-center p-0">
-                <div class="blog-post-image">
-                  <img class="img-fluid" src="../img/blog/04.jpg" alt="">
-                </div>
-                <div class="blog-content">
-                  <a class="badge" href="#">Télécharger</a>
-                  <div class="blog-post-title">
-                    <h6 class="mb-0"><a href="#">Does your life lack meaning</a></h6>
-                  </div>
-                  <div class="blog-post-footer blog-post-categorise">
-                    <div class="blog-post-time">
-                      <a href="#"><i class="far fa-clock"></i>12 Jan 2021</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-  </div>
-</section>
 
 <!--=================================
  blog -->
@@ -343,31 +206,31 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
 
     <!-- JS Global Compulsory (Do not remove)-->
-    <script src="../js/jquery-3.5.1.min.js"></script>
-    <script src="../js/popper/popper.min.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/popper/popper.min.js"></script>
     <!--<script src="js/bootstrap/bootstrap.min.js"></script> -->
 
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-    <script src="../js/jquery.appear.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../js/swiper/swiper.min.js"></script>
-    <script src="../js/swiperanimation/swiperanimation.min.js"></script>
-    <script src="../js/instagramFeed/jquery.instagramFeed.min.js"></script>
+    <script src="/js/jquery.appear.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/swiper/swiper.min.js"></script>
+    <script src="/js/swiperanimation/swiperanimation.min.js"></script>
+    <script src="/js/instagramFeed/jquery.instagramFeed.min.js"></script>
 
 
     <!-- Template Scripts (Do not remove)-->
-    <script src="../js/custom.js"></script>
+    <script src="/js/custom.js"></script>
 
 
 </body>

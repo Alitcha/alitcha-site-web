@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\User;
+
+
 return [
 
     /*
@@ -253,50 +256,60 @@ return [
         [
             'text' => 'Statistique',
             'url'  => 'dashboard',
-            'icon' => 'fa  fa-bar-chart',
+            'icon' => 'fas  fa-chart-pie',
             'can' => 'access-dashboard'
         ],
 
         [
             'text' => 'Administrateurs',
             'route'  => 'showadmin',
-            'label'       => 3,
-            'icon' => 'fa-solid fa-lock-keyhole',
+            //'label'       => 3,
+            'icon' => 'fas fa-user-lock ',
             'label_color' => 'success',
             'can' => 'admin'
         ],
         [
             'text' => 'Users',
             'route'  => 'users.list',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-users',
             'can' => 'admin'
         ],
         [
             'text' => 'Editeurs',
             'route'  => 'editor.index',
-            'icon' => 'fa-solid fa-pen-to-square',
+            'icon' => 'fas fa-pen',
             'can' => 'access-dashboard'
         ],
        
         [
             'text' => 'Articles',
             'route'  => 'article.index',
-            'label'       => 4,
+            
             'icon' => 'far fa-fw fa-file',
             'can' => 'access-dashboard'
         ],
+
+        [
+            'text' => 'Images',
+            'route'  => 'image.index',
+            
+            'icon' => 'far fa-fw fa-image',
+            'can' => 'access-dashboard'
+        ],
+        
+        
 
         
         [
             'text' => 'Magazine',
             'url'  => 'admin/settings',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-map',
             'can' => 'access-dashboard'
         ],
         [
             'text' => 'Adhésion',
             'url'  => 'admin/settings',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-user-plus',
             'can' => 'admin',
             'submenu' =>[
                 [
@@ -304,14 +317,14 @@ return [
                     'url'  => 'admin/settings',
                     'icon' => 'far fa-fw fa-file',
                     'can' => 'admin',
-                    'label'       => 4,
+                    //'label'       => 4,
                     'shift'   => 'ml-3'
 
                 ],
                 [
                     'text' => 'Adhérants',
                     'url'  => 'admin/settings',
-                    'icon' => 'far fa-fw fa-file',
+                    'icon' => 'fas fa-users',
                     'can' => 'admin',
                     'shift'   => 'ml-3'
                 ],
@@ -320,7 +333,7 @@ return [
         [
             'text' => 'Newletter',
             'url'  => 'admin/settings',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'fas fa-paper-plane',
             'can' => 'admin'
         ],
         
