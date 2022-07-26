@@ -302,7 +302,7 @@ return [
         
         [
             'text' => 'Magazine',
-            'url'  => 'admin/settings',
+            'route'  => 'magazine.index',
             'icon' => 'fas fa-map',
             'can' => 'access-dashboard'
         ],

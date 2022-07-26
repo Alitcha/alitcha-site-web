@@ -13,6 +13,7 @@ use App\Http\Controllers\CommentaireController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\MagazineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,12 @@ Route::delete('/article/{id}', [ArticleController::class, 'destroy'])->name('art
 //Image
 Route::get('/image', [ImageController::class, 'index'])->name('image.index')->middleware('can:access-dashboard');;
 Route::post('/image/store', [ImageController::class, 'store'])->name('image.store')->middleware('can:access-dashboard');;
+
+
+//Gestion Magazine
+Route::get('/magazine', [MagazineController::class, 'index'])->name('magazine.index')->middleware('can:access-dashboard');;
+Route::post('/magazine/store', [MagazineController::class, 'store'])->name('magazine.store')->middleware('can:access-dashboard');;
+Route::get('/magazine/{id}/admin', [MagazineController::class, 'adminshow'])->name('magazine.adminshow')->middleware('can:access-dashboard');;
 
 
 //Admin
