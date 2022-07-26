@@ -581,6 +581,8 @@ class ComposerStaticInit39924153d746970c7101e596f2665ba4
         'App\\Models\\Categorie' => __DIR__ . '/../..' . '/app/Models/Categorie.php',
         'App\\Models\\Commentaire' => __DIR__ . '/../..' . '/app/Models/Commentaire.php',
         'App\\Models\\ContactMessage' => __DIR__ . '/../..' . '/app/Models/ContactMessage.php',
+        'App\\Models\\Image' => __DIR__ . '/../..' . '/app/Models/Image.php',
+        'App\\Models\\Magazine' => __DIR__ . '/../..' . '/app/Models/Magazine.php',
         'App\\Models\\NewsletterUser' => __DIR__ . '/../..' . '/app/Models/NewsletterUser.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

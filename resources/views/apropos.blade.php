@@ -14,15 +14,15 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
+
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -53,18 +53,18 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                       <a href="/" class="nav-item nav-link">Acceuil</a>
-                        <a href="/webmagazine" class="nav-item nav-link active">Web Magazine</a>
-                      <a href="/apropos" class="nav-item nav-link">A propos</a>
+                        <a href="/webmagazine" class="nav-item nav-link">Web Magazine</a>
+                      <a href="/apropos" class="nav-item nav-link active">A propos</a>
                         <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
                         <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="/contact" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
-            
-            
 
-            
+
+
+
         <!-- Navbar & Hero End -->
         <!--Carrousel-->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -99,7 +99,7 @@
                         <p class="pb-3 animated slideInDown"><a href="/">Alitcha</a> a été créé non seulement pour la
                             promotion du numérique, de la technologie et de l'écologie mais également pour la
                             réalisation d'innovants projets.</p>
-                        
+
                     </div>
   <!--                     <div class="col-lg-6 text-center text-lg-start"  >
                         <img class="img-fluid animated zoomIn" src="img/team-1.jpg" alt="" id="imageApropos">
@@ -126,13 +126,13 @@
                                 ainsi l'avenir du Bénin en particulier et de l'Afrique en général en ce qui concerne la
                                 tech.
                                 </p>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- Newsletter End -->
-        
+
          <!-- Projects Start -->
         <div class="container-xxl py-5" class="bodyApropos" >
             <div class="container py-5 px-lg-5">
@@ -141,7 +141,7 @@
                     <h1 class="text-center mb-5"> Objectifs de Alitcha</h1>
                 </div>
                 <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                   
+
                         <ul class="portfolio-flters" >
                             <li class="mx-2 active" data-filter="*">Contribuer à l'amélioration des conditions de vie des populations grâce aux
                                 recherches et
@@ -173,20 +173,20 @@
                                     <li class="mx-2" data-filter=".first"> Secteur Technologie
                                        </li>
                                     <li class="mx-2" data-filter=".second"> Secteur Ecologie
-                                       
+
                                         </li>
-        
+
                                         <li class="mx-2" data-filter=".second">  Equipe en charge du magazine Web.</li>
                                 </ul>
-        
+
                             </div>
                         </div>
 
-                
+
             </div>
         </div>
-        <!-- Projects End -->    
-            
+        <!-- Projects End -->
+
 
 
 
