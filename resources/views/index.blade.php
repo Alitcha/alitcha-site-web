@@ -368,50 +368,6 @@
 
 
     <!-- Modal Adhérer Alitcha -->
-    <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header " style="background-color: #F77B1E;">
-                    <h5 class="modal-title text-white" id="adhererAlitchaLabel">Adhérer Alitcha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Entrez votre nom et prénoms">
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de téléphone</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Entrez votre numero">
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos
-                            compétences, dans le domaine du numérique surtout ?</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour
-                            l'adhésion</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="fa fa-times"></i>
-                        &nbsp; Annuler</button>
-                    <button style="background-color: #F77B1E;" type="button" class="btn btn-secondary text-white"><i
-                            class="fa fa-user-plus"></i> &nbsp; Adhérer</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <form class="AdhesionUser">
         <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false"
             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -481,16 +437,16 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/counterup/counterup.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
