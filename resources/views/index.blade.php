@@ -51,7 +51,8 @@
                 <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="img/logo.png" alt="Logo">
                 </a>
-                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars" style="color: #FFFFFF;"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -76,9 +77,10 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="mb-4 animated slideInDow">Une communauté de jeunes entreprenants & créatifs</h1>
                             <p class="pb-3 animated slideInDown">Notre vocation est de travailler sur des projets
-                                révolutionnaires tout en vous en apprenant le
-                                plus possible sur la science et ses dérivées. Adhérez Alitcha et suivez notre
-                                web magazine pour élargir votre culture. </p>
+                                innovants et futuristes tout en vous en apprenant le plus possible sur la science et ses
+                                dérivées.<br> Adhérez Alitcha pour rejoindre nos Labs ou notre équipe du magazine.
+                                Suivez
+                                notre web magazine pour élargir votre culture en sciences, technologies et divers.</p>
                             <a href="webmag.html"
                                 class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white"
                                 style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web
@@ -87,7 +89,7 @@
                                 class="btn py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft text-white"
                                 style="background-color: #F77B1E;"><i class="fa fa-user-plus"></i> &nbsp; Adhérer
                                 Alitcha</a>
-                            
+
 
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
@@ -104,16 +106,22 @@
         <div class="container-xxl pb-5">
             <div class="container pb-5 px-lg-5">
                 <div class="row g-4">
+                    <p class="section-title text-secondary justify-content-center">
+                        <span></span>Nos Labs<span></span>
+                    </p>
+                    <p class="m-0 text-center">
+                        Recherche, innovation, apprentissage et partage sont le quotidien des labmates de Alitcha.<br>
+                        Ils
+                        réfléchissent et travaillent sur les technologies innovantes et futuristes.
+                    </p>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item bg-light rounded text-center p-4">
 
                             <i class="fa fa-3x fa-user-astronaut mb-4" style="color:#F77B1E;"></i>
-                            <h5 class="mb-3">Technologie</h5>
-                            <p class="m-0">Composée d'amoureux de l'ingénierie innovante, l'équipe
-                                technologique de
+                            <h5 class="mb-3">TechLab</h5>
+                            <p class="m-0">Composé d'amoureux de l'ingénierie innovante, l'équipe technologique de
                                 Alitcha s'occupe de la mise en œuvre des projets relevant de son ressort. Avec elle,
-                                allez à la
-                                rencontre des technologies futures.</p>
+                                allez à la rencontre des technologies futures.</p>
 
                         </div>
 
@@ -121,22 +129,20 @@
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item bg-light rounded text-center p-4">
 
-                            <i class="fa fa-3x fa-leaf mb-4" style="color:#F77B1E;"></i>
-                            <h5 class="mb-3">Écologie</h5>
-                            <p class="m-0">Conscient des exigences environnementales liées à un développement
-                                durable, la
-                                communauté s'est dotée de cette cellule afin de favoriser des transitions écologiques
-                                conséquentes.</p>
+                            <i class="fa fa-3x fa-laptop-code mb-4" style="color:#F77B1E;"></i>
+                            <h5 class="mb-3">Numlab</h5>
+                            <p class="m-0">Formé par des amateurs de la technologie numérique, cette équipe met en
+                                œuvre le génie du web et du digital (génie logiciel, intelligence artificielle, sécurité
+                                informatique et plusieurs autres dérivées du numérique)</p>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-laptop-code mb-4" style="color:#F77B1E;"></i>
-                            <h5 class="mb-3">Numérique</h5>
-                            <p class="m-0">Formée par des amateurs de la technologie numérique, cette équipe
-                                met en
-                                œuvre le génie du web et du digital (génie logiciel, intelligence artificielle, sécurité
-                                informatique...) pour réaliser des projets innovants.
+                            <i class="fa fa-3x fa-leaf mb-4" style="color:#F77B1E;"></i>
+                            <h5 class="mb-3">Ecolab</h5>
+                            <p class="m-0">Conscient des exigences environnementales liées à un développement
+                                durable, la communauté s'est dotée de cette cellule afin de favoriser une transition
+                                écologique durable au Bénin, en Afrique et dans le monde.
                             </p>
 
                         </div>
@@ -252,9 +258,8 @@
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="{{ route('article', 1) }}"
-                                        class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg"><i
-                                            class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
+                                        href="img/portfolio-4.jpg"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                             class="fa fa-download"></i></a>
                                 </div>
@@ -270,9 +275,8 @@
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="{{ route('article', 1) }}"
-                                        class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg"><i
-                                            class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
+                                        href="img/portfolio-5.jpg"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                             class="fa fa-download"></i></a>
                                 </div>
@@ -288,9 +292,8 @@
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="{{ route('article', 1) }}"
-                                        class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg"><i
-                                            class="fa fa-eye"></i></a>
+                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
+                                        href="img/portfolio-6.jpg"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                             class="fa fa-download"></i></a>
                                 </div>
@@ -359,7 +362,8 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
+                class="bi bi-arrow-up"></i></a>
     </div>
 
 
@@ -400,8 +404,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i
-                            class="fa fa-times"></i> &nbsp; Annuler</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="fa fa-times"></i>
+                        &nbsp; Annuler</button>
                     <button style="background-color: #F77B1E;" type="button" class="btn btn-secondary text-white"><i
                             class="fa fa-user-plus"></i> &nbsp; Adhérer</button>
                 </div>
@@ -409,52 +413,66 @@
         </div>
     </div>
     <form class="AdhesionUser">
-        <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="adhererAlitcha" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header " style="background-color: #F77B1E;">
-                    <h5 class="modal-title text-white" id="adhererAlitchaLabel" >Adhérer Alitcha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="AnnulerAdhesion"></button>
+                <div class="modal-content">
+                    <div class="modal-header " style="background-color: #F77B1E;">
+                        <h5 class="modal-title text-white" id="adhererAlitchaLabel">Adhérer Alitcha</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="AnnulerAdhesion"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les
+                            champs</p>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
+                            <input type="text" class="form-control" id="nameForm"
+                                placeholder="Entrez votre nom et prénoms" style="color: #000000;">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" id="emailForm" placeholder="name@example.com"
+                                style="color: #000000;">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de
+                                téléphone</label>
+                            <input type="tel" class="form-control" id="numForm" placeholder="229********"
+                                style="color: #000000;">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos
+                                compétences, dans le domaine du numérique surtout ?</label>
+                            <textarea class="form-control" id="competenceForm" rows="3" style="color: #000000;"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour
+                                l'adhésion</label>
+                            <textarea class="form-control" id="motivationForm" rows="3" style="color: #000000;"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div>
+                            <p class="text-success" id="add_success" style="display:none;">Vos informations sont
+                                envoyés avec succès. Les administrateurs traiteront votre demande et vous recevrez un
+                                mail...</p>
+                            <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré,
+                                soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
+                            <p class="text-primary" id="add_error1" style="display:none;">Vérifiez que tout les
+                                champs sont bien remplit et rééssayez...</p>
+                        </div>
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="AnnulerAdhesion">
+                            <i class="fa fa-times"></i>
+                            &nbsp; Annuler
+                        </button>
+                        <button style="background-color: #F77B1E;" type="submit"
+                            class="btn btn-secondary text-white">
+                            <i class="fa fa-user-plus"></i>
+                            &nbsp; Adhérer
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les champs</p>
-                    <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
-                        <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms" style="color: #000000;">
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
-                        <input type="email" class="form-control" id="emailForm" placeholder="name@example.com" style="color: #000000;">
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-bold">Numero de téléphone</label>
-                        <input type="tel" class="form-control" id="numForm" placeholder="229********" style="color: #000000;">
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos compétences, dans le domaine du numérique surtout ?</label>
-                        <textarea class="form-control" id="competenceForm" rows="3" style="color: #000000;"></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlTextarea1" class="form-label fw-bold">Vos motivations pour l'adhésion</label>
-                        <textarea class="form-control" id="motivationForm" rows="3" style="color: #000000;"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div>
-                        <p class="text-success" id="add_success" style="display:none;">Vos informations sont envoyés avec succès. Les administrateurs traiteront votre demande et vous recevrez un mail...</p>
-                        <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré, soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
-                        <p class="text-primary" id="add_error1" style="display:none;">Vérifiez que tout les champs sont bien remplit et rééssayez...</p>
-                    </div>
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="AnnulerAdhesion">
-                        <i class="fa fa-times"></i>
-                        &nbsp; Annuler
-                    </button>
-                    <button  style="background-color: #F77B1E;" type="submit" class="btn btn-secondary text-white">
-                        <i class="fa fa-user-plus"></i>
-                        &nbsp; Adhérer
-                    </button>
-                </div>
-            </div>
             </div>
         </div>
     </form>
