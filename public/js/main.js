@@ -202,7 +202,7 @@ var newsletter = function () {
                 $("#newsletterForm").val()
             )
         ) {
-            var options = {
+            var options1 = {
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "application/json, text-plain, */*",
@@ -216,7 +216,7 @@ var newsletter = function () {
                 }),
             };
 
-            fetch(url1, options)
+            fetch(url1, options1)
                 .then((response) => response.json())
                 .then((response) => {
                     if (response.success) {

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdherantController;
 
 use App\Http\Controllers\NewsletterUserController;
 
@@ -13,6 +13,7 @@ use App\Http\Controllers\CommentaireController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\LabsController;
 use App\Http\Controllers\MagazineController;
 
 /*
@@ -38,6 +39,8 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/labs', [LabsController::class, 'show'])->name('labs');
+
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
 
@@ -50,7 +53,7 @@ Route::post('/commentaire/{id}', [CommentaireController::class, 'store'])->where
 
 
 //Routes de l'adhesion
-Route::post('/user/adhesion', [UserController::class, 'adhesion']) -> name('adhesion_user');
+Route::post('/user/adhesion', [AdherantController::class, 'adhesion']) -> name('adhesion_user');
 
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index')->middleware('can:access-dashboard');;

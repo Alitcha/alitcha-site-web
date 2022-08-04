@@ -74,10 +74,9 @@
             <div class="collapse navbar-collapse" id="navbarCollapse" >
                 <div class="navbar-nav mx-auto py-0">
                     <a href="/" class="nav-item nav-link">Acceuil</a>
-                        <a href="/webmagazine" class="nav-item nav-link active">Web Magazine</a>
+                        <a href="/webmagazine" class="nav-item nav-link active">Alitcha Magazine</a>
+                        <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
                       <a href="/apropos" class="nav-item nav-link">A propos</a>
-                        <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
-                        <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
@@ -125,20 +124,20 @@
               </div>
             </div>
           </div>
-          
+
           <div class="blog-post mb-4">
 
             <div class="blog-content ps-0 pe-0">
-                
+
                     {!! $article->content !!}
-              
-              
-              
-                
-                
+
+
+
+
+
               </div>
-              
-              
+
+
             </div>
           </div>
         </div>
@@ -165,12 +164,11 @@
               <div class="col-md-12 text-center">
                 <h2 class="footer-heading"><a href="index.html" class="logo">&nbsp;</a></h2>
                 <p class="menu">
-                  <a href="index.html">Accueil</a>
-                  <a href="webmag.html">Web Magazine</a>
-                  <a href="apropos.html">A propos</a>
-
-                  <a href="contact.html">Contact</a>
-
+                    <a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
+                    <a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
+                    <a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
+                    <a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
+                    <a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
                 </p>
 
         <ul class="ftco-footer-social p-0">
@@ -255,7 +253,7 @@
         </div>
     </div>
 
-    
+
     <script src="{{ asset('js/trix.js') }}"></script>
         <script src="{{ asset('js/trix-core.js') }}"></script>
     </body>

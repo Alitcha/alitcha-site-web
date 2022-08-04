@@ -60,11 +60,11 @@
                         <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
                             &nbsp; Acceuil</a>
                         <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
-                            &nbsp; Web Magazine</a>
+                            &nbsp; Alitcha Magazine</a>
+                        <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
+                            &nbsp; Alitcha Labs</a>
                         <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i>
                             &nbsp; A propos</a>
-                        <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
-                        <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
                             &nbsp; Contact</a>
                     </div>
@@ -81,7 +81,7 @@
                                 dérivées.<br> Adhérez Alitcha pour rejoindre nos Labs ou notre équipe du magazine.
                                 Suivez
                                 notre web magazine pour élargir votre culture en sciences, technologies et divers.</p>
-                            <a href="webmag.html"
+                            <a href={{ url('/webmagazine') }}
                                 class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight text-white"
                                 style="background-color: #F77B1E;"><i class="fa fa-newspaper"></i> &nbsp; Web
                                 Magazine</a>
@@ -184,25 +184,19 @@
 
 
         <!-- Projects Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5 mb-5">
             <div class="container py-5 px-lg-5">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="section-title text-secondary justify-content-center"><span></span>Web
+                <div class="row wow fadeInUp justify-content-center" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span>Notre Web
                         Magazine<span></span></p>
+                    <p class="text-black col-lg-7 text-center mb-4">Media principalement scientifique et technologique,
+                        Alitcha magazine
+                        fait la promotion de ses domaines d’intervention par des articles et un magazine trimestriel.
+                    </p>
                     <h1 class="text-center mb-5">Publications récentes</h1>
                 </div>
-                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-12 text-center">
-                        <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="mx-2 active" data-filter="*">Numérique</li>
-                            <li class="mx-2" data-filter=".first">Technologie</li>
-                            <li class="mx-2" data-filter=".second">Ecologie</li>
-                            <li class="mx-2" data-filter=".second">Divers</li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="row g-4 portfolio-container">
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.1s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
@@ -219,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
@@ -236,7 +230,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.5s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
@@ -253,7 +247,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.1s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
@@ -270,7 +264,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
@@ -287,7 +281,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.5s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
@@ -305,12 +299,96 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-2">
+                    --- <a href={{ url('/webmagazine') }} style="text-decoration: underline;">Voir plus</a> ---
+                </div>
             </div>
         </div>
         <!-- Projects End -->
 
+        <!-- Réalisations Start -->
+        <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <p class="section-title text-secondary justify-content-center">
+                            <span></span>Nos Réalisations<span></span>
+                        </p>
+                        <h1 class="text-center text-black mb-4">Nous vous présentons nos réalisations</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Réalisations End -->
 
+        <!-- Services Start -->
+        <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <p class="section-title text-secondary justify-content-center">
+                            <span></span>Nos services<span></span>
+                        </p>
+                        <p class="mb-4" style="color: #000000;">Alitcha propose ses services dans ses domaines
+                            d’intervention pour
+                            améliorer le quotidien des entreprises, entrepreneurs et populations africaines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
 
+        <!-- equipe Start -->
+        <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 text-center">
+                        <p class="section-title text-secondary justify-content-center">
+                            <span></span>Notre équipe<span></span>
+                        </p>
+                        <h1 class="text-center text-black mb-4">Rencontrez notre équipe.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- equipe End -->
+
+        <!-- Partenaires Start -->
+        <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
+            <div class="container py-5 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <p class="section-title text-secondary justify-content-center">
+                            <span></span>Nos Partenaires<span></span>
+                        </p>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-2">
+                                    <img src="/assets/img/company-logos/1.png" alt="">
+                                </div>
+                                <div class="col-2">
+                                    <img src="/assets/img/company-logos/2.png" alt="">
+                                </div>
+                                <div class="col-2">
+                                    <img src="/assets/img/company-logos/3.png" alt="">
+                                </div>
+                                <div class="col-2">
+                                    <img src="/assets/img/company-logos/4.png" alt="">
+                                </div>
+                                <div class="col-2">
+                                    <img src="/assets/img/company-logos/5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            --- <a href={{ url('/apropos') }} style="text-decoration: underline;">En savoir plus sur
+                                nous</a> ---
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partenaires End -->
 
         <!-- Footer Start -->
 
@@ -321,7 +399,8 @@
                         <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
                         <p class="menu">
                             <a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-                            <a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Web Magazine</a>
+                            <a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
+                            <a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
                             <a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
                             <a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
 
@@ -379,6 +458,7 @@
                             id="AnnulerAdhesion"></button>
                     </div>
                     <div class="modal-body">
+                        <p class="text-info">Remplissez ce formulaire pour soumettre votre demande d’adhésion.</p>
                         <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les
                             champs</p>
                         <div class="mb-4">
@@ -410,9 +490,9 @@
                     </div>
                     <div class="modal-footer">
                         <div>
-                            <p class="text-success" id="add_success" style="display:none;">Vos informations sont
-                                envoyés avec succès. Les administrateurs traiteront votre demande et vous recevrez un
-                                mail...</p>
+                            <p class="text-success" id="add_success" style="display:none;">Votre soumission sera
+                                étudié puis vous serez contactés par mail pour l’entretien en ligne.<br> Welcome chez
+                                Alitcha !!!</p>
                             <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré,
                                 soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
                             <p class="text-primary" id="add_error1" style="display:none;">Vérifiez que tout les

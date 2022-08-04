@@ -18,12 +18,11 @@ class ArticleController extends Controller
         $articles_P = Article::all()->sortByDesc('nb_like');
         $articles_A = Article::all()->random(4);
         //$writers = Writers::all();
-        
+
         return view('webmag', [
             'articles_R' => $articles,
             'articles_P' => $articles_P,
             'articles_A' => $articles_A,
-            //'writers' => $writers,
 
         ]);
     }
@@ -54,7 +53,7 @@ class ArticleController extends Controller
         elseif (Auth::user()->isEditor()){
             $articles = Article::where("postBy",Auth::user()->id)->get();;
         }
-       
+
 
         return view("article.index",compact("articles"));
 
@@ -128,7 +127,7 @@ class ArticleController extends Controller
         $categories = Categorie::all();
         $images = Image::all();
         return view('article.edit',compact("article","categories","images"));
-        
+
     }
 
     /**
@@ -153,14 +152,14 @@ class ArticleController extends Controller
         $article->content = $request->content;
         $article->image = $request->image;
         $article->categorie_id = $request->categorie;
-        
+
         $article->update();
         return redirect()->back()->with('message','Bien enregistré');
     }
 
     public function publish(Request $request, $id)
     {
-        
+
         $article = Article::find($id);
         $article->published = true;
         $article->update();
@@ -179,6 +178,6 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->delete();
         return redirect()->back()->with('message','Bien supprimé');
-   
+
     }
 }

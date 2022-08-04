@@ -13,11 +13,10 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'nom_prenom',
+        'firstname',
+        'lastname',
         'email',
-        'numeroTel',
-        'competences',
-        'motivations',
+        'password',
     ];
 
     public function roles()
@@ -49,6 +48,6 @@ class User extends Authenticatable
          $this->isAdmin()?'admin': (
               $this->isEditor()?'editor':''
          )
-        ); 
+        );
     }
 }

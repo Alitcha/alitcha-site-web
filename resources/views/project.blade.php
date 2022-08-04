@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -56,7 +56,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse" >
                     <div class="navbar-nav mx-auto py-0">
                         <a href="" class="nav-item nav-link active">Accueil</a>
-                        <a href="" class="nav-item nav-link ">Web Magazine</a>
+                        <a href="" class="nav-item nav-link ">Alitcha Magazine</a>
+                        <a href="" class="nav-item nav-link ">Alitcha Labs</a>
                         <a href="" class="nav-item nav-link">A propos</a>
                         <a href="" class="nav-item nav-link">Contact</a>
                     </div>
@@ -177,7 +178,7 @@
             </div>
         </div>
         <!-- Projects End -->
-        
+
 
         <!-- Footer Start -->
        <div class="container-fluid text-light " style="background-color: black">
@@ -190,13 +191,13 @@
                     <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/Alitcha-106586631967294/!" role="button"
                       ><i class="fab fa-facebook-f"></i
                     ></a>
-            
+
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/alitcha00?utm_medium=copy_link!" role="button"
                       ><i class="fab fa-instagram"></i
                     ></a>
-              
-                 
+
+
                    <!-- Twitter -->
                     <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" role="button"
                         ><i class="fab fa-twitter"></i
@@ -206,14 +207,14 @@
                   <!-- Section: Social media -->
                 </div>
                 <!-- Grid container -->
-              
+
                 <!-- Copyright -->
                 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                   © 2022 Alitcha Community
                 </div>
                 <!-- Copyright -->
               </footer>
-           
+
 
 
         <!-- Back to Top -->

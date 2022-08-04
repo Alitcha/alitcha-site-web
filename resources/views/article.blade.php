@@ -56,14 +56,6 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-         Spinner End -->
-
         <!-- Navbar Start -->
         <div class="container-xxl position-relative p-0" >
           <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
@@ -76,19 +68,15 @@
             <div class="collapse navbar-collapse" id="navbarCollapse" >
                 <div class="navbar-nav mx-auto py-0">
                     <a href="/" class="nav-item nav-link">Acceuil</a>
-                        <a href="/webmagazine" class="nav-item nav-link active">Web Magazine</a>
+                        <a href="/webmagazine" class="nav-item nav-link active">Alitcha Magazine</a>
+                        <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
                       <a href="/apropos" class="nav-item nav-link">A propos</a>
-                        <!--<a href="service.html" class="nav-item nav-link">Service</a>-->
-                        <!--<a href="project.html" class="nav-item nav-link">Projet</a>-->
                         <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
         </div>
         <!-- Navbar End -->
-
-
-
   <!--=================================
     Article début
    -->
@@ -177,7 +165,7 @@
                       <i class="fas fa-chevron-left"></i>
                       Précédent
                     </span>
-                   
+
 
                   </div>
 
@@ -192,7 +180,7 @@
                       <i class="fas fa-chevron-right"></i>
                     </span>
 
-                    
+
                   </div>
                 </a>
               </div>
@@ -339,7 +327,8 @@
 						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
 						<p class="menu">
 							<a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Web Magazine</a>
+							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
+							<a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
 							<a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
 							<a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
 

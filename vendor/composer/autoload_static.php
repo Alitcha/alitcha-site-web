@@ -189,8 +189,8 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -346,8 +346,8 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -564,6 +564,7 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\ImageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ImageController.php',
+        'App\\Http\\Controllers\\LabsController' => __DIR__ . '/../..' . '/app/Http/Controllers/LabsController.php',
         'App\\Http\\Controllers\\MagazineController' => __DIR__ . '/../..' . '/app/Http/Controllers/MagazineController.php',
         'App\\Http\\Controllers\\MdlController' => __DIR__ . '/../..' . '/app/Http/Controllers/MdlController.php',
         'App\\Http\\Controllers\\NewsletterUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsletterUserController.php',
@@ -578,6 +579,7 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Mail\\AdhesionMail' => __DIR__ . '/../..' . '/app/Mail/AdhesionMail.php',
+        'App\\Models\\Adherant' => __DIR__ . '/../..' . '/app/Models/Adherant.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\Categorie' => __DIR__ . '/../..' . '/app/Models/Categorie.php',
         'App\\Models\\Commentaire' => __DIR__ . '/../..' . '/app/Models/Commentaire.php',

@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AdhesionMail;
+use App\Models\Adherant;
 
-class UserController extends Controller
+class AdherantController extends Controller
 {
     public function adhesion(Request $request){
         try {
@@ -19,7 +20,7 @@ class UserController extends Controller
             ]);
 
             //Envoi dans la base de données
-            \App\Models\User::create([
+            Adherant::create([
                 'nom_prenom' => $request -> json('nom_prenom'),
                 'email' => $request -> json('email'),
                 'numeroTel' => $request -> json('numeroTel'),
