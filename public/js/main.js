@@ -189,4 +189,69 @@ $('.back-to-top').click(function () {
     $('#AnnulerAdhesion1').click(annuleradhesion);
 //Fin de la gestion de l'adhesion
 
+//---------Gestion de la Newsletter----------------
+let url1 = "/newsletter/member/add";
+let token1 = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
+
+var newsletter = function () {
+    if ($("#newsletterForm").val().length > 0) {
+        if (
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                $("#newsletterForm").val()
+            )
+        ) {
+            var options = {
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json, text-plain, */*",
+                    "X-Requested-With": "XMLHttpRequest",
+                    "X-CSRF-TOKEN": token1,
+                },
+                method: "post",
+                credentials: "same-origin",
+                body: JSON.stringify({
+                    email: $("#newsletterForm").val(),
+                }),
+            };
+
+            fetch(url1, options)
+                .then((response) => response.json())
+                .then((response) => {
+                    if (response.success) {
+                        $(".text-danger.error").css("display", "none");
+                        $(".text-success.error").fadeIn(2000);
+                        $("#newsletterForm").val("");
+                    } else {
+                        $(".text-success.error").css("display", "none");
+                        $(".text-danger.error")
+                            .fadeIn()
+                            .text(
+                                "Une erreur s'est produite ! Rechargez la page."
+                            );
+                    }
+                })
+                .catch(() => {
+                    $(".text-success.error").css("display", "none");
+                    $(".text-danger.error")
+                        .fadeIn(2000)
+                        .text(
+                            "Une erreur s'est produite ! Rechargez la page."
+                        );
+                });
+        } else {
+            $(".text-success.error").css("display", "none");
+            $(".text-danger.error").fadeIn(2000).text("Adresse invalide !");
+        }
+    } else {
+        $(".text-success.error").css("display", "none");
+        $(".text-danger.error")
+            .fadeIn(2000)
+            .text("Veuillez remplir le champ d'email.");
+    }
+};
+$("#newsletterSubmit").click(newsletter);
+//----Fin de la Gestion de la Newsletter-----
+
 })(jQuery);
