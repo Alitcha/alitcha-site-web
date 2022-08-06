@@ -61,7 +61,7 @@
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
                 style="background-color: #F77B1E;">
                 <a href="/" class="navbar-brand p-0">
-                    <img src="img/logo.png" alt="Logo">
+                    <img src="/img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -73,9 +73,16 @@
                         <a href="/webmagazine" class="nav-item nav-link active">Alitcha Magazine</a>
                         <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
                         <a href="/apropos" class="nav-item nav-link">A propos</a>
-                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
-                            &nbsp; Contact</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
+                    <form action={{ url('/search/article') }} method="post"
+                        class="bg-white py-sm-3 px-sm-5 rounded-pill p-0">
+                        @csrf
+                        <input type="text" name="recherche" id="recherche" placeholder="Rechercher"
+                            style="border: none" class="m-0" required>
+                        <button type="submit" style="border: none" class="m-0 p-0">
+                            <i class="fa fa-search"></i></button>
+                    </form>
                 </div>
             </nav>
         </div>
@@ -148,7 +155,7 @@
                                         </div>
                                         <div class="blog-post-footer blog-post-categorise">
                                             <div class="blog-post-author">
-                                                <span>Par<a href="#"><img src="../img/avatar/03.jpg"
+                                                <span>Par<a href="#"><img src="/img/avatar/03.jpg"
                                                             alt="">John</a></span>
                                             </div>
                                             <div class="blog-post-time">
@@ -238,7 +245,7 @@
                                     <li>
                                         <div class="blog-post blog-overlay blog-post-05">
                                             <div class="blog-image">
-                                                <img class="img-fluid" src="../img/blog/num.jpg" alt="">
+                                                <img class="img-fluid" src="/img/blog/num.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
                                                 <a href="#">Numérique <span class="ms-auto">(10)</span></a>
@@ -248,7 +255,7 @@
                                     <li>
                                         <div class="blog-post blog-overlay blog-post-05">
                                             <div class="blog-image">
-                                                <img class="img-fluid" src="../img/blog/tech.jpg" alt="">
+                                                <img class="img-fluid" src="/img/blog/tech.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
                                                 <a href="#">Technologie <span class="ms-auto">(8)</span></a>
@@ -258,7 +265,7 @@
                                     <li>
                                         <div class="blog-post blog-overlay blog-post-05">
                                             <div class="blog-image">
-                                                <img class="img-fluid" src="../img/blog/05.jpg" alt="">
+                                                <img class="img-fluid" src="/img/blog/05.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
                                                 <a href="#">Ecologie<span class="ms-auto">(5)</span></a>
@@ -268,7 +275,7 @@
                                     <li>
                                         <div class="blog-post blog-overlay blog-post-05">
                                             <div class="blog-image">
-                                                <img class="img-fluid" src="../img/blog/divers.jpg" alt="">
+                                                <img class="img-fluid" src="/img/blog/divers.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
                                                 <a href="#">Divers <span class="ms-auto">(10)</span></a>
@@ -323,7 +330,7 @@
                                 <div class="item">
                                     <div class="blog-post blog-overlay">
                                         <div class="blog-image">
-                                            <img class="img-fluid" src="../img/blog/01.jpg" alt="">
+                                            <img class="img-fluid" src="/img/blog/01.jpg" alt="">
                                         </div>
                                         <div class="blog-name text-center px-2">
                                             <a class="btn btn-outline-light mb-3 tag" href="#">Numérique</a>
@@ -338,7 +345,7 @@
                                 <div class="item">
                                     <div class="blog-post blog-overlay">
                                         <div class="blog-image">
-                                            <img class="img-fluid" src="../img/blog/04.jpg" alt="">
+                                            <img class="img-fluid" src="/img/blog/04.jpg" alt="">
                                         </div>
                                         <div class="blog-name text-center px-2">
                                             <a class="btn btn-outline-light mb-3 tag" href="#">Ecologie</a>
@@ -352,7 +359,7 @@
                                 <div class="item">
                                     <div class="blog-post blog-overlay">
                                         <div class="blog-image">
-                                            <img class="img-fluid" src="../img/blog/05.jpg" alt="">
+                                            <img class="img-fluid" src="/img/blog/05.jpg" alt="">
                                         </div>
                                         <div class="blog-name text-center px-2">
                                             <a class="btn btn-outline-light mb-3 tag" href="#">Numérique</a>
@@ -366,7 +373,7 @@
                                 <div class="item">
                                     <div class="blog-post blog-overlay">
                                         <div class="blog-image">
-                                            <img class="img-fluid" src="../img/blog/05.jpg" alt="">
+                                            <img class="img-fluid" src="/img/blog/05.jpg" alt="">
                                         </div>
                                         <div class="blog-name text-center px-2">
                                             <a class="btn btn-outline-light mb-3 tag" href="#">Technologie</a>
@@ -442,7 +449,7 @@
                         <!-- <div class="item">
               <div class="blog-post text-center p-0">
                 <div class="blog-post-image">
-                  <img class="img-fluid" src="../img/blog/05.jpg" alt="">
+                  <img class="img-fluid" src="/img/blog/05.jpg" alt="">
                 </div>
                 <div class="blog-content">
                   <a class="badge" href="#">Télécharger</a>
@@ -460,7 +467,7 @@
             <div class="item">
               <div class="blog-post text-center p-0">
                 <div class="blog-post-image">
-                  <img class="img-fluid" src="../img/blog/04.jpg" alt="">
+                  <img class="img-fluid" src="/img/blog/04.jpg" alt="">
                 </div>
                 <div class="blog-content">
                   <a class="badge" href="#">Télécharger</a>
@@ -541,31 +548,31 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 
     <!-- JS Global Compulsory (Do not remove)-->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <!--<script src="js/bootstrap/bootstrap.min.js"></script> -->
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/popper/popper.min.js"></script>
+    <!--<script src="/js/bootstrap/bootstrap.min.js"></script> -->
 
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-    <script src="js/jquery.appear.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/swiper/swiper.min.js"></script>
-    <script src="js/swiperanimation/swiperanimation.min.js"></script>
-    <script src="js/instagramFeed/jquery.instagramFeed.min.js"></script>
+    <script src="/js/jquery.appear.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/swiper/swiper.min.js"></script>
+    <script src="/js/swiperanimation/swiperanimation.min.js"></script>
+    <script src="/js/instagramFeed/jquery.instagramFeed.min.js"></script>
 
 
     <!-- Template Scripts (Do not remove)-->
-    <script src="js/custom.js"></script>
+    <script src="/js/custom.js"></script>
 
 
 </body>

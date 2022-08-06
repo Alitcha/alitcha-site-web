@@ -47,7 +47,7 @@
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
                 style="background-color: #F77B1E;">
                 <a href="/" class="navbar-brand p-0">
-                    <img src="img/logo.png" alt="Logo">
+                    <img src="/img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -72,13 +72,13 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner carrousel-div">
                     <div class="carousel-item active">
-                        <img src="../img/blog/num.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/blog/num.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/image2.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/image2.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/image1.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/image1.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -258,7 +258,7 @@
                         <li class="mx-2" data-filter=".second">Permettre à plus de nos membres de réaliser leurs
                             rêves par leurs propres moyens d’où le slogan de Alitcha : Be your own hero.</li>
                     </ul>
-                    <img src="./img/about.png" alt="..." class="objeImage">
+                    <img src="/img/about.png" alt="..." class="objeImage">
                 </div>
             </div>
 
@@ -418,16 +418,16 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/counterup/counterup.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

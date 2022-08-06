@@ -49,7 +49,7 @@
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
                 style="background-color: #F77B1E;">
                 <a href="{{ route('home') }}" class="navbar-brand p-0">
-                    <img src="img/logo.png" alt="Logo">
+                    <img src="/img/logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -93,7 +93,7 @@
 
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="img/hero.png" alt="">
+                            <img class="img-fluid animated zoomIn" src="/img/hero.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.1s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                                <img class="img-fluid w-100" src="/img/portfolio-1.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-1.jpg"><i class="fa fa-eye"></i></a>
@@ -216,7 +216,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                                <img class="img-fluid w-100" src="/img/portfolio-2.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-2.jpg"><i class="fa fa-eye"></i></a>
@@ -233,7 +233,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.5s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                                <img class="img-fluid w-100" src="/img/portfolio-3.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-3.jpg"><i class="fa fa-eye"></i></a>
@@ -250,7 +250,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.1s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                                <img class="img-fluid w-100" src="/img/portfolio-4.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-4.jpg"><i class="fa fa-eye"></i></a>
@@ -267,7 +267,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.3s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                                <img class="img-fluid w-100" src="/img/portfolio-5.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-5.jpg"><i class="fa fa-eye"></i></a>
@@ -284,7 +284,7 @@
                     <div class="col-lg-4 col-md-6 portfolio-item wow fadeInUp mb-3" data-wow-delay="0.5s">
                         <div class="rounded overflow-hidden">
                             <div class="position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                                <img class="img-fluid w-100" src="/img/portfolio-6.jpg" alt="">
                                 <div class="portfolio-overlay">
                                     <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-6.jpg"><i class="fa fa-eye"></i></a>

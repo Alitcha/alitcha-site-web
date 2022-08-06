@@ -14,10 +14,9 @@ use App\Models\Image;
 class ArticleController extends Controller
 {
     public function showMagazine(){
-        $articles = Article::all()->sortByDesc('id');
-        $articles_P = Article::all()->sortByDesc('nb_like');
-        $articles_A = Article::all()->random(4);
-        //$writers = Writers::all();
+        $articles = Article::where('published', 1)->get()->sortByDesc('id');
+        $articles_P = Article::where('published', 1)->get()->sortByDesc('nb_like');
+        $articles_A = Article::where('published', 1)->get()->random(4);
 
         return view('webmag', [
             'articles_R' => $articles,

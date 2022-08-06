@@ -15,6 +15,7 @@ use App\Http\Controllers\EditorController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LabsController;
 use App\Http\Controllers\MagazineController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,8 @@ Route::get('/labs', [LabsController::class, 'show'])->name('labs');
 Route::get('/webmagazine', [ArticleController::class, 'showMagazine'])->name('webmagazine');
 Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNumber('id')->name('article');
 
+//Search
+Route::post('/search/article', [SearchController::class, 'search']);
 
 Route::post('/newsletter/member/add', [NewsletterUserController::class, 'store'])->name('newsletteradd');
 

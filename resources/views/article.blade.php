@@ -60,7 +60,7 @@
         <div class="container-xxl position-relative p-0" >
           <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
             <a href="/" class="navbar-brand p-0">
-              <img src="../img/logo.png" alt="Logo">
+              <img src="/img/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
               <span class="fa fa-bars" style="color: #FFFFFF;"></span>
@@ -116,7 +116,7 @@
               </div>
             </div>
           </div>
-          <img class="img-fluid mb-3" src="../{{ $article->image }}" alt="">
+          <img class="img-fluid mb-3" src="/{{ $article->image }}" alt="">
 
           <h5 class="mb-20"><a href="#">{{ $article->description }}</a></h5>
 
@@ -367,31 +367,31 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
 
     <!-- JS Global Compulsory (Do not remove)-->
-    <script src="../js/jquery-3.5.1.min.js"></script>
-    <script src="../js/popper/popper.min.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/popper/popper.min.js"></script>
     <!--<script src="js/bootstrap/bootstrap.min.js"></script> -->
 
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-    <script src="../js/jquery.appear.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../js/swiper/swiper.min.js"></script>
-    <script src="../js/swiperanimation/swiperanimation.min.js"></script>
-    <script src="../js/instagramFeed/jquery.instagramFeed.min.js"></script>
+    <script src="/js/jquery.appear.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/swiper/swiper.min.js"></script>
+    <script src="/js/swiperanimation/swiperanimation.min.js"></script>
+    <script src="/js/instagramFeed/jquery.instagramFeed.min.js"></script>
 
 
     <!-- Template Scripts (Do not remove)-->
-    <script src="../js/custom.js"></script>
+    <script src="/js/custom.js"></script>
 
 
 </body>

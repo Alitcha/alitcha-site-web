@@ -217,7 +217,7 @@
     <!-- JS Global Compulsory (Do not remove)-->
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/popper/popper.min.js"></script>
-    <!--<script src="js/bootstrap/bootstrap.min.js"></script> -->
+    <!--<script src="/js/bootstrap/bootstrap.min.js"></script> -->
 
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script src="/js/jquery.appear.js"></script>
