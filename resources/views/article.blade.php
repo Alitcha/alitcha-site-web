@@ -57,24 +57,30 @@
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Navbar Start -->
-        <div class="container-xxl position-relative p-0" >
-          <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
-            <a href="/" class="navbar-brand p-0">
-              <img src="/img/logo.png" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span class="fa fa-bars" style="color: #FFFFFF;"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" >
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="/" class="nav-item nav-link">Acceuil</a>
-                        <a href="/webmagazine" class="nav-item nav-link active">Alitcha Magazine</a>
-                        <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
-                      <a href="/apropos" class="nav-item nav-link">A propos</a>
-                        <a href="/contact" class="nav-item nav-link">Contact</a>
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
+                    <img src="/img/logo.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars" style="color: #FFFFFF;"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
+                            &nbsp; Acceuil</a>
+                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
+                            &nbsp; Alitcha Magazine</a>
+                        <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
+                            &nbsp; Alitcha Labs</a>
+                        <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i>
+                            &nbsp; A propos</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
+                            &nbsp; Contact</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </div>
         <!-- Navbar End -->
   <!--=================================
@@ -290,7 +296,7 @@
                             <div class="item">
                                 <div class="blog-post text-center p-0">
                                     <div class="blog-post-image">
-                                        <img class="img-fluid" src="{{ asset('images/'.$articleSimilaire->image) }}" alt="">
+                                        <img class="img-fluid" src="{{ $articleSimilaire->image }}" alt="">
                                     </div>
                                     <div class="blog-content">
                                         <a class="badge" href="{{ route('article', $articleSimilaire->id) }}">Lire</a>
@@ -320,43 +326,44 @@
 
         <!-- Footer Start -->
 
-        <footer class="footer-07">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-12 text-center">
-						<h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
-						<p class="menu">
-							<a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-							<a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
-							<a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
-							<a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
-							<a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
+        <footer class="footer-07" style="margin-top:0em;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
+                        
 
-						</p>
+                        <ul class="ftco-footer-social p-0">
+                            <li class="ftco-animate"><a
+                                    href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank"
+                                    data-toggle="tooltip" data-placement="top" title="Twitter">
 
-		<ul class="ftco-footer-social p-0">
-              <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                    <span class="fab fa-twitter"></span>
+                                </a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294"
+                                    target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                    <span class="fab fa-facebook"></span>
 
-				  <span class="fab fa-twitter"></span>
-				</a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
-				<span class="fab fa-facebook"></span>
-
-				</a></li>
-              <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
-				<span class="fab fa-instagram"></span></a></li>
-            </ul>
-					</div>
-				</div>
-				<div class="row mt-5">
-					<div class="col-md-12 text-center">
-						<p class="copyright">
-					  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa-solid fa-heart" ></i> by <a href="/" target="_blank">Alitcha Community</a>
-					  </p>
-					</div>
-				</div>
-			</div>
-		</footer>
+                                </a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank"
+                                    data-toggle="tooltip" data-placement="top" title="Instagram">
+                                    <span class="fab fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright">
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a
+                                href="/" target="_blank">Alitcha Community</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     <!-- Footer End -->
 
 

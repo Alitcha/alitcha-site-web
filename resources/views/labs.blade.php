@@ -46,8 +46,7 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
-                style="background-color: #F77B1E;">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="/img/logo.png" alt="Logo">
                 </a>
@@ -70,16 +69,18 @@
                     </div>
                 </div>
             </nav>
-            <div class="container-xxl hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 justify-content-center">
-                        <div class="col-lg-7 text-center text-lg-start">
-                            <h4 class="pb-3 animated slideInDown text-center">L’équipe de <span
-                                    style="color: #F77B1E;">Alitcha</span> est conscient de l’importance de
-                                la recherche dans la technologie. Elle met donc en avant la recherche pour
-                                l’apprentissage, le partage et l’innovation. <br>
-                                Ses premiers Labs sont :</h4>
+            <div class="container-xxl hero-header shape">
+                <div class="container px-lg-5 ">
+                    <div class="row g-5 align-items-end" >
+                        <div class="col-lg-6 text-center text-lg-start" style="margin-top: 0 !important;">
+                            <p class="mb-4 animated slideInDow">L’équipe de Alitcha est conscient de l’importance de
+                                la recherche dans la technologie. <br> Elle met donc en avant la recherche pour
+                                l’apprentissage, le partage et l’innovation.Ses premiers Labs sont</p>
+                           
                         </div>
+                        <!-- <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="/img/hero.png" alt="">
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -131,19 +132,12 @@
         <!-- Feature End -->
 
         <!-- Footer Start -->
-        <footer class="footer-07">
+        <footer class="footer-07" style="margin-top:0;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
-                        <p class="menu">
-                            <a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-                            <a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
-                            <a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
-                            <a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
-                            <a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
-
-                        </p>
+                        
 
                         <ul class="ftco-footer-social p-0">
                             <li class="ftco-animate"><a
@@ -163,7 +157,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="copyright">
                             Copyright &copy;

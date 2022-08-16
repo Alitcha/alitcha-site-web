@@ -6,6 +6,7 @@
  */
 :root {
   --blue: #007bff;
+  --lig: #91c7e9;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -8217,8 +8218,8 @@ textarea.form-control {
 
 .info-wrap {
   color: rgba(255, 255, 255, 0.8);
-  background: #CE6719;}
-  .info-wrap h3 {
+  background: #edfeed;}
+  .info-wrap h5 {
     color: #fff; }
   .info-wrap .dbox {
     width: 100%;

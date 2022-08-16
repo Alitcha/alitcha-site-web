@@ -16,6 +16,8 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LabsController;
 use App\Http\Controllers\MagazineController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +30,7 @@ use App\Http\Controllers\SearchController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/apropos', function () {
     return view('apropos');

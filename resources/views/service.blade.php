@@ -46,24 +46,29 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0">DGital</h1>
-                    <!-- <img src="/img/logo.png" alt="Logo"> -->
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
+                    <img src="/img/logo.png" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars" style="color: #FFFFFF;"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse" >
+                <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Acceuil</a>
-                        <a href="about.html" class="nav-item nav-link ">A propos</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Projet</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
+                            &nbsp; Acceuil</a>
+                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
+                            &nbsp; Alitcha Magazine</a>
+                        <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
+                            &nbsp; Alitcha Labs</a>
+                        <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i>
+                            &nbsp; A propos</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
+                            &nbsp; Contact</a>
                     </div>
                 </div>
             </nav>
-            </nav>
+            
         <!-- Navbar & Hero End -->
 
 
@@ -162,39 +167,44 @@
 
 
         <!-- Footer Start -->
-       <div class="container-fluid text-light " style="background-color: black">
-            <footer class="bg-dark text-center text-white">
-                <!-- Grid container -->
-                <div class="container p-4 pb-0">
-                  <!-- Section: Social media -->
-                  <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/Alitcha-106586631967294/!" role="button"
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
+        <footer class="footer-07" style="margin-top:0em;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
+                        
 
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/alitcha00?utm_medium=copy_link!" role="button"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
+                        <ul class="ftco-footer-social p-0">
+                            <li class="ftco-animate"><a
+                                    href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank"
+                                    data-toggle="tooltip" data-placement="top" title="Twitter">
 
+                                    <span class="fab fa-twitter"></span>
+                                </a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294"
+                                    target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                    <span class="fab fa-facebook"></span>
 
-                   <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" role="button"
-                        ><i class="fab fa-twitter"></i
-                     ></a>
-
-                  </section>
-                  <!-- Section: Social media -->
+                                </a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank"
+                                    data-toggle="tooltip" data-placement="top" title="Instagram">
+                                    <span class="fab fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Grid container -->
-
-                <!-- Copyright -->
-                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                  © 2022 Alitcha Community
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright">
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a
+                                href="/" target="_blank">Alitcha Community</a>
+                        </p>
+                    </div>
                 </div>
-                <!-- Copyright -->
-              </footer>
+            </div>
+        </footer>
 
 
         <!-- Back to Top -->

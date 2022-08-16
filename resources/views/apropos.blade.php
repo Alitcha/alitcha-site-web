@@ -43,31 +43,32 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
-                style="background-color: #F77B1E;">
-                <a href="/" class="navbar-brand p-0">
+        <div class="container-xxl position-relative p-0" >
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background:#ffffff;">
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="/img/logo.png" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars" style="color: #FFFFFF;"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="/" class="nav-item nav-link">Acceuil</a>
-                        <a href="/webmagazine" class="nav-item nav-link">Alitcha Magazine</a>
-                        <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
-                        <a href="/apropos" class="nav-item nav-link active">A propos</a>
-                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                        <a href="{{ route('home') }}" class="nav-item nav-link "> <i class="fa fa-home"></i>
+                            &nbsp; Acceuil</a>
+                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
+                            &nbsp; Alitcha Magazine</a>
+                        <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
+                            &nbsp; Alitcha Labs</a>
+                        <a href="{{ route('apropos') }}" class="nav-item nav-link active"><i class="fa fa-info-circle"></i>
+                            &nbsp; A propos</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
+                            &nbsp; Contact</a>
                     </div>
                 </div>
             </nav>
-
-
-
-
             <!-- Navbar & Hero End -->
+
             <!--Carrousel-->
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner carrousel-div">
@@ -363,18 +364,12 @@
 
         <!-- Footer Start -->
 
-        <footer class="footer-07">
+        <footer class="footer-07" style="margin-top:-7em;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
                         <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
-                        <p class="menu">
-                            <a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-                            <a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
-                            <a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
-                            <a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
-                            <a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
-                        </p>
+                        
 
                         <ul class="ftco-footer-social p-0">
                             <li class="ftco-animate"><a
@@ -394,7 +389,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="copyright">
                             Copyright &copy;
