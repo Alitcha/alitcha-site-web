@@ -783,6 +783,10 @@ footer h2{
     width: 7em !important;
 }
 
+.artfix{
+    width: 25em !important;
+}
+
 @media screen and (min-width: 363px) {
     .first{
         width:35em !important;

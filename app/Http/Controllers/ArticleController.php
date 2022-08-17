@@ -17,11 +17,19 @@ class ArticleController extends Controller
         $articles = Article::where('published', 1)->get()->sortByDesc('id');
         $articles_P = Article::where('published', 1)->get()->sortByDesc('nb_like');
         $articles_A = Article::where('published', 1)->get()->random(4);
+        $num = Article::where('categorie_id', 1)->get()->count();
+        $eco = Article::where('categorie_id', 2)->get()->count();
+        $tech = Article::where('categorie_id', 3)->get()->count();
+        $divers = Article::where('categorie_id', 4)->get()->count();
 
         return view('webmag', [
             'articles_R' => $articles,
             'articles_P' => $articles_P,
             'articles_A' => $articles_A,
+            'num' => $num,
+            'eco' => $eco,
+            'tech' => $tech,
+            'divers' => $divers,
 
         ]);
     }

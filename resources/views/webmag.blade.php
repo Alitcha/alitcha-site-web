@@ -191,7 +191,7 @@
                                         </div>
                                         <div class="blog-post-divider">
                                         </div>
-                                        <p class="mt-2 mb-0 p-4">{{ $article_A->subtitle }}</p>
+                                        <p class="mt-2 mb-0 p-4 artfix">{{ $article_A->subtitle }}</p>
                                         <a href="/article/<?php echo $article_A->id; ?>"
                                             class="btn btn-link text-dark p-1">Continuer la lecture</a>
                                     </div>
@@ -252,7 +252,7 @@
                                                 <img class="img-fluid" src="/img/blog/num.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
-                                                <a href="#">Numérique <span class="ms-auto">(10)</span></a>
+                                                <a href="#">Numérique <span class="ms-auto">({{$num}})</span></a>
                                             </div>
                                         </div>
                                     </li>
@@ -262,7 +262,7 @@
                                                 <img class="img-fluid" src="/img/blog/tech.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
-                                                <a href="#">Technologie <span class="ms-auto">(8)</span></a>
+                                                <a href="#">Technologie <span class="ms-auto">({{$tech}})</span></a>
                                             </div>
                                         </div>
                                     </li>
@@ -272,7 +272,7 @@
                                                 <img class="img-fluid" src="/img/blog/05.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
-                                                <a href="#">Ecologie<span class="ms-auto">(5)</span></a>
+                                                <a href="#">Ecologie<span class="ms-auto">({{$eco}})</span></a>
                                             </div>
                                         </div>
                                     </li>
@@ -282,7 +282,7 @@
                                                 <img class="img-fluid" src="/img/blog/divers.jpg" alt="">
                                             </div>
                                             <div class="blog-name">
-                                                <a href="#">Divers <span class="ms-auto">(10)</span></a>
+                                                <a href="#">Divers <span class="ms-auto">({{$divers}})</span></a>
                                             </div>
                                         </div>
                                     </li>
@@ -420,7 +420,7 @@
 
     <!--=================================
  blog  -->
-    <section class="space-pb bg-light">
+    <section class="space-pb bg-light" style="margin-top:-10em;">
         <div class="container">
             <div class="col-md-8">
                 <div class="bg-white p-4">
@@ -436,7 +436,7 @@
                                         <img class="img-fluid second" src="<?php echo $article->image; ?>" alt="">
                                     </div>
                                     <div class="blog-content">
-                                        <a class="badge" href="#">Télécharger</a>
+                                        <a class="badge" href="/article/<?php echo $article->id; ?>">Lire</a>
                                         <div class="blog-post-title">
                                             <h6 class="mb-0"><a href="#">{{ $article->title }}</a></h6>
                                         </div>

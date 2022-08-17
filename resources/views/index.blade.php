@@ -194,7 +194,7 @@
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{{$article->image}}" alt="">
                                 <div class="portfolio-overlay">
-                                    <a href="{{ route('article', 1) }}" class="btn btn-square btn-outline-light mx-1"
+                                    <a href="{{ route('article', $article->id) }}" class="btn btn-square btn-outline-light mx-1"
                                         href="img/portfolio-1.jpg"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                             class="fa fa-download"></i></a>
