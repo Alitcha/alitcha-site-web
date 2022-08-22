@@ -80,11 +80,11 @@
                             &nbsp; Contact</a>
                     </div>
                     <form action={{ url('/search/article') }} method="post"
-                        class="bg-white py-sm-3 px-sm-5 rounded-pill p-0">
+                        class="bg-white py-sm-3 px-sm-5 ml-5 rounded-pill p-0 formsearch">
                         @csrf
                         <input type="text" name="recherche" id="recherche" placeholder="Rechercher"
                             style="border: none" class="m-0" required>
-                        <button type="submit" style="border: none" class="m-0 p-0">
+                        <button type="submit"  class="m-0 p-0">
                             <i class="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -159,8 +159,8 @@
                                         </div>
                                         <div class="blog-post-footer blog-post-categorise">
                                             <div class="blog-post-author">
-                                                <span>Par<a href="#"><img src="/img/avatar/03.jpg"
-                                                            alt="">John</a></span>
+                                                <span><a href="#"><img src="/img/avatar/03.jpg"
+                                                            alt="">{{$article_A->author->firstname}}</a></span>
                                             </div>
                                             <div class="blog-post-time">
                                                 <a href="#"><i
@@ -397,15 +397,15 @@
                             <div class="widget-content mt-4">
                                 <div class="popular-tag">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="#"> Blog</a></li>
-                                        <li><a href="#"> Adventure</a></li>
+                                        <li><a href="#"> Découverte</a></li>
+                                        <li><a href="#"> Nature</a></li>
                                         <li><a href="#"> Wordpress</a></li>
-                                        <li><a href="#"> Blogger</a></li>
-                                        <li><a href="#"> Food</a></li>
-                                        <li><a href="#"> Tourism</a></li>
+                                        <li><a href="#"> Robotique</a></li>
+                                        <li><a href="#"> Passion</a></li>
+                                        <li><a href="#"> Magazine</a></li>
                                         <li><a href="#"> Fashion</a></li>
                                         <li><a href="#"> Travel</a></li>
-                                        <li><a href="#"> Magazine</a></li>
+                                        <li><a href="#"> Cybersécurité</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -420,7 +420,7 @@
 
     <!--=================================
  blog  -->
-    <section class="space-pb bg-light" style="margin-top:-10em;">
+    <section class="space-pb bg-light" style="margin-top:-3em;">
         <div class="container">
             <div class="col-md-8">
                 <div class="bg-white p-4">

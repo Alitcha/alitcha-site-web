@@ -58,8 +58,7 @@
 
         <!-- Navbar Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
-                style="background-color: #F77B1E;">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="/" class="navbar-brand p-0">
                     <img src="/img/logo.png" alt="Logo">
                 </a>
@@ -76,7 +75,7 @@
                         <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
                     <form action={{ url('/search/article') }} method="post"
-                        class="bg-white py-sm-3 px-sm-5 rounded-pill p-0">
+                        class="bg-white py-sm-3 ml-5 px-sm-5 rounded-pill p-0 formsearch">
                         @csrf
                         <input type="text" name="recherche" id="recherche" placeholder="Rechercher"
                             style="border: none" class="m-0" required>
@@ -92,7 +91,7 @@
     Articles début
    -->
     <section class="space-ptb bg-light">
-        <div class="container mt-lg-5 px-lg-5">
+        <div class="container-xxl mt-lg-5 px-lg-5">
             <div class="row">
                 <div class="col-lg-8">
                     @if (count($result))
@@ -107,7 +106,7 @@
                     <div class="row">
                         <div class="col-lg-12 mb-lg-0 populaire">
                             @if (!count($result))
-                                <div class="col-12 text-danger text-center" style="font-size: 2.4em;">
+                                <div class="col-12 text-danger text-center mt-20" style="font-size: 2.4em;">
                                     Aucun article publié ne correspond à votre recherche.
                                 </div>
                             @else
@@ -157,7 +156,7 @@
                                             </div>
                                             <div class="blog-post-divider">
                                             </div>
-                                            <p class="mt-2 mb-0 p-4">{{ $article_A->subtitle }}</p>
+                                            <p class="mt-2 mb-0 p-4 artfix">{{ $article_A->subtitle }}</p>
                                             <a href="/article/<?php echo $article_A->id; ?>"
                                                 class="btn btn-link text-dark p-1">Continuer la lecture</a>
                                         </div>

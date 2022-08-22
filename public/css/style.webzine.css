@@ -363,7 +363,7 @@ body {
     margin: 0px;
     color: #ffffff;
     font-size: 18px;
-    background: #f77b1e;
+    background: #f77b7e !important;
     color: #ffffff;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1892,7 +1892,7 @@ body {
       line-height: 50px;
       display: inline-block;
       color: #f77b1e;
-      background: #89a481;
+      background: #4e1da3;
       border: 0px solid #e7e7e7;
       text-align: center;
       -webkit-transition: all 0.2s ease-in-out;
@@ -1901,7 +1901,7 @@ body {
         display: block; }
       .owl-carousel .owl-nav i:hover {
         background: #f77b1e;
-        color: #89a481; }
+        color: #4e1da3; }
   
   .owl-carousel .owl-controls .owl-dot {
     margin: 0;
@@ -2052,7 +2052,14 @@ body {
   
   button {
     outline: medium none !important;
-    color: #f77b1e; }
+    color: #f77b1e;
+    border: none;
+    background: #ffffff; }
+
+    .formsearch{
+      -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
   
   /* btn */
   .btn {
@@ -2124,29 +2131,30 @@ body {
     border-color: #333333; }
   
   .btn-secondary {
-    background: #89a481;
-    border-color: #89a481;
-    color: #ffffff;
+    background: #fba504;
+    border-color: #fba504;
+    color: #000000;
     position: relative; }
     .btn-secondary:hover {
-      background: #78976f;
-      border-color: #78976f; }
+      background: #431b7a;
+      border-color: #431b7a;
+      color:#ffffff; }
       .btn-secondary:hover:not(:disabled):not(.disabled).active {
-        background: #89a481;
-        border-color: #89a481; }
+        background: #431b7a;
+        border-color: #431b7a; }
       .btn-secondary:hover:not(:disabled):not(.disabled):active {
-        background: #89a481;
-        border-color: #89a481; }
+        background: #431b7a;
+        border-color: #431b7a; }
     .btn-secondary:focus {
-      background: #78976f;
-      border-color: #78976f; }
+      background: #fba504;
+      border-color: #fba504; }
     .btn-secondary:focus {
-      background: #78976f;
-      border-color: #78976f; }
+      background: #fba504;
+      border-color: #fba504; }
   
   .btn-secondary:not(:disabled):not(.disabled):active:focus {
-    background: #89a481;
-    border-color: #89a481; }
+    background: #fba504;
+    border-color: #fba504; }
   
   .btn-dark {
     background: #18191c;
@@ -3838,6 +3846,10 @@ body {
     .blog-post .blog-detail .blog-post-comment,
     .blog-post .blog-post-share {
       margin: 0 8px; }
+
+    .blog-post-time a, .blog-post-share a{
+        font-size: 13px !important;
+    }
   
   .widget .search {
     position: relative; }

@@ -87,7 +87,7 @@
             </div> -->
             
             
-            <div class="container-xxl hero-header shape">
+            <div class="container-xxl hero-header ">
                 <div class="container px-lg-5 ">
                     <div class="row g-5 align-items-end" >
                         <div class="col-lg-6 text-center text-lg-start" style="margin-top: 0 !important;">

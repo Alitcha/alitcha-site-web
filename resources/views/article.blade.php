@@ -68,7 +68,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
+                        <a href="{{ route('home') }}" class="nav-item nav-link"> <i class="fa fa-home"></i>
                             &nbsp; Acceuil</a>
                         <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
                             &nbsp; Alitcha Magazine</a>
@@ -83,29 +83,47 @@
             </nav>
         </div>
         <!-- Navbar End -->
+
+        <!-- breadcrumb start -->
+
+        
+
+        <!-- breadcrumb end -->
+
   <!--=================================
-    Article début
+     Article début
    -->
 
 <section class="o-hidden position-relative pt-5">
     <div class="container mt-lg-5 pt-lg-5">
       <div class="row no-gutters justify-content-center bg-white">
         <div class="col-lg-8 blog-single">
-          <div class="blog-post">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
+            <li class="breadcrumb-item"><a href="#">Magazine</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Article : {{ $article->title }}</li>
+          </ol>
+        </nav>
+          <div class="blog-post mt-5">
             <div class="blog-content pb-2 ps-0">
               <div class="blog-post-title">
-                <h1 class="mb-0"><a href="#">{{ $article->title }}</a></h1>
-                <h4 class="mb-0"><a href="#">{{ $article->subtitle }}</a></h4>
+                <h1 class="mb-0">{{ $article->title }}</h1>
+                <h4 class="mb-0">{{ $article->subtitle }}</h4>
               </div>
               <div class="blog-post-footer blog-post-categorise justify-content-start">
               <div class="blog-post-author">
-                  <span>Par <a href="#"><!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</a></span>
+                  <span>Par <!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</span>
                 </div>
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-clock"></i> {{ $article->created_at }}</a>
+                  <i class="far fa-clock"></i> {{ $article->created_at }}
                 </div>
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-comment"></i>({{ $article->totalCommentaires() }})</a>
+                  <i class="far fa-comment"></i>({{ $article->totalCommentaires() }})
+                </div>
+                <div class="blog-post-time">
+                      <a href="#"><i
+                        class="far fa-heart"></i>({{ $article->nb_like }})</a>
                 </div>
                 <div class="blog-post-share">
                   <div class="share-box">
@@ -124,7 +142,7 @@
           </div>
           <img class="img-fluid mb-3" src="/{{ $article->image }}" alt="">
 
-          <h5 class="mb-20"><a href="#">{{ $article->description }}</a></h5>
+          <h5 class="mb-20">{{ $article->description }}</h5>
 
           <div class="blog-post mb-4">
             <div class="blog-content ps-0 pe-0">
@@ -296,7 +314,7 @@
                             <div class="item">
                                 <div class="blog-post text-center p-0">
                                     <div class="blog-post-image">
-                                        <img class="img-fluid" src="{{ $articleSimilaire->image }}" alt="">
+                                        <img class="img-fluid four" src="{{ $articleSimilaire->image }}" alt="">
                                     </div>
                                     <div class="blog-content">
                                         <a class="badge" href="{{ route('article', $articleSimilaire->id) }}">Lire</a>

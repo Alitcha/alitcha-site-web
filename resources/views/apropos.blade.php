@@ -43,7 +43,7 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0" >
+        <div class="container-xxl position-relative p-0 extend" >
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background:#ffffff;">
                 <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="/img/logo.png" alt="Logo">
@@ -70,7 +70,7 @@
             <!-- Navbar & Hero End -->
 
             <!--Carrousel-->
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner carrousel-div">
                     <div class="carousel-item active">
                         <img src="/img/blog/num.jpg" class="d-block w-100" alt="...">
@@ -92,11 +92,11 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
+            </div> -->
             <!--Carrousel-->
 
-            <div class="container-xxl hero-header" style="padding-top: 2rem;" class="bodyApropos">
-                <div class="container px-lg-5">
+            <div class="container-xxl apropos">
+                <div class="container px-lg-5 ">
                     <div class="row g-5 align-items-end">
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="mb-4 animated slideInDow">À la fois communauté et startup studio,
@@ -300,7 +300,7 @@
         <!-- Réalisations End -->
 
         <!-- Services Start -->
-        <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
+        <!-- <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
             <div class="container py-5 px-lg-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-7 text-center">
@@ -311,7 +311,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Services End -->
 
         <!-- equipe Start -->
@@ -327,40 +327,7 @@
         </div>
         <!-- equipe End -->
 
-        <!-- Partenaires Start -->
-        <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <h1 class="text-center text-secondary mb-5">Nos Partenaires</h1>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-2">
-                                    <img src="/assets/img/company-logos/1.png" alt="">
-                                </div>
-                                <div class="col-2">
-                                    <img src="/assets/img/company-logos/2.png" alt="">
-                                </div>
-                                <div class="col-2">
-                                    <img src="/assets/img/company-logos/3.png" alt="">
-                                </div>
-                                <div class="col-2">
-                                    <img src="/assets/img/company-logos/4.png" alt="">
-                                </div>
-                                <div class="col-2">
-                                    <img src="/assets/img/company-logos/5.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-5">
-                            --- <a href={{ url('/apropos') }} style="text-decoration: underline;">En savoir plus sur
-                                nous</a> ---
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Partenaires End -->
+        
 
         <!-- Footer Start -->
 

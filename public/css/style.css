@@ -148,6 +148,22 @@ h6,
     background: url(/img/blob.svg) no-repeat !important ;
     background-position: -150px -50px !important;
 }
+.apropos{
+    background: url(/img/collab1.png) no-repeat !important;
+    background-size: cover !important;
+    opacity: 0.9;
+    color:#000;
+   
+    padding: 10rem 0 10rem 0;
+}
+.apropos h1{
+   
+    opacity: 1;
+}
+
+.extend{
+    background-color: #F77B1E !important;
+}
 
 
 
@@ -239,16 +255,16 @@ h6,
     margin-bottom: 6rem;
     padding: 15rem 0 10rem 0;
     background:
-        url(../img/blob-top-left.png),
-        url(../img/blob-top-right.png),
-        url(../img/blob-bottom-left.png),
-        url(../img/blob-bottom-right.png),
+        url(../img/blob.svg),
+        url(../img/blob2.svg),
+        url(../img/blob1.svg),
+        url(../img/blob-right.png),
         url(../img/blob-center.png),
         url(../img/bg-bottom.png);
     background-position:
-        left 0px top 0px,
-        right 0px top 0px,
-        left 0px bottom 0px,
+        -150px -50px,
+        55pc -20pc,
+        50pc 30pc,
         right 0px bottom 0px,
         center center,
         center bottom;
@@ -768,7 +784,12 @@ footer h2{
     margin-right:2em;
 }
 .second{
-    height: 20em !important;
+    height: 25em !important;
+    width: 100% !important;
+}
+
+.four{
+    height: 27em !important;
     width: 100% !important;
 }
 
