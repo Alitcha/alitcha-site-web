@@ -36,6 +36,30 @@
     <!-- Template Stylesheet -->
     <link href="css/contact.css" rel="stylesheet">
     <link href="css/animcontact.css" rel="stylesheet">
+    <style>
+
+  .bg-primary {
+    background: #f77b1e !important; 
+    
+}
+.btn-outline-primary {
+    background-color: transparent;
+    color: #f77b1e;
+    border-color: #f77b1e; }
+    .btn-outline-primary:hover {
+      background-color: #29077a;
+      color: #ffffff;
+      border-color: #eb701e; }
+    .btn-outline-primary:not(:disabled):not(.disabled).active {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #000000; }
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #000000; }
+    </style>
+    
     <link href="css/style.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/1f9f6c8634.js" crossorigin="anonymous"></script>
@@ -53,7 +77,7 @@
                 </a>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars" style="color: #FFFFFF;"></span>
+                    <span class="fa fa-bars" ></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
@@ -135,7 +159,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-5 d-flex align-items-stretch bg-sky">
-                                        <div class="info-wrap w-100 p-md-5 p-4 " style="background: #f77b1e !important;">
+                                        <div class="info-wrap w-100 p-md-5 p-4 bg-gradient"  style="background: linear-gradient(blue, #F77B1E) !important">
                                             <h5 class="mb-4">Nous sommes ouvert pour toute sugession, requête ou
                                                 discussion.</h5>
                                             
@@ -164,7 +188,7 @@
                                                 </div>
                                                 <div class="text pl-3">
                                                     <p><span>Email:</span> <a
-                                                            href="mailto:alitcha.community@gmail.com">alitcha.community@gmail.com</a>
+                                                            href="mailto:alitcha.community@gmail.com">info@alitchateam.com</a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -188,47 +212,70 @@
             </section>
             <!-- Contact End -->
 
+        <!-- Footer Start -->
+        <div class="container-fluid  footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: black;">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-md-6">
 
-            <!-- Footer Start -->
+                            <h1 class="text-white">
+                                Alitcha
+                            </h1>
+                            <p>
+                                Promotion du numérique, de la technologie et de l'écologie, la recherche et la réalisation de projets innovants.
+                            </p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-square btn-outline-primary me-1" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fab fa-twitter fs-4 p-1"></i></a>
+                                <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-f fs-4 p-1"></i></a>
+                                <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram fs-4 p-1"></i></a>
 
-            <footer class="footer-07" style="margin-top:0;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 text-center">
-                        <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
-                        
 
-                        <ul class="ftco-footer-social p-0">
-                            <li class="ftco-animate"><a
-                                    href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank"
-                                    data-toggle="tooltip" data-placement="top" title="Twitter">
-
-                                    <span class="fab fa-twitter"></span>
-                                </a></li>
-                            <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294"
-                                    target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
-                                    <span class="fab fa-facebook"></span>
-
-                                </a></li>
-                            <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank"
-                                    data-toggle="tooltip" data-placement="top" title="Instagram">
-                                    <span class="fab fa-instagram"></span></a></li>
-                        </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-light mb-4">Adresse</h4>
+                            <p>
+                                <i class="fa fa-map-marker-alt me-3"></i>Cotonou, Bénin
+                            </p>
+                            <p><i class="fa fa-phone-alt me-3"></i>+229 57 25 14 74</p>
+                            <p><i class="fa fa-envelope me-3"></i>info@alitchateam.com</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-light mb-4">Liens rapides</h4>
+                            <a class="btn btn-link" href="/apropos">A propos</a>
+                            <a class="btn btn-link" href="/contact">Contact</a>
+                            <a class="btn btn-link" href="/webmagazine">Alitcha magazine</a>
+                            <a class="btn btn-link" href="/labs">Alitcha labs</a>
+                            <a class="btn btn-link" href="#">Politique de confidentialité</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="text-light mb-4">Newsletter</h4>
+                            <p>Rejoignez notre newsletter pour recevoir des informations en temps réel sur Alitcha et notre Webmagazi</p>
+                            <div class="position-relative mx-auto" style="max-width: 400px">
+                                <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email" />
+                                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                                    OK
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="copyright">
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a
-                                href="/" target="_blank">Alitcha Community</a>
-                        </p>
+                <div class="container-fluid copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p class="copyright">
+                                    Copyright &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a href="/" target="_blank">Alitcha Community</a>
+                                </p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
             <!-- Footer End -->
 
 

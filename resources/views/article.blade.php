@@ -23,34 +23,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- Commentaire Stylesheet -->
-    <link href="../css/commentStyle.css" rel="stylesheet">
+    <link href="/css/commentStyle.css" rel="stylesheet">
 
 
      <!-- CSS Global Compulsory (Do not remove)-->
-     <link rel="stylesheet" href="../css/font-awesome/all.min.css" />
+     <link rel="stylesheet" href="/css/font-awesome/all.min.css" />
 
 
      <!-- Page CSS Implementing Plugins -->
-     <link rel="stylesheet" href="../css/select2/select2.css" />
+     <link rel="stylesheet" href="/css/select2/select2.css" />
 
-     <link rel="stylesheet" href="../css/swiper/swiper.min.css" />
+     <link rel="stylesheet" href="/css/swiper/swiper.min.css" />
 
      <!-- Template Style -->
-     <link rel="stylesheet" href="../css/style.webzine.css" />
+     <link rel="stylesheet" href="/css/style.webzine.css" />
 
      <!-- Template Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <style>
+     /* img {max-width: 100%;
+      
+      
+      }*/
+
+     
+    </style>
+        <script src="https://kit.fontawesome.com/1f9f6c8634.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -64,13 +74,13 @@
                 </a>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars" style="color: #FFFFFF;"></span>
+                    <span class="fa fa-bars" ></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="{{ route('home') }}" class="nav-item nav-link"> <i class="fa fa-home"></i>
+                    <a href="{{ route('home') }}" class="nav-item nav-link"> <i class="fa fa-home"></i>
                             &nbsp; Acceuil</a>
-                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
+                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link active"><i class="fa fa-newspaper"></i>
                             &nbsp; Alitcha Magazine</a>
                         <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
                             &nbsp; Alitcha Labs</a>
@@ -108,23 +118,28 @@
           <div class="blog-post mt-5">
             <div class="blog-content pb-2 ps-0">
               <div class="blog-post-title">
-                <h1 class="mb-0">{{ $article->title }}</h1>
-                <h4 class="mb-0">{{ $article->subtitle }}</h4>
+                <h5 class="display-6">{{ $article->title }}</h5>
+              </div>
+              <div>
+              <h6 class="mt-1">{{ $article->subtitle }}</h6>
               </div>
               <div class="blog-post-footer blog-post-categorise justify-content-start">
               <div class="blog-post-author">
                   <span>Par <!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</span>
                 </div>
                 <div class="blog-post-time">
-                  <i class="far fa-clock"></i> {{ $article->created_at }}
+                  <i class="far fa-clock"></i> {{ $article->created_at->diffForHumans() }}
                 </div>
+                <!--
                 <div class="blog-post-time">
                   <i class="far fa-comment"></i>({{ $article->totalCommentaires() }})
                 </div>
+                
                 <div class="blog-post-time">
                       <a href="#"><i
                         class="far fa-heart"></i>({{ $article->nb_like }})</a>
                 </div>
+                
                 <div class="blog-post-share">
                   <div class="share-box">
                     <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
@@ -136,18 +151,18 @@
                       {{-- <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li> --}}
                     </ul>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
-          <img class="img-fluid mb-3" src="/{{ $article->image }}" alt="">
+          <img class="img-fluid mb-3" src="{{ $article->image }}" alt="">
 
           <h5 class="mb-20">{{ $article->description }}</h5>
 
           <div class="blog-post mb-4">
             <div class="blog-content ps-0 pe-0">
 
-              <p class="mb-3 d-block text-justify" style="text-align : justify">
+              <p class="mb-3 d-block text-justify article-content" style="text-align : justify">
                 {!! $article->content !!}
               </p>
 
@@ -241,15 +256,15 @@
 
                         <div class="topic topic--comment" style="margin-bottom : 20px; background-color: #f0f0f0;">
                             <div class="topic__head" style="align-items: center;">
-                                <div class="topic__avatar">
+                                <!--<div class="topic__avatar">
                                     <a href="#" class="avatar"><img src="" alt="avatar"></a>
-                                </div>
+                                </div>-->
                                 <div class="topic__caption">
                                     <div class="topic__name">
-                                        <a href="#" style="">{{ $commentaire->author }}</a>
+                                        <a href="#" >{{ $commentaire->author }}</a>
                                     </div>
                                     <div class="topic__date" style="margin-right: 10px;"><i class="fa fa-calendar"></i>
-                                        {{ $commentaire->created_at }}
+                                        {{ $commentaire->created_at->diffForHumans() }}
                                         <i class="fa fa-clock" style="margin-left: 14px;"></i>
                                     </div>
                                 </div>
@@ -342,46 +357,70 @@
 @endif
 
 
-        <!-- Footer Start -->
+         <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
 
-        <footer class="footer-07" style="margin-top:0em;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 text-center">
-                        <h2 class="footer-heading"><a href="/" class="logo">&nbsp;</a></h2>
-                        
+                    <h1 class="text-white">
+                        Alitcha
+                    </h1>
+                    <p>
+                        Promotion du numérique, de la technologie et de l'écologie, la recherche et la réalisation de projets innovants.
+                    </p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fab fa-twitter fs-4 p-1"></i></a>
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-f fs-4 p-1"></i></a>
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram fs-4 p-1"></i></a>
 
-                        <ul class="ftco-footer-social p-0">
-                            <li class="ftco-animate"><a
-                                    href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank"
-                                    data-toggle="tooltip" data-placement="top" title="Twitter">
 
-                                    <span class="fab fa-twitter"></span>
-                                </a></li>
-                            <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294"
-                                    target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
-                                    <span class="fab fa-facebook"></span>
-
-                                </a></li>
-                            <li class="ftco-animate"><a href="https://www.instagram.com/ali.tcha/" target="_blank"
-                                    data-toggle="tooltip" data-placement="top" title="Instagram">
-                                    <span class="fab fa-instagram"></span></a></li>
-                        </ul>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Adresse</h4>
+                    <p>
+                        <i class="fa fa-map-marker-alt me-3"></i>Cotonou, Bénin
+                    </p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+229 57 25 14 74</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@alitchateam.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Liens rapides</h4>
+                    <a class="btn btn-link" href="/apropos">A propos</a>
+                    <a class="btn btn-link" href="/contact">Contact</a>
+                    <a class="btn btn-link" href="/webmagazine">Alitcha magazine</a>
+                    <a class="btn btn-link" href="/labs">Alitcha labs</a>
+                    <a class="btn btn-link" href="#">Politique de confidentialité</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Rejoignez notre newsletter pour recevoir des informations en temps réel sur Alitcha et notre Webmagazi</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email" />
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="copyright">
                             Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a
-                                href="/" target="_blank">Alitcha Community</a>
+                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a href="/" target="_blank">Alitcha Community</a>
                         </p>
                     </div>
+
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
     <!-- Footer End -->
 
 
@@ -417,6 +456,9 @@
 
     <!-- Template Scripts (Do not remove)-->
     <script src="/js/custom.js"></script>
+    <script>
+      $("p img").addClass("img-fluid");
+    </script>
 
 
 </body>

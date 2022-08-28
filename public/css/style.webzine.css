@@ -1,5 +1,5 @@
 /*
-
+h5
 Template: Xberg - Multipurpose Blog HTML Template
 Version: 1.0.0
 Author: potenzaglobalsolutions
@@ -57,7 +57,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 /*****************************
     Typography
 *****************************/
-
+.newsletter
 
 body {
     font-family: "Heebo",sans-serif;
@@ -90,11 +90,11 @@ body {
   h4,
   h5,
   h6 {
-    font-family: "Barlow Semi Condensed", sans-serif;
+    /*font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: normal;
     color: #333333;
     margin-top: 0px;
-    text-transform: capitalize; }
+    text-transform: capitalize; */}
     h1 a,
     h2 a,
     h3 a,
@@ -501,7 +501,7 @@ body {
   
   .skew-reverse {
     display: inline-block; }
-  
+    
   .bg-primary {
     background: #f77b1e !important; }
   
@@ -522,7 +522,15 @@ body {
   
   .bg-linkedin {
     background: #238cc8 !important; }
+
+    .bg-gradient {
+      background: linear-gradient(blue, #F77B1E) !important;
+  }
   
+
+  .text-gradient {
+    color: linear-gradient(blue, #F77B1E) !important;
+}
   .bg-white-soft {
     background: rgba(255, 255, 255, 0.1); }
   
@@ -537,7 +545,7 @@ body {
   
   .space-pb {
     padding: 0 0 90px; }
-  
+    
   .h-100vh {
     height: 100vh !important; }
   
@@ -1789,7 +1797,7 @@ body {
   /*****************************
     Newsletter
   *****************************/
-  .newsletter {
+  /*.newsletter {
     padding: 50px 30px;
     position: relative; }
     .newsletter .form-control {
@@ -1804,7 +1812,7 @@ body {
       padding: 14px 30px; }
     .newsletter .custom-control-label {
       margin-top: -5px;
-      margin-left: 10px; }
+      margin-left: 10px; }*/
   
   /*****************************
     Counter
@@ -2276,9 +2284,9 @@ body {
     color: #f77b1e;
     border-color: #f77b1e; }
     .btn-outline-primary:hover {
-      background-color: #000000;
+      background-color: #29077a;
       color: #ffffff;
-      border-color: #000000; }
+      border-color: #eb701e; }
     .btn-outline-primary:not(:disabled):not(.disabled).active {
       background-color: #000000;
       color: #ffffff;

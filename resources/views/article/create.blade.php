@@ -46,16 +46,20 @@
 
                 
                 <div class="from-group mb-2">
-                <input id="title" name="title" class="form-control  @error('titte') is-invalid @enderror" placeholder="Titre" type="input" name="content" value="{{ old('title') }}" />
+                <input id="title" name="title" class="form-control  @error('title') is-invalid @enderror" placeholder="Titre" type="input" name="content" value="{{ old('title') }}" />
                   
                 </div>
                 <div class="from-group mb-2">
-                <input id="image" name="image" class="form-control  @error('titte') is-invalid @enderror" placeholder="L'url de l'image principale (copier/coller)" type="input" name="content" value="{{ old('image') }}" />
+                  <textarea name="subtitle" id="subtitle"  class="form-control  @error('subtitle') is-invalid @enderror" placeholder="Sous titre...">{{old('subtitle')}}</textarea>
+                 
+                </div>
+                <div class="from-group mb-2">
+                <input id="image" name="image" class="form-control  @error('image') is-invalid @enderror" placeholder="L'url de l'image principale (copier/coller)" type="input" name="content" value="{{ old('image') }}" />
                   
                 </div>
 
                 <div>
-                  <select id="categorie" name="categorie" class="form-select mb-2" aria-label="Default select example">
+                  <select id="categorie" name="categorie" class="form-select mb-2 error('image')" aria-label="Default select example">
                  
                     @foreach($categories as $cat)
                         <option value="{{$cat->id}}">{{$cat->name}}</option>
@@ -66,7 +70,7 @@
                 
             
                 <div class="from-group mb-2">
-                    <textarea id="content" type="hidden" name="content" >
+                    <textarea id="content" type="hidden" name="content"  class="error('content')">
                     {{ old('content') }}
                     </textarea>
                     <!-- <input id="content" type="hidden" name="content" value="{{ old('content') }}" /> -->
@@ -169,7 +173,7 @@
   //document.querySelector(".btn1").addEventListener('click', ()=>{ copy("")});
   //plugins: 'a11ychecker advcode advlist casechange export formatpainter image editimage  autolink help lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents  tinymcespellchecker',
     tinymce.init({
-      selector: 'textarea',
+      selector: '#content',
       plugins: 'advlist image autolink help lists  media table',
       toolbar: 'undo redo  blocks bold italic forecolor backcolor fontsize  font alignleft  aligncenter alignright alignjustify image help| bullist numlist outdent indent | format  casechange checklist code editimage table formatpainter',
       toolbar_mode: 'floating',

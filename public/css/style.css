@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
 body{
-    font-family: 'Asap', sans-serif !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
 }
 :root {
     --primary: #6222CC;
@@ -11,6 +11,8 @@ body{
 .ale{
     color:#F77B1E;
 }
+
+
 
 /*** Spinner ***/
 #spinner {
@@ -47,8 +49,7 @@ h4,
 .fw-semi-bold {
     font-weight: 600 !important;
 }
-
-h5,
+h5
 h6,
 .fw-medium {
     font-weight: 500 !important;
@@ -74,6 +75,8 @@ h6,
     width: 32px;
     height: 32px;
 }
+
+
 
 .btn-lg-square {
     width: 48px;
@@ -149,7 +152,16 @@ h6,
     background-position: -150px -50px !important;
 }
 .apropos{
-    background: url(/img/collab1.png) no-repeat !important;
+    background: url(/img/t2.png) no-repeat !important;
+    background-size: cover !important;
+    opacity: 0.9;
+    color:#000;
+   
+    padding: 10rem 0 10rem 0;
+}
+
+.labs-head{
+    background: url(/img/labs.jpeg) no-repeat !important;
     background-size: cover !important;
     opacity: 0.9;
     color:#000;
@@ -193,6 +205,8 @@ h6,
         height: 30px;
     }
 }
+
+
 
 @media (min-width: 992px) {
     .navbar-light {
@@ -415,12 +429,12 @@ h6,
     background-size: contain;
 }
 
-.service-item h5,
+.service-item,
 .service-item p {
     transition: .5s;
 }
 
-.service-item:hover h5,
+.service-item:hover,
 .service-item:hover p {
     color: #FFFFFF;
 }
@@ -567,6 +581,7 @@ h6,
 .text-success.error, .text-danger.error{
     display: none;
 }
+
 
 #newsletterSubmit:active i{
     transform: scale(0.93);
@@ -808,11 +823,154 @@ footer h2{
     width: 25em !important;
 }
 
+
 @media screen and (min-width: 363px) {
     .first{
         width:35em !important;
         margin: auto !important;
     }
 }
+
+
+/* Ajouter Par Dinyad 22/08/2022 */
+
+/*** Footer ***/
+.footer {
+    color: #999999;
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #999999;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #999999;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--light);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+
+/*** Team ***/
+.team-item {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    transition: .5s;
+    z-index: 1;
+}
+
+.team-item::before,
+.team-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 40%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    transition: .5s;
+    z-index: -1;
+}
+
+.team-item::after {
+    top: auto;
+    bottom: 0;
+}
+
+.team-item:hover::before,
+.team-item:hover::after {
+    background: linear-gradient(blue, #F77B1E) ;
+}
+
+.team-item h5,
+.team-item p {
+    transition: .5s;
+}
+
+.team-item:hover h5,
+.team-item:hover p {
+    color: #FFFFFF;
+}
+
+.team-item img {
+    padding: 15px;
+    border: 1px solid var(--primary);
+}
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--secondary);
+    border: 10px solid var(--secondary);
+    border-radius: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    background: url(../img/carousel-1.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: #999999;
+}
+
+
+
+
+
+/* Fin Dinyad Add */
 
 

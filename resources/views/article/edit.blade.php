@@ -48,8 +48,13 @@
 
                 
                 <div class="from-group mb-2">
-                <input id="title" name="title" class="form-control  @error('titte') is-invalid @enderror" placeholder="Titre" type="input" name="content" value="{{ old('title',$article->title) }}" />
+                <input id="title" name="title" class="form-control  @error('title') is-invalid @enderror" placeholder="Titre" type="input" name="content" value="{{ old('title',$article->title) }}" />
                 
+                </div>
+
+                <div class="from-group mb-2">
+                  <textarea name="subtitle" id="subtitle"  class="form-control  @error('subtitle') is-invalid @enderror" placeholder="Sous titre...">{{$article->subtitle}}</textarea>
+                 
                 </div>
 
                 
@@ -174,7 +179,7 @@ function copy(id) {
   }
   //plugins: 'a11ychecker advcode advlist casechange export formatpainter image editimage  autolink help lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents  tinymcespellchecker',
     tinymce.init({
-      selector: 'textarea',
+      selector: '#content',
       plugins: 'advlist image autolink help lists fullscreen media table',
       toolbar: 'undo redo  blocks bold italic forecolor backcolor fontsize  font alignleft  aligncenter alignright alignjustify image fullscreen | help bullist numlist outdent indent | format  casechange checklist code   editimage table formatpainter',
       toolbar_mode: 'floating',

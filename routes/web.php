@@ -77,6 +77,7 @@ Route::post('/image/store', [ImageController::class, 'store'])->name('image.stor
 Route::get('/magazine', [MagazineController::class, 'index'])->name('magazine.index')->middleware('can:access-dashboard');;
 Route::post('/magazine/store', [MagazineController::class, 'store'])->name('magazine.store')->middleware('can:access-dashboard');;
 Route::get('/magazine/{id}/admin', [MagazineController::class, 'adminshow'])->name('magazine.adminshow')->middleware('can:access-dashboard');;
+Route::get('/magazine/{id}', [MagazineController::class, 'read'])->name('magazine.read');
 
 
 //Admin

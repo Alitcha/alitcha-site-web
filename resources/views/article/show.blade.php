@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +33,9 @@
     <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
 
+    <!-- Commentaire Stylesheet -->
+    <link href="/css/commentStyle.css" rel="stylesheet">
+
 
      <!-- CSS Global Compulsory (Do not remove)-->
      <link rel="stylesheet" href="/css/font-awesome/all.min.css" />
@@ -49,96 +51,182 @@
 
      <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
+    <style>
+     /* img {max-width: 100%;
+      
+      
+      }*/
+
+     
+    </style>
+        <script src="https://kit.fontawesome.com/1f9f6c8634.js" crossorigin="anonymous"></script>
+
 
 </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-         Spinner End -->
-
+<body >
+    <div class="container-xxl bg-white text-body p-0">
         <!-- Navbar Start -->
-        <div class="container-xxl position-relative p-0" >
-          <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #F77B1E;">
-            <a href="index.html" class="navbar-brand p-0">
-              <img src="/img/logo.png" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span class="fa fa-bars" style="color: #FFFFFF;"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" >
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="/" class="nav-item nav-link">Acceuil</a>
-                        <a href="/webmagazine" class="nav-item nav-link active">Alitcha Magazine</a>
-                        <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
-                      <a href="/apropos" class="nav-item nav-link">A propos</a>
-                        <a href="/contact" class="nav-item nav-link">Contact</a>
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="{{ route('home') }}" class="navbar-brand p-0">
+                    <img src="/img/logo.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars" ></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                    <a href="{{ route('home') }}" class="nav-item nav-link "> <i class="fa fa-home"></i>
+                            &nbsp; Acceuil</a>
+                        <a href="{{ route('webmagazine') }}" class="nav-item nav-link active"><i class="fa fa-newspaper"></i>
+                            &nbsp; Alitcha Magazine</a>
+                        <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
+                            &nbsp; Alitcha Labs</a>
+                        <a href="{{ route('apropos') }}" class="nav-item nav-link "><i class="fa fa-info-circle"></i>
+                            &nbsp; A propos</a>
+                        <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
+                            &nbsp; Contact</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </div>
         <!-- Navbar End -->
 
+        <!-- breadcrumb start -->
 
+        
+
+        <!-- breadcrumb end -->
 
   <!--=================================
-    Article début
+     Article début
    -->
 
 <section class="o-hidden position-relative pt-5">
     <div class="container mt-lg-5 pt-lg-5">
       <div class="row no-gutters justify-content-center bg-white">
         <div class="col-lg-8 blog-single">
-          <div class="blog-post">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
+            <li class="breadcrumb-item" ><a href="/article">Admin</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Prévisualisation d'article</li>
+          </ol>
+        </nav>
+          <div class="blog-post mt-5">
             <div class="blog-content pb-2 ps-0">
               <div class="blog-post-title">
-                <h5 class="mb-0"><a href="#">{{ $article->title }}</a></h5>
+                <h5 class="display-6">{{ $article->title }}</h5>
+              </div>
+              <div>
+              <h6 class="mt-1">{{ $article->subtitle }}</h6>
               </div>
               <div class="blog-post-footer blog-post-categorise justify-content-start">
-                <div class="blog-post-author">
-                  <span>Par <a href="#"><!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</a></span>
+              <div class="blog-post-author">
+                  <span>Par <!--<img src="/img/avatar/03.jpg" alt="">-->{{$article->author->firstname}} {{$article->author->lastname}}</span>
                 </div>
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-clock"></i>{{ $article->created_at->format('d/m/Y') }}</a>
+                  <i class="far fa-clock"></i> {{ $article->created_at->diffForHumans() }}
                 </div>
+                <!--
                 <div class="blog-post-time">
-                  <a href="#"><i class="far fa-comment"></i>({{$article->totalCommentaires()}})</a>
+                  <i class="far fa-comment"></i>({{ $article->totalCommentaires() }})
                 </div>
+                
+                <div class="blog-post-time">
+                      <a href="#"><i
+                        class="far fa-heart"></i>({{ $article->nb_like }})</a>
+                </div>
+                
                 <div class="blog-post-share">
                   <div class="share-box">
                     <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
-                    <ul class="list-unstyled share-box-social">
-                      <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
+                    <ul class="list-unstyled share-box-social" style="min-width : 120px !important;">
+                      <li> <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
+                      <li> <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-twitter"></i></a> </li>
+                      <li> <a href="https://www.linkedin.com/shareArticle?url=http://127.0.0.1:8000/article/{{ $article->id }}&title=" target="_blank"><i class="fab fa-linkedin"></i></a> </li>
                       <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                      <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
+                      {{-- <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li> --}}
                     </ul>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
+          <img class="img-fluid mb-3" src="{{ $article->image }}" alt="">
+
+          <h5 class="mb-20">{{ $article->description }}</h5>
 
           <div class="blog-post mb-4">
-
             <div class="blog-content ps-0 pe-0">
 
-                    {!! $article->content !!}
+              <p class="mb-3 d-blo-justify article-content" styl-align : justify">
+                {!! $article->content !!}
+              </p>
 
+              <div class="blog-post-share-box d-flex flex-wrap justify-content-between align-items-center mt-5">
+                 <!-- <div class="blog-post-share">
+                  <div class="share-box">
+                    <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
+                    <ul class="list-unstyled share-box-social" style="min-width : 120px !important;">
+                      <li> <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
+                      <li> <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-twitter"></i></a> </li>
+                      <li> <a href="https://www.linkedin.com/shareArticle?url=http://127.0.0.1:8000/article/{{ $article->id }}&title=" target="_blank"><i class="fab fa-linkedin"></i></a> </li>
+                      <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
+                      {{-- <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li> --}}
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                     <i class="fas fa-like"></i>
+                     <span class="ps-2">{{ $article->nb_like }}
+                        @if ($article->nb_like > 1)
+                         likes
+                         @else
+                         like
+                        @endif
+                     </span>
 
+                </div>
+                <div class="badges">
 
-
-
+                  <a href="#" class="btn btn-outline-primary">Like</a>
+                </div>-->
               </div>
+              <nav class="navigation post-navigation py-2 py-lg-3">
+            <div class="nav-links d-sm-flex justify-content-between">
+             <!-- <div class="nav-previous float-left">
+                <a class="d-flex align-items-center" href="#">
+                  <div class="align-self-center nav-left ml-2">
+                    <span class="pa d-inline-block btn btn-link px-0 p-1">
+                      <i class="fas fa-chevron-left"></i>
+                      Précédent
+                    </span>
 
 
+                  </div>
+
+                </a>
+              </div>
+              <div class="nav-next float-right">
+                <a class="d-flex align-items-center" href="#">
+
+                  <div class="align-self-cent-right nav-right">
+                    <span class="pa d-inline-block btn btn-link px-0 p-1">
+                      Suivant
+                      <i class="fas fa-chevron-right"></i>
+                    </span>
+
+
+                  </div>
+                </a>
+              </div>
+-->
             </div>
+          </nav>
+              
           </div>
         </div>
       </div>
@@ -146,55 +234,72 @@
   </section>
 
 
-    <!--=================================
-    Article fin  -->
 
-<!--=================================
- blog  -->
+         <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+
+                    <h1 clas-white">
+                        Alitcha
+                    </h1>
+                    <p>
+                        Promotion du numérique, de la technologie et de l'écologie, la recherche et la réalisation de projets innovants.
+                    </p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fab fa-twitter fs-4 p-1"></i></a>
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-f fs-4 p-1"></i></a>
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram fs-4 p-1"></i></a>
 
 
-<!--=================================
- blog -->
-
-
-        <!-- Footer Start -->
-        <footer class="footer-07">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-12 text-center">
-                <h2 class="footer-heading"><a href="index.html" class="logo">&nbsp;</a></h2>
-                <p class="menu">
-                    <a href="{{ route('home') }}"><i class="fa fa-home"></i> Accueil</a>
-                    <a href="{{ route('webmagazine') }}"><i class="fa fa-newspaper"></i> Alitcha Magazine</a>
-                    <a href="{{ route('labs') }}"><i class="fa fa-fa"></i> Alitcha Labs</a>
-                    <a href="{{ route('apropos') }}"><i class="fa fa-info-circle"></i> A propos</a>
-                    <a href="{{ route('contact') }}"><i class="fa fa-phone"></i> Contact</a>
-                </p>
-
-        <ul class="ftco-footer-social p-0">
-                  <li class="ftco-animate"><a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" data-toggle="tooltip" data-placement="top" title="Twitter">
-
-              <span class="fab fa-twitter"></span>
-            </a></li>
-                  <li class="ftco-animate"><a href="https://www.facebook.com/Alitcha-106586631967294/!" data-toggle="tooltip" data-placement="top" title="Facebook">
-            <span class="fab fa-facebook"></span>
-
-            </a></li>
-                  <li class="ftco-animate"><a href="https://instagram.com/alitcha00?utm_medium=copy_link!" data-toggle="tooltip" data-placement="top" title="Instagram">
-            <span class="fab fa-instagram"></span></a></li>
-                </ul>
-              </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 clas-light mb-4">Adresse</h4>
+                    <p>
+                        <i class="fa fa-map-marker-alt me-3"></i>Cotonou, Bénin
+                    </p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+229 57 25 14 74</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@alitchateam.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 clas-light mb-4">Liens rapides</h4>
+                    <a class="btn btn-link" href="/apropos">A propos</a>
+                    <a class="btn btn-link" href="/contact">Contact</a>
+                    <a class="btn btn-link" href="/webmagazine">Alitcha magazine</a>
+                    <a class="btn btn-link" href="/labs">Alitcha labs</a>
+                    <a class="btn btn-link" href="#">Politique de confidentialité</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 clas-light mb-4">Newsletter</h4>
+                    <p>Rejoignez notre newsletter pour recevoir des informations en temps réel sur Alitcha et notre Webmagazi</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" typ" placeholder="Votre email" />
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            OK
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="row mt-5">
-              <div class="col-md-12 text-center">
-                <p class="copyright">
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa-solid fa-heart" ></i> by <a href="index.html" target="_blank">Alitcha Community</a>
-                </p>
-              </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md--center">
+                        <p class="copyright">
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a href="/" target="_blank">Alitcha Community</a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
-          </div>
-        </footer>
-        <!-- Footer End -->
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
         <!-- Back to Top -->
@@ -217,7 +322,7 @@
     <!-- JS Global Compulsory (Do not remove)-->
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/popper/popper.min.js"></script>
-    <!--<script src="/js/bootstrap/bootstrap.min.js"></script> -->
+    <!--<script src="js/bootstrap/bootstrap.min.js"></script> -->
 
     <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
     <script src="/js/jquery.appear.js"></script>
@@ -229,33 +334,11 @@
 
     <!-- Template Scripts (Do not remove)-->
     <script src="/js/custom.js"></script>
+    <script>
+      $("p img").addClass("img-fluid");
+    </script>
 
 
 </body>
 
 </html>
-<!--
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{{ asset('/css/trix.css') }}">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    </head>
-    <body>
-    <div class="container">
-        <div class="col-8 offset-2 mt-5">
-            <h1>{{ $article->titre }}</h1>
-            <h5>{{ $article->created_at->format('d/m/Y') }}</h5>
-            <div class="mt-5">
-                {!! $article->content !!}
-            </div>
-        </div>
-    </div>
-
-
-    <script src="{{ asset('js/trix.js') }}"></script>
-        <script src="{{ asset('js/trix-core.js') }}"></script>
-    </body>
-</html> -->
-

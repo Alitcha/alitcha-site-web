@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Magazine;
 use App\Models\Writers;
 use App\Models\User;
 use App\Models\Categorie;
@@ -10,11 +11,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Image;
 
+//#F77B1E
 
 class ArticleController extends Controller
 {
     public function showMagazine(){
-        $articles = Article::where('published', 1)->get()->sortByDesc('id');
+        $magazines = Magazine::all();
+        $articles = Article::where('published', 1)->get()->sortByDesc('id')->take(3);
         $articles_P = Article::where('published', 1)->get()->sortByDesc('nb_like');
         $articles_A = Article::where('published', 1)->get()->random(4);
         $num = Article::where('categorie_id', 1)->get()->count();
@@ -23,6 +26,7 @@ class ArticleController extends Controller
         $divers = Article::where('categorie_id', 4)->get()->count();
 
         return view('webmag', [
+            'magazines' => $magazines,
             'articles_R' => $articles,
             'articles_P' => $articles_P,
             'articles_A' => $articles_A,
@@ -102,6 +106,7 @@ class ArticleController extends Controller
         //
         $validated= $request->validate([
             "title" => "bail|required",
+            "subtitle" => "bail|required",
             "content" => "bail|required",
             "image" => "bail|required",
             "categorie" => "bail|required"
@@ -109,7 +114,7 @@ class ArticleController extends Controller
 
         $id =  Article::create([
             "title" => $request->title,
-            "subtitle" => "",
+            "subtitle" => $request->subtitle,
             "image" => $request->image,
             "content" => $request->content,
             "postBy" => Auth::user()->id,
@@ -149,6 +154,7 @@ class ArticleController extends Controller
         //
         $validated= $request->validate([
             "title" => "bail|required",
+            "subtitle" => "bail|required",
             "content" => "bail|required",
             "image" => "bail|required",
             "categorie" => "bail|required"
@@ -156,6 +162,7 @@ class ArticleController extends Controller
 
         $article = Article::find($id);
         $article->title = $request->title;
+        $article->subtitle = $request->subtitle;
         $article->content = $request->content;
         $article->image = $request->image;
         $article->categorie_id = $request->categorie;

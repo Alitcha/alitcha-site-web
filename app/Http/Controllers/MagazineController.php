@@ -16,6 +16,14 @@ class MagazineController extends Controller
         $images = Image::all();
         return view('magazine.index',compact("magazines","images"));
     }
+
+    public function read($id)
+    {
+        //
+        $magazine = Magazine::find($id); 
+        return view('magazineread',compact("magazine"));
+    }
+    
     public function adminshow($id)
     {
         //
