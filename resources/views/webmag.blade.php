@@ -128,25 +128,26 @@
                         <div class="item">
                             <div class="blog-post text-center">
                                 <div class="blog-post-image">
-                                    <img class="img-fluid first" src="<?php echo $magazine->image; ?>" alt="">
+                                    <!-- <img class="img-fluid first" src='<?php echo $magazine->image; ?>' alt=""> -->
+                                    <img class="img-fluid first" src="/img/magload.png" alt="">
                                 </div>
                                 <div class="blog-content">
-                                    <div class="row">
+                                    <!-- <div class="row">
                                     
                                         <div class="col"> <a class="badge" href="{{asset('magazines/'.$magazine->path_name)}}" re download="alitcha_magazine_{{ $magazine->title }}">Télécharger</a>
                                         </div>
                                         <div class="col"> <a class="badge" href="/magazine/<?php echo $magazine->id; ?>">Lire</a></div>
 
-                                    </div>
+                                    </div> -->
 
-                                    <div class="blog-post-title">
+                                    <!-- <div class="blog-post-title">
                                         <h6 class="mb-0"><a href="/magazine/<?php echo $magazine->id; ?>">{{ $magazine->title }}</a></h6>
-                                    </div>
-                                    <div class="blog-post-footer blog-post-categorise">
+                                    </div> -->
+                                    <!-- <div class="blog-post-footer blog-post-categorise">
                                         <div class="blog-post-time">
                                             <a href="#"><i class="far fa-clock"></i>{{ $magazine->created_at }}</a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

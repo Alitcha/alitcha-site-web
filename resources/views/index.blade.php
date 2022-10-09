@@ -370,6 +370,7 @@
                         d’intervention pour
                         améliorer le quotidien des entreprises, entrepreneurs et populations africaines.
                     </p>
+                    <img src="/img/services.png" alt="Loading..."  class="img-fluid img-thumbnail">
                 </div>
             </div>
         </div>
@@ -474,55 +475,28 @@
                     <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="color:black;">Notre équipe</div>
                     <h2 class="mb-5">Rencontrez les membres de notre équipe</h2>
                 </div>
+                
                 <div class="row g-4">
+
+                    @foreach($team as $member)
+
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item">
-                            <h5>Full Name</h5>
-                            <p class="mb-4">Designation</p>
-                            <img class="img-fluid rounded-circle w-100 mb-4" src="img/team-1.jpg" alt="">
+                            <h5>{{ $member->firstname }} {{ $member->lastname }}</h5>
+                            <p class="mb-4">{{ $member->position }}</p>
+                            <img class="img-fluid rounded-circle w-100 mb-4" src="img/team/{{ $member->img_path }}" alt="">
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-square text-primary bg-white m-1" href="{{ $member->facebook }}"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square text-primary bg-white m-1" href="{{ $member->twitter }}"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square text-primary bg-white m-1" href="{{ $member->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item">
-                            <h5>Full Name</h5>
-                            <p class="mb-4">Designation</p>
-                            <img class="img-fluid rounded-circle w-100 mb-4" src="img/team-2.jpg" alt="">
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item">
-                            <h5>Full Name</h5>
-                            <p class="mb-4">Designation</p>
-                            <img class="img-fluid rounded-circle w-100 mb-4" src="img/team-3.jpg" alt="">
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item">
-                            <h5>Full Name</h5>
-                            <p class="mb-4">Designation</p>
-                            <img class="img-fluid rounded-circle w-100 mb-4" src="img/team-1.jpg" alt="">
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square text-primary bg-white m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
+                    @endforeach
+                    
+                   
+                   
                 </div>
             </div>
         </div>
@@ -676,9 +650,9 @@
                         <p class="text-info">Remplissez ce formulaire pour soumettre votre demande d’adhésion.</p>
                         <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les
                             champs</p>
-                        <div class="mb-4">
+                        <div class="mb-4" >
                             <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
-                            <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms" style="color: #000000;">
+                            <input type="text" class="form-control" id="nameForm" placeholder="Entrez votre nom et prénoms" style="color: #000000;" >
                         </div>
                         <div class="mb-4">
                             <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
@@ -691,7 +665,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="exampleFormControlTextarea1" class="form-label fw-bold">Quelles sont vos
-                                compétences, dans le domaine du numérique surtout ?</label>
+                                compétences ?</label>
                             <textarea class="form-control" id="competenceForm" rows="3" style="color: #000000;"></textarea>
                         </div>
                         <div class="mb-4">
@@ -711,12 +685,10 @@
                                 champs sont bien remplit et rééssayez...</p>
                         </div>
                         <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="AnnulerAdhesion">
-                            <i class="fa fa-times"></i>
-                            &nbsp; Annuler
+                           Annuler
                         </button>
                         <button style="background-color: #F77B1E;" type="submit" class="btn btn-secondary text-white">
-                            <i class="fa fa-user-plus"></i>
-                            &nbsp; Adhérer
+                            Adhérer
                         </button>
                     </div>
                 </div>

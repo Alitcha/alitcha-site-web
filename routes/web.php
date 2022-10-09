@@ -17,6 +17,7 @@ use App\Http\Controllers\LabsController;
 use App\Http\Controllers\MagazineController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
+use App\Models\Team;
 
 
 /*
@@ -33,7 +34,10 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/apropos', function () {
-    return view('apropos');
+    $team = Team::all();
+    return view('apropos',[
+        'team' => $team
+    ]);
 })->name('apropos');
 
 Route::get('/contact', function () {
