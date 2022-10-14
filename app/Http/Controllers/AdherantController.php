@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AdhesionMail;
 use App\Models\Adherant;
+use Exception;
 
 class AdherantController extends Controller
 {

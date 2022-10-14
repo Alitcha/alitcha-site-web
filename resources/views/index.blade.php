@@ -689,15 +689,14 @@
             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
                 <div class="modal-content">
-                    <div class="modal-header " style="background-color: #F77B1E;">
+                    <div class="modal-header" style="background-color: #F77B1E;">
                         <h5 class="modal-title text-white" id="adhererAlitchaLabel">Adhérer Alitcha</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                            id="AnnulerAdhesion"></button>
+                            id="AnnulerAdhesion1"></button>
                     </div>
                     <div class="modal-body">
-                        <p class="text-info">Remplissez ce formulaire pour soumettre votre demande d’adhésion.</p>
-                        <p class="text-danger" id="champs_requis" style="display:none;">Veuillez remplir tout les
-                            champs</p>
+                        <p style="color: #F77B1E;">Remplissez ce formulaire pour soumettre votre demande d’adhésion.
+                        </p>
                         <div class="mb-4">
                             <label for="exampleFormControlInput1" class="form-label fw-bold">Nom et Prénoms</label>
                             <input type="text" class="form-control" id="nameForm"
@@ -728,12 +727,14 @@
                     <div class="modal-footer">
                         <div>
                             <p class="text-success" id="add_success" style="display:none;">Votre soumission sera
-                                étudié puis vous serez contactés par mail pour l’entretien en ligne.<br> Welcome chez
-                                Alitcha !!!</p>
+                                étudié puis vous serez contactés par mail pour l’entretien en ligne.<br> <b>Welcome chez
+                                Alitcha !!!</b></p>
                             <p class="text-danger" id="add_error" style="display:none;">Soit un champ est mal entré,
                                 soit l'email ou le numéro de téléphone entré est déjà utilisé.</p>
                             <p class="text-primary" id="add_error1" style="display:none;">Vérifiez que tout les
                                 champs sont bien remplit et rééssayez...</p>
+                            <p class="text-info" id="envoie" style="display:none;">Votre demande d'adhésion à la
+                                communauté Alitcha est en cours d'envoie...</p>
                         </div>
                         <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id="AnnulerAdhesion">
                             Annuler
@@ -763,9 +764,6 @@
     <script src="/js/popper.js"></script>
     <script src="/js/toastify/bootstrap.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/main.js"></script>
-
-    <!-- Template Javascript -->
     <script src="/js/main.js"></script>
 </body>
 

@@ -14,17 +14,17 @@ class AdhesionMail extends Mailable
     /**
      * Elements d'Adhésion
      * @var array
-    */
+     */
     public $adhesion_mail;
 
     /**
      * Create a new message instance.
      *
      * @return void
-    */
-    public function __construct(Array $adhesion_mail)
+     */
+    public function __construct(array $adhesion_mail)
     {
-        $this -> adhesion_mail = $adhesion_mail;
+        $this->adhesion_mail = $adhesion_mail;
     }
 
     /**
@@ -34,8 +34,7 @@ class AdhesionMail extends Mailable
      */
     public function build()
     {
-        return $this->from($this->adhesion_mail['email'])
-        						->subject("Demande d'Adhésion à la Communauté")
-                    -> view('emails.adhesionmail');
+        return $this->subject("Demande d'Adhésion à la Communauté")
+            ->view('emails.adhesionmail');
     }
 }
