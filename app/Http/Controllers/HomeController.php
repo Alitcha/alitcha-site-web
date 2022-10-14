@@ -9,10 +9,10 @@ use App\Models\Team;
 
 class HomeController extends Controller
 {
-    
+
     public function index()
     {
-        $articles_A = Article::where('published', 1)->get()->random(3);
+        $articles_A = Article::where('published', 1)->get()/*->random(3)*/;
         $team = Team::all();
 
         return view('index', [

@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -30,9 +31,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-     <!-- Template Style -->
+    <!-- Template Style -->
 
-     <link rel="stylesheet" href="css/style.webzine.css" />
+    <link rel="stylesheet" href="css/style.webzine.css" />
 
 
     <!-- Template Stylesheet -->
@@ -51,8 +52,9 @@
                 <a href="{{ route('home') }}" class="navbar-brand p-0">
                     <img src="/img/logo.png" alt="Logo">
                 </a>
-                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars" ></span>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
@@ -62,7 +64,8 @@
                             &nbsp; Alitcha Magazine</a>
                         <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
                             &nbsp; Alitcha Labs</a>
-                        <a href="{{ route('apropos') }}" class="nav-item nav-link active"><i class="fa fa-info-circle"></i>
+                        <a href="{{ route('apropos') }}" class="nav-item nav-link active"><i
+                                class="fa fa-info-circle"></i>
                             &nbsp; A propos</a>
                         <a href="{{ route('contact') }}" class="nav-item nav-link"><i class="fa fa-phone"></i>
                             &nbsp; Contact</a>
@@ -103,7 +106,8 @@
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="mb-4 animated slideInDow text-white">À la fois communauté et startup studio,
                             </h1>
-                            <p class="pb-3 animated slideInDown text-white"><a href="/">Alitcha</a> a été créé non
+                            <p class="pb-3 animated slideInDown text-white"><a href="/">Alitcha</a> a été créé
+                                non
                                 seulement pour la promotion du numérique, de la technologie et de l'écologie mais
                                 également pour la recherche et la réalisation d'innovants projets.</p>
 
@@ -116,13 +120,14 @@
         <!-- Communauté Start -->
         <div class="container-fluid bg-light bg-icon my-5 py-6">
             <div class="container">
-                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     <h1 class="display-5 mb-3" style="color:black;"> Communauté</h1>
                     <p style="color:black;">La communauté Alitcha est composé de son magazine et de ses Labs. </p>
                 </div>
                 <div class="row g-4">
 
-                    <div class="col-lg-6 col-md-6 wow fadeInUp bg-gradient" data-wow-delay="0.3s" >
+                    <div class="col-lg-6 col-md-6 wow fadeInUp bg-gradient" data-wow-delay="0.3s">
                         <div class="bg-white text-center h-100 p-md-4 p-1 p-xl-5 rounded">
                             <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
                             <h4 class="mb-3">Notre magazine</h4>
@@ -130,24 +135,29 @@
                                 médiatique chargé principalement de la vulgarisation et de la promotion des projets de
                                 Alitcha.
                             </p>
-                            <p class="text-black mb-4" style="margin-top: 20px;">Nous ciblons en particulier les jeunes
-                                afin de les pousser à se dépasser et à assurer ainsi l'avenir du Bénin en particulier et de
+                            <p class="text-black mb-4" style="margin-top: 20px;">Nous ciblons en particulier les
+                                jeunes
+                                afin de les pousser à se dépasser et à assurer ainsi l'avenir du Bénin en particulier et
+                                de
                                 l'Afrique en général en ce qui concerne les technologies du futur.
                             </p>
-                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="/webmagazine">En savoir plus</a>
+                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="/webmagazine">En
+                                savoir plus</a>
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp bg-gradient" data-wow-delay="0.5s" >
+                    <div class="col-lg-6 col-md-6 wow fadeInUp bg-gradient" data-wow-delay="0.5s">
                         <div class="bg-white text-center h-100 p-md-4 p-1 p-xl-5 rounded">
                             <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                            <h4 class="mb-3" >Nos Labs</h4>
+                            <h4 class="mb-3">Nos Labs</h4>
                             <p class="text-black mb-4">Avec pour objectif d’apprendre, de faire de la recherche et
-                                d’innover, Alitcha Labs participe activement au développement des technologies en Afrique.
+                                d’innover, Alitcha Labs participe activement au développement des technologies en
+                                Afrique.
                             </p>
                             <p>Il vise à intervenir dans plusieurs domaines et améliorer les conditions de vies et le
                                 quotidien des populations africaines.</p>
-                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="/labs">En savoir plus</a>
+                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="/labs">En
+                                savoir plus</a>
 
                         </div>
 
@@ -162,7 +172,8 @@
         <!-- Startup studio Start -->
         <div class="container-fluid bg-light bg-icon my-5 py-6">
             <div class="container">
-                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     <h1 class="display-5 mb-3" style="color:black;">Startup studio</h1>
                     <p class="mb-4" style="color:black;">Focalisé sur la réalisation , le suivi et la croissance
                         de projets visant à devenir des startups, elle permet aux membres d’acquérir de l’expérience
@@ -171,44 +182,46 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Startup studio End -->
 
         <!-- vision Start -->
         <div class="container-fluid bg-light bg-icon my-5 py-6">
             <div class="container">
-                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     <h1 class="display-5 mb-3" style="color:black;"> Notre vision</h1>
                     <p class="mb-4" style="color:black;">Alitcha a pour vision de devenir le carrefour des
-                            nouvelles technologies en Afrique en améliorant le quotidien des Africains grâce à la
-                            recherche et à des solutions technologiques. Elle vise aussi à amener tous de ses membres à
-                            atteindre leurs objectifs.
-                        </p>
+                        nouvelles technologies en Afrique en améliorant le quotidien des Africains grâce à la
+                        recherche et à des solutions technologiques. Elle vise aussi à amener tous de ses membres à
+                        atteindre leurs objectifs.
+                    </p>
                 </div>
             </div>
         </div>
-       
+
         <!-- vision End -->
 
         <!-- valeurs Start -->
 
         <div class="container-fluid bg-light bg-icon my-5 py-6">
             <div class="container">
-                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-5 mb-3" style="color:black;" > Nos valeurs</h1>
+                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
+                    <h1 class="display-5 mb-3" style="color:black;"> Nos valeurs</h1>
                     <p>Alitcha c’est avant tout des valeurs qui font de ses
-                            membres une équipe ayant les mêmes idéaux :</p>
+                        membres une équipe ayant les mêmes idéaux :</p>
                 </div>
                 <div class="row g-4 justify-content-center">
 
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s" >
-                        <div class="bg-white text-center text-white h-100 p-md-4 p-1 p-xl-3 rounded bg-gradient" >
+                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="bg-white text-center text-white h-100 p-md-4 p-1 p-xl-3 rounded bg-gradient">
                             <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
                             <h4 class="mb-3 text-white">Partage</h4>
                             <p class="mb-4">Le partage est au centre de nos activités non seulement au sein de
-                            Alitcha mais aussi avec les organisations externes.
+                                Alitcha mais aussi avec les organisations externes.
                             </p>
-                           
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -216,39 +229,40 @@
                             <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
                             <h4 class="mb-3 text-white">Curiosité</h4>
                             <p class="text-white mb-4">Elle est l’une des principales caractéristiques de nos membres.
-                            Avide de connaissances, nous cherchons sans cesse à nous améliorer dans nos différents
-                            domaines d’intervention.</p>
-                           
+                                Avide de connaissances, nous cherchons sans cesse à nous améliorer dans nos différents
+                                domaines d’intervention.</p>
+
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s" >
+                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="bg-white text-center h-100 p-md-4 p-1 p-xl-3 rounded bg-gradient">
                             <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
                             <h4 class="mb-3 text-white">Travail acharné</h4>
                             <p class="text-white mb-4">Nous sommes travailleurs et faisons toujours ce que nous avons à
-                            faire dans les temps.</p>
-                            
+                                faire dans les temps.</p>
+
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s" >
+                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="bg-white text-center h-100 p-md-4 p-1 p-xl-3 rounded bg-gradient">
                             <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
                             <h4 class="mb-3 text-white">Passion</h4>
-                            <p class="text-white mb-4">La passion pour les sciences et technologies font vivre Alitcha et
-                            nous permet de toujours atteindre nos objectifs.</p>
-                            
+                            <p class="text-white mb-4">La passion pour les sciences et technologies font vivre Alitcha
+                                et
+                                nous permet de toujours atteindre nos objectifs.</p>
+
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s" >
+                    <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="bg-white text-center h-100 p-md-4 p-1 p-xl-3 rounded bg-gradient">
                             <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
                             <h4 class="mb-3 text-white">Esprit d’équipe</h4>
                             <p class="text-white mb-4">Nous sommes organisés et coordonnés pour travailler en équipe en
-                            équipe dans une bonne harmonie.</p>
-                            
+                                équipe dans une bonne harmonie.</p>
+
                         </div>
 
                     </div>
@@ -257,17 +271,18 @@
         </div>
 
 
-        
+
         <!-- valeurs End -->
 
         <!-- objectifs et fonctionnement Start -->
         <div class="container-xxl py-5" class="bodyApropos">
             <div class="container py-5 px-lg-5">
-                 <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-5 mb-3" style="color:black;" > Nos Objectifs</h1>
+                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
+                    <h1 class="display-5 mb-3" style="color:black;"> Nos Objectifs</h1>
                     <p>Alitcha a pour objectif de  :</p>
                 </div>
-                
+
                 <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
                     <ul class=" col-md portfolio-flters">
                         <li class="mx-2 active" data-filter="*">Contribuer à l'amélioration des conditions de vie des
@@ -287,21 +302,22 @@
 
             <div class="container-xxl py-5">
                 <div class="container py-5 px-lg-5">
-                <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-5 mb-3" style="color:black;" > Fonctionnement de Alitcha</h1>
-                   
-                </div>
-                    
+                    <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+                        style="max-width: 500px;">
+                        <h1 class="display-5 mb-3" style="color:black;"> Fonctionnement de Alitcha</h1>
+
+                    </div>
+
                     <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
                         <h5>Alitcha fonctionne avec une organisation bien établie. Plusieurs équipes collaborant entre
                             elles ont été mis en place pour la bonne marche des activités :</h5>
                         <ul class="portfolio-flters" id="fonctionnement">
-                            <li class="mx-2 " > Equipe en charge de la réalisation, du suivi et
+                            <li class="mx-2 "> Equipe en charge de la réalisation, du suivi et
                                 de la croissance des projets.
                             </li>
-                            <li class="mx-2 " > Equipe des Labs pour la recherche et
+                            <li class="mx-2 "> Equipe des Labs pour la recherche et
                                 l’innovation.</li>
-                            <li class="mx-2" > Equipe en charge du magazine Web.</li>
+                            <li class="mx-2"> Equipe en charge du magazine Web.</li>
                         </ul>
                         <p class="text-black mb-4">Des responsables ont été choisis pour assurer la coordination des
                             différentes activités.</p>
@@ -311,7 +327,7 @@
         </div>
         <!-- objectifs et fonctionnement End -->
 
-        <!-- Réalisations Start 
+        <!-- Réalisations Start
         <div class="container-xxl newsletter py-5 wow fadeInUp bg-light">
             <div class="container py-5 px-lg-5">
                 <div class="row justify-content-center">
@@ -339,110 +355,122 @@
         </div> -->
         <!-- Services End -->
 
-       
-
-         <!-- Team Start -->
-         <div class="container-xxl py-6">
+        <!-- Team Start -->
+        {{-- <div class="container-xxl py-6">
             <div class="container">
                 <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="color:black;">Notre équipe</div>
+                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3" style="color:black;">Notre
+                        équipe</div>
                     <h2 class="mb-5">Rencontrez les membres de notre équipe</h2>
                 </div>
                 <div class="row g-4">
-                @foreach($team as $member)
-
-<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="team-item">
-        <h5>{{ $member->firstname }} {{ $member->lastname }}</h5>
-        <p class="mb-4">{{ $member->position }}</p>
-        <img class="img-fluid rounded-circle w-100 mb-4" src="img/team/{{ $member->img_path }}" alt="">
-        <div class="d-flex justify-content-center">
-            <a class="btn btn-square text-primary bg-white m-1" href="{{ $member->facebook }}"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-square text-primary bg-white m-1" href="{{ $member->twitter }}"><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-square text-primary bg-white m-1" href="{{ $member->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </div>
-</div>
-
-@endforeach
+                    @foreach ($team as $member)
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="team-item">
+                                <h5>{{ $member->firstname }} {{ $member->lastname }}</h5>
+                                <p class="mb-4">{{ $member->position }}</p>
+                                <img class="img-fluid rounded-circle w-100 mb-4"
+                                    src="img/team/{{ $member->img_path }}" alt="">
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-square text-primary bg-white m-1"
+                                        href="{{ $member->facebook }}"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square text-primary bg-white m-1"
+                                        href="{{ $member->twitter }}"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square text-primary bg-white m-1"
+                                        href="{{ $member->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Team End -->
-        
 
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
 
-
-            <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-
-                    <h1 class="text-white">
-                        Alitcha
-                    </h1>
-                    <p>
-                        Promotion du numérique, de la technologie et de l'écologie, la recherche et la réalisation de projets innovants.
-                    </p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-primary me-1" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fab fa-twitter fs-4 p-1"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/Alitcha-106586631967294" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-f fs-4 p-1"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram fs-4 p-1"></i></a>
-
-
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Adresse</h4>
-                    <p>
-                        <i class="fa fa-map-marker-alt me-3"></i>Cotonou, Bénin
-                    </p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+229 57 25 14 74</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@alitchateam.com</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Liens rapides</h4>
-                    <a class="btn btn-link" href="/apropos">A propos</a>
-                    <a class="btn btn-link" href="/contact">Contact</a>
-                    <a class="btn btn-link" href="/webmagazine">Alitcha magazine</a>
-                    <a class="btn btn-link" href="/labs">Alitcha labs</a>
-                    <a class="btn btn-link" href="#">Politique de confidentialité</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Rejoignez notre newsletter pour recevoir des informations en temps réel sur Alitcha et notre Webmagazi</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Votre email" />
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                            OK
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="copyright">
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a href="/" target="_blank">Alitcha Community</a>
+                        <h1 class="text-white">
+                            Alitcha
+                        </h1>
+                        <p>
+                            Promotion du numérique, de la technologie et de l'écologie, la recherche et la réalisation
+                            de projets innovants.
                         </p>
-                    </div>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-square btn-outline-primary me-1"
+                                href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title="Twitter"><i
+                                    class="fab fa-twitter fs-4 p-1"></i></a>
+                            <a class="btn btn-square btn-outline-primary me-1"
+                                href="https://www.facebook.com/Alitcha-106586631967294" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title="Facebook"><i
+                                    class="fab fa-facebook-f fs-4 p-1"></i></a>
+                            <a class="btn btn-square btn-outline-primary me-1"
+                                href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip"
+                                data-placement="top" title="Instagram"><i class="fab fa-instagram fs-4 p-1"></i></a>
 
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-light mb-4">Adresse</h4>
+                        <p>
+                            <i class="fa fa-map-marker-alt me-3"></i>Cotonou, Bénin
+                        </p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+229 57 25 14 74</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@alitchateam.com</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-light mb-4">Liens rapides</h4>
+                        <a class="btn btn-link" href="/apropos">A propos</a>
+                        <a class="btn btn-link" href="/contact">Contact</a>
+                        <a class="btn btn-link" href="/webmagazine">Alitcha magazine</a>
+                        <a class="btn btn-link" href="/labs">Alitcha labs</a>
+                        <a class="btn btn-link" href="#">Politique de confidentialité</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-light mb-4">Newsletter</h4>
+                        <p>Rejoignez notre newsletter pour recevoir des informations en temps réel sur Alitcha et notre
+                            Webmagazi</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Votre email" />
+                            <button type="button"
+                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright">
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | <i class="fa-solid fa-heart"></i> by <a
+                                    href="/" target="_blank">Alitcha Community</a>
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
+                class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
