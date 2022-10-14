@@ -79,7 +79,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                     <a href="{{ route('home') }}" class="nav-item nav-link"> <i class="fa fa-home"></i>
-                            &nbsp; Acceuil</a>
+                            &nbsp; Accueil</a>
                         <a href="{{ route('webmagazine') }}" class="nav-item nav-link active"><i class="fa fa-newspaper"></i>
                             &nbsp; Alitcha Magazine</a>
                         <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>
@@ -110,7 +110,7 @@
         <div class="col-lg-8 blog-single">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
+            <li class="breadcrumb-item"><a href="#">Accueil</a></li>
             <li class="breadcrumb-item"><a href="#">Magazine</a></li>
             <li class="breadcrumb-item active" aria-current="page">Article : {{ $article->title }}</li>
           </ol>

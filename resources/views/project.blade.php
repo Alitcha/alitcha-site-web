@@ -56,7 +56,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="{{ route('home') }}" class="nav-item nav-link active"> <i class="fa fa-home"></i>
-                            &nbsp; Acceuil</a>
+                            &nbsp; Accueil</a>
                         <a href="{{ route('webmagazine') }}" class="nav-item nav-link"><i class="fa fa-newspaper"></i>
                             &nbsp; Alitcha Magazine</a>
                         <a href="{{ route('labs') }}" class="nav-item nav-link"><i class="fa fa-fa"></i>

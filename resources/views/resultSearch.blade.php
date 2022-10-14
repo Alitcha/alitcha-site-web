@@ -68,7 +68,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="/" class="nav-item nav-link">Acceuil</a>
+                        <a href="/" class="nav-item nav-link">Accueil</a>
                         <a href="/webmagazine" class="nav-item nav-link active">Alitcha Magazine</a>
                         <a href="/labs" class="nav-item nav-link">Alitcha Labs</a>
                         <a href="/apropos" class="nav-item nav-link">A propos</a>
