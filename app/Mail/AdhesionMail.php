@@ -34,7 +34,8 @@ class AdhesionMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Demande d'Adhésion à la Communauté")
+        return $this->from($this->adhesion_mail['email'])
+        						->subject("Demande d'Adhésion à la Communauté")
                     -> view('emails.adhesionmail');
     }
 }

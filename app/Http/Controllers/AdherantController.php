@@ -29,12 +29,12 @@ class AdherantController extends Controller
             ]);
 
             //Envoi de l'e-mail à l'admin
-            Mail::to('alitcha.admin@gmail.com')
+            Mail::to('secretariat@alitchateam.com')
                 ->queue(new AdhesionMail([
                     'nom_prenom' => $request->nom_prenom,
                     'email' => $request->email,
                     'numeroTel' => $request->numeroTel,
-                    'link' => url('http://127.0.0.1:8000/')
+                    'link' => url('https://alitchateam.com/dashboard')
                 ]));
 
             return response() -> json([
