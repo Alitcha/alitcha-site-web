@@ -7,11 +7,8 @@ use App\Models\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\DB;
 
-class editorController extends Controller
+class EditorController extends Controller
 {
-    //
-   
-
     public function index() 
     {
         $users = User::all();
