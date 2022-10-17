@@ -819,6 +819,10 @@ footer h2{
     width: 7em !important;
 }
 
+.post-recent-title{
+    width: 200px;
+}
+
 .artfix{
     width: 25em !important;
 }

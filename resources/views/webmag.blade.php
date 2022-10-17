@@ -90,7 +90,9 @@
                     <div class="row py-5 justify-content-center">
                         <div class="col-11 col-md-8 text-center">
                             <h1 class="text-white">Alitcha Magazine</h1>
-                            <label for="templatesSearch" class="text-white">Nous ciblons en particulier les jeunes afin de les pousser à se dépasser et à assurer ainsi l'avenir du Bénin en particulier et de l'Afrique en général en ce qui concerne les technologies du futur. </label>
+                            <!-- <label for="templatesSearch" class="text-white">
+                                Nous ciblons en particulier les jeunes afin de les pousser à se dépasser et à assurer ainsi l'avenir du Bénin en particulier et de l'Afrique en général en ce qui concerne les technologies du futur.
+                            </label> -->
                             <!-- <form class="form-inline search-form w-100 px-3 my-3" method="get" action="/templates/search">
                             <input class="form-control search-input w-100 h-auto" type="text" name="q" id="templatesSearch" placeholder="Ex informatique" value="" autocomplete="off" maxlength="128">
                         </form> -->
@@ -107,17 +109,43 @@
                                 <button type="submit" class="position-absolute top-0 start-0 mt-3 ms-3">
                                     <i class="fa fa-search fs-6"></i></button>
                             </form>
+                            <section class="pt-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="owl-carousel blog-arrow" data-nav-arrow="true" data-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-xx-items="1" data-space="15">
+                                                @foreach ($magazines as $magazine)
+                                                <div class="item">
+                                                    <div class="blog-post text-center">
+                                                        <div class="blog-post-image">
+                                                            <!-- <img class="img-fluid first" src='<?php echo $magazine->image; ?>' alt=""> -->
+                                                            <img class="img-fluid first" src="/img/magload.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section class="pt-4">
-        <!--
+    
+    <!-- <section class="pt-4">
+        
         <div id="categoriesList" class="container pt-3">
             <div class="d-flex flex-wrap"><a href="/templates/magazines/arts-culture" class="btn btn-sm btn-outline-primary mr-2 mb-2">Arts &amp; Culture</a><a href="/templates/magazines/tech" class="btn btn-sm btn-outline-primary mr-2 mb-2">Tech</a><a href="/templates/magazines/lifestyle" class="btn btn-sm btn-outline-primary mr-2 mb-2">Lifestyle</a><a href="/templates/magazines/fashion" class="btn btn-sm btn-outline-primary mr-2 mb-2">Fashion</a><a href="/templates/magazines/science" class="btn btn-sm btn-outline-primary mr-2 mb-2">Science</a><a href="/templates/magazines/food" class="btn btn-sm btn-outline-primary mr-2 mb-2">Food</a><a href="/templates/magazines/travel" class="btn btn-sm btn-outline-primary mr-2 mb-2">Travel</a><a href="/templates/magazines/school" class="btn btn-sm btn-outline-primary mr-2 mb-2">School</a><a href="/templates/magazines/teen" class="btn btn-sm btn-outline-primary mr-2 mb-2">Teen</a><a href="/templates/magazines/business" class="btn btn-sm btn-outline-primary mr-2 mb-2">Business</a><a href="/templates/magazines/news" class="btn btn-sm btn-outline-primary mr-2 mb-2">News</a></div>
-        </div> -->
+        </div>
         <div class="container px-lg-5">
             <div class="row">
                 <div class="col-md-12">
@@ -128,26 +156,26 @@
                         <div class="item">
                             <div class="blog-post text-center">
                                 <div class="blog-post-image">
-                                    <!-- <img class="img-fluid first" src='<?php echo $magazine->image; ?>' alt=""> -->
+                                    <img class="img-fluid first" src='<?php echo $magazine->image; ?>' alt="">
                                     <img class="img-fluid first" src="/img/magload.png" alt="">
                                 </div>
                                 <div class="blog-content">
-                                    <!-- <div class="row">
+                                    <div class="row">
                                     
                                         <div class="col"> <a class="badge" href="{{asset('magazines/'.$magazine->path_name)}}" re download="alitcha_magazine_{{ $magazine->title }}">Télécharger</a>
                                         </div>
                                         <div class="col"> <a class="badge" href="/magazine/<?php echo $magazine->id; ?>">Lire</a></div>
 
-                                    </div> -->
+                                    </div>
 
-                                    <!-- <div class="blog-post-title">
+                                    <div class="blog-post-title">
                                         <h6 class="mb-0"><a href="/magazine/<?php echo $magazine->id; ?>">{{ $magazine->title }}</a></h6>
                                     </div> -->
                                     <!-- <div class="blog-post-footer blog-post-categorise">
                                         <div class="blog-post-time">
                                             <a href="#"><i class="far fa-clock"></i>{{ $magazine->created_at }}</a>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +184,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --> -->
 
     <!--=================================
     Articles début
@@ -247,7 +275,7 @@
                                     <div class="avatar avatar-xll h-auto">
                                         <img class="img-fluid post-recent-img" src="<?php echo $article->image; ?>" alt="">
                                     </div>
-                                    <div class="ms-3">
+                                    <div class="ms-3 post-recent-title">
                                         <!-- <div class="tag">
                                             <a class="btn btn-link p-0" href="#">INSPIRATION,</a>
                                             <a class="btn btn-link p-0" href="#">Fashion</a>
@@ -331,18 +359,18 @@
                                             <a href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"> <i class="fab fa-twitter me-3"></i>twitter</a>
                                             <a class="follow ms-auto" href="https://twitter.com/Alitcha5?t=RlRUgTunK2yOglcP7WbmgQ&s=09!">Suivre </a>
                                         </li>
-                                        <!--<li class="youtube">
+                                        <li class="youtube">
                                             <a href="#"> <i class="fab fa-youtube me-3"></i>youtube</a>
                                             <a class="follow ms-auto" href="#">Subscribers </a>
-                                        </li>-->
+                                        </li>
                                         <li class="instagram">
                                             <a href="https://www.instagram.com/ali.tcha/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"> <i class="fab fa-instagram me-3"></i>instagram</a>
                                             <a class="follow ms-auto" href="https://www.instagram.com/ali.tcha/">Suivre </a>
                                         </li>
-                                        <!--<li class="linkedIn">
+                                        <li class="linkedIn">
                                             <a href="#"> <i class="fab fa-linkedin-in me-3"></i>linkedIn</a>
                                             <a class="follow ms-auto" href="#">followers </a>
-                                        </li> -->
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
