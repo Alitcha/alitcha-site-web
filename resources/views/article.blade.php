@@ -167,9 +167,12 @@
               </p>
 
               <div class="blog-post-share-box d-flex flex-wrap justify-content-between align-items-center mt-5">
+                   <p>
+                     Vous avez aimé cet article? Partagez-le.
+                   </p> 
                   <div class="blog-post-share">
                   <div class="share-box">
-                    <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
+                    <a href="#"> <i class="fas fa-share-alt fa-2x"></i><span class="ps-2" style="font-size: 20px;">Partagez</span></a>
                     <ul class="list-unstyled share-box-social" style="min-width : 120px !important;">
                       <li> <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
                       <li> <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-twitter"></i></a> </li>
