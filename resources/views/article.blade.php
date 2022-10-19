@@ -260,7 +260,7 @@
                 <div class="topics">
                     @foreach ($article->commentaires() as $commentaire)
 
-                        <div class="topic topic--comment" style="margin-bottom : 20px; background-color: #f0f0f0;">
+                        <div class="topic topic--comment" style="margin-bottom : 20px; background-color: #f0f0f0; border:solid 1px #F77B1E; border-radius:15px;">
                             <div class="topic__head" style="align-items: center;">
                                 <!--<div class="topic__avatar">
                                     <a href="#" class="avatar"><img src="" alt="avatar"></a>
@@ -269,9 +269,9 @@
                                     <div class="topic__name">
                                         <a href="#" >{{ $commentaire->author }}</a>
                                     </div>
-                                    <div class="topic__date" style="margin-right: 10px;"><i class="fa fa-calendar"></i>
+                                    <div class="topic__date" style="margin-right: 10px;"><i class="fa fa-calendar" style="color:#F77B1E;"></i>
                                         {{ $commentaire->created_at->diffForHumans() }}
-                                        <i class="fa fa-clock" style="margin-left: 14px;"></i>
+                                        <i class="fa fa-clock" style="margin-left: 14px; color:#F77B1E;"></i>
                                     </div>
                                 </div>
                             </div>
