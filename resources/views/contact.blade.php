@@ -160,7 +160,7 @@
                                     </div>
                                     <div class="col-lg-4 col-md-5 d-flex align-items-stretch bg-sky">
                                         <div class="info-wrap w-100 p-md-5 p-4 bg-gradient"  style="background: linear-gradient(blue, #F77B1E) !important">
-                                            <h5 class="mb-4">Nous sommes ouvert pour toute sugession, requête ou
+                                            <h5 class="mb-4">Nous sommes ouvert pour toute suggestion, requête ou
                                                 discussion.</h5>
                                             
                                             <div class="dbox w-100 d-flex align-items-start">
