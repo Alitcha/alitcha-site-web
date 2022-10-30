@@ -35,7 +35,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/apropos', function () {
     $team = Team::all();
-    return view('apropos',[
+    return view('apropos', [
         'team' => $team
     ]);
 })->name('apropos');
@@ -51,6 +51,7 @@ Route::get('/article/{id}', [ArticleController::class, 'showArticle'])->whereNum
 
 //Search
 Route::post('/search/article', [SearchController::class, 'search']);
+Route::get('/search/article', [SearchController::class, 'search2']);
 
 Route::post('/newsletter/member/add', [NewsletterUserController::class, 'store'])->name('newsletteradd');
 
@@ -60,7 +61,7 @@ Route::post('/commentaire/{id}', [CommentaireController::class, 'store'])->where
 
 
 //Routes de l'adhesion
-Route::post('/user/adhesion', [AdherantController::class, 'adhesion']) -> name('adhesion_user');
+Route::post('/user/adhesion', [AdherantController::class, 'adhesion'])->name('adhesion_user');
 
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index')->middleware('can:access-dashboard');;

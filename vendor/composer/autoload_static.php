@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
+class ComposerStaticInitfb1183adaea5179ce91895faeab7f99a
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -191,8 +191,8 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'Whoops\\' => 
         array (
@@ -352,8 +352,8 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -639,6 +639,7 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'Carbon\\Exceptions\\BadFluentConstructorException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadFluentConstructorException.php',
         'Carbon\\Exceptions\\BadFluentSetterException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadFluentSetterException.php',
         'Carbon\\Exceptions\\BadMethodCallException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/BadMethodCallException.php',
+        'Carbon\\Exceptions\\EndLessPeriodException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/EndLessPeriodException.php',
         'Carbon\\Exceptions\\Exception' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/Exception.php',
         'Carbon\\Exceptions\\ImmutableException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/ImmutableException.php',
         'Carbon\\Exceptions\\InvalidArgumentException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidArgumentException.php',
@@ -1193,6 +1194,8 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'Egulias\\EmailValidator\\Result\\SpoofEmail' => __DIR__ . '/..' . '/egulias/email-validator/src/Result/SpoofEmail.php',
         'Egulias\\EmailValidator\\Result\\ValidEmail' => __DIR__ . '/..' . '/egulias/email-validator/src/Result/ValidEmail.php',
         'Egulias\\EmailValidator\\Validation\\DNSCheckValidation' => __DIR__ . '/..' . '/egulias/email-validator/src/Validation/DNSCheckValidation.php',
+        'Egulias\\EmailValidator\\Validation\\DNSGetRecordWrapper' => __DIR__ . '/..' . '/egulias/email-validator/src/Validation/DNSGetRecordWrapper.php',
+        'Egulias\\EmailValidator\\Validation\\DNSRecords' => __DIR__ . '/..' . '/egulias/email-validator/src/Validation/DNSRecords.php',
         'Egulias\\EmailValidator\\Validation\\EmailValidation' => __DIR__ . '/..' . '/egulias/email-validator/src/Validation/EmailValidation.php',
         'Egulias\\EmailValidator\\Validation\\Exception\\EmptyValidationList' => __DIR__ . '/..' . '/egulias/email-validator/src/Validation/Exception/EmptyValidationList.php',
         'Egulias\\EmailValidator\\Validation\\Extra\\SpoofCheckValidation' => __DIR__ . '/..' . '/egulias/email-validator/src/Validation/Extra/SpoofCheckValidation.php',
@@ -3557,6 +3560,7 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
         'Monolog\\Formatter\\FluentdFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/FluentdFormatter.php',
         'Monolog\\Formatter\\FormatterInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php',
         'Monolog\\Formatter\\GelfMessageFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/GelfMessageFormatter.php',
+        'Monolog\\Formatter\\GoogleCloudLoggingFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/GoogleCloudLoggingFormatter.php',
         'Monolog\\Formatter\\HtmlFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/HtmlFormatter.php',
         'Monolog\\Formatter\\JsonFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/JsonFormatter.php',
         'Monolog\\Formatter\\LineFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/LineFormatter.php',
@@ -6237,10 +6241,10 @@ class ComposerStaticInit6398bc653be91b04778d04df7783f2aa
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6398bc653be91b04778d04df7783f2aa::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6398bc653be91b04778d04df7783f2aa::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6398bc653be91b04778d04df7783f2aa::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit6398bc653be91b04778d04df7783f2aa::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitfb1183adaea5179ce91895faeab7f99a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitfb1183adaea5179ce91895faeab7f99a::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitfb1183adaea5179ce91895faeab7f99a::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitfb1183adaea5179ce91895faeab7f99a::$classMap;
 
         }, null, ClassLoader::class);
     }

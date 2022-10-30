@@ -10,16 +10,18 @@ use App\Models\Categorie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Image;
+use Exception;
 
 //#F77B1E
 
 class ArticleController extends Controller
 {
-    public function showMagazine(){
+    public function showMagazine()
+    {
         $magazines = Magazine::all();
-        $articles = Article::where('published', 1)->get()->sortByDesc('id')->take(3);
+        $articles = Article::where('published', 1)->get()->sortByDesc('id')->take(3); //Récents
         $articles_P = Article::where('published', 1)->get()->sortByDesc('nb_like');
-        $articles_A = Article::where('published', 1)->get()->random(4);
+        $articles_A = Article::where('published', 1)->get();
         $num = Article::where('categorie_id', 1)->get()->count();
         $eco = Article::where('categorie_id', 2)->get()->count();
         $tech = Article::where('categorie_id', 3)->get()->count();
@@ -38,9 +40,26 @@ class ArticleController extends Controller
         ]);
     }
 
-    public function showArticle($id){
+    public function moreMagazine()
+    {
+        try {
+            return response()->json([
+                'success' => true,
+                'message' => 'DONE',
+                'data' => []
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ], 400);
+        }
+    }
+
+    public function showArticle($id)
+    {
         $article = Article::all()->find($id);
-        if ($article != null){
+        if ($article != null) {
             return view('article', ['article' => $article]);
         } else {
             return redirect()->route('webmagazine')
@@ -57,17 +76,13 @@ class ArticleController extends Controller
     public function index()
     {
         //A trier prochainement
-        $articles=[];
-        if(Auth::user()->isRoot()){
+        $articles = [];
+        if (Auth::user()->isRoot()) {
             $articles = Article::all();
+        } elseif (Auth::user()->isEditor()) {
+            $articles = Article::where("postBy", Auth::user()->id)->get();;
         }
-        elseif (Auth::user()->isEditor()){
-            $articles = Article::where("postBy",Auth::user()->id)->get();;
-        }
-
-
-        return view("article.index",compact("articles"));
-
+        return view("article.index", compact("articles"));
     }
 
     /**
@@ -79,7 +94,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::findOrFail($id);
-        return view('article.show',compact("article")) ;
+        return view('article.show', compact("article"));
     }
 
     /**
@@ -92,7 +107,7 @@ class ArticleController extends Controller
         //
         $categories = Categorie::all();
         $images = Image::all();
-        return view('article.create',compact("categories","images"));
+        return view('article.create', compact("categories", "images"));
     }
 
     /**
@@ -104,7 +119,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
-        $validated= $request->validate([
+        $validated = $request->validate([
             "title" => "bail|required",
             "subtitle" => "bail|required",
             "content" => "bail|required",
@@ -121,9 +136,7 @@ class ArticleController extends Controller
             "categorie_id" => $request->categorie
         ]);
 
-        return redirect()->route('article.edit', ['id' => $id])->with('message','Bien enregistré');;
-
-
+        return redirect()->route('article.edit', ['id' => $id])->with('message', 'Bien enregistré');;
     }
 
     /**
@@ -135,11 +148,10 @@ class ArticleController extends Controller
     public function edit($id)
     {
         //
-        $article=Article::findOrFail($id);
+        $article = Article::findOrFail($id);
         $categories = Categorie::all();
         $images = Image::all();
-        return view('article.edit',compact("article","categories","images"));
-
+        return view('article.edit', compact("article", "categories", "images"));
     }
 
     /**
@@ -152,7 +164,7 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $validated= $request->validate([
+        $validated = $request->validate([
             "title" => "bail|required",
             "subtitle" => "bail|required",
             "content" => "bail|required",
@@ -168,7 +180,7 @@ class ArticleController extends Controller
         $article->categorie_id = $request->categorie;
 
         $article->update();
-        return redirect()->back()->with('message','Bien enregistré');
+        return redirect()->back()->with('message', 'Bien enregistré');
     }
 
     public function publish(Request $request, $id)
@@ -177,7 +189,7 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->published = true;
         $article->update();
-        return redirect()->back()->with('message','Bien publié');
+        return redirect()->back()->with('message', 'Bien publié');
     }
 
     /**
@@ -191,7 +203,6 @@ class ArticleController extends Controller
         //
         $article = Article::find($id);
         $article->delete();
-        return redirect()->back()->with('message','Bien supprimé');
-
+        return redirect()->back()->with('message', 'Bien supprimé');
     }
 }
