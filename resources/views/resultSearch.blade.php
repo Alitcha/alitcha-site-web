@@ -103,19 +103,6 @@
       margin: 0;
     }
 
-    .post-meta {
-      overflow: hidden;
-      color: #e5491d;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      padding: 0 1px;
-    }
-
-    .index-post .post-meta {
-      margin: 10px 0 0;
-    }
-
     .index-post {
       display: block;
       margin: 0 0 30px;
@@ -201,6 +188,27 @@
       border: 0;
     }
 
+    .index-post .post-info>h2 {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5em;
+      text-decoration: none;
+      margin: 0;
+    }
+
+    .post-meta {
+      overflow: hidden;
+      color: #e5491d;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 0 1px;
+    }
+
+    .index-post .post-meta {
+      margin: 10px 0 0;
+    }
+
     .post-snippet {
       position: relative;
       display: none;
@@ -227,6 +235,32 @@
       float: left;
       display: inline-block;
       margin: 0 10px 0 0;
+    }
+
+    /* @media screen and (max-width: 1100px) {
+      .index-post {
+        display: block;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 15px;
+        margin: 0 0 40px;
+      }
+    } */
+    @media screen and (max-width: 500px) {
+      .blog-post {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+      }
+
+      .post-title {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .post-image-wrap {
+        width: 100% !important;
+      }
     }
 
     .post-meta .post-author:before {
