@@ -872,7 +872,7 @@
 
 .topic__name a {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .topic__name a,
@@ -918,9 +918,10 @@
 }
 
 .topic__text>p {
-    margin: 0;
-    color: #8e9091;
+    margin-left:-60px;
+    color: black;
     line-height: 1.5;
+    margin-top: -20px;
 }
 
 @media only screen and (min-width: 1040px) {

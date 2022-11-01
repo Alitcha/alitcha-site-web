@@ -83,7 +83,7 @@
                                 
                         <p class="mb-4 animated slideInDow fs-5 text-white">L’équipe de Alitcha est conscient de l’importance de
                                 la recherche dans la technologie. Elle met donc en avant la recherche pour
-                                l’apprentissage, le partage et l’innovation. Ses premiers Labs sont Techlab, Numlab et Eumlab.</p>
+                                l’apprentissage, le partage et l’innovation. Ses premiers Labs sont Techlab, Numlab et Ecolab.</p>
                            
                         </div>
                         <!-- <div class="col-lg-6 text-center text-lg-start">

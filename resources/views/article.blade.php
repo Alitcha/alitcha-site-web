@@ -14,8 +14,11 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"> 
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> -->
 
 
     <!-- Icon Font Stylesheet -->
@@ -167,9 +170,12 @@
               </p>
 
               <div class="blog-post-share-box d-flex flex-wrap justify-content-between align-items-center mt-5">
+                   <p>
+                     Vous avez aimé cet article? Partagez-le.
+                   </p> 
                   <div class="blog-post-share">
                   <div class="share-box">
-                    <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
+                    <a href="#"> <i class="fas fa-share-alt fa-2x"></i><span class="ps-2" style="font-size: 20px;">Partagez</span></a>
                     <ul class="list-unstyled share-box-social" style="min-width : 120px !important;">
                       <li> <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
                       <li> <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/article/{{ $article->id }}" target="_blank"><i class="fab fa-twitter"></i></a> </li>
@@ -254,7 +260,7 @@
                 <div class="topics">
                     @foreach ($article->commentaires() as $commentaire)
 
-                        <div class="topic topic--comment" style="margin-bottom : 20px; background-color: #f0f0f0;">
+                        <div class="topic topic--comment" style="margin-bottom : 20px; background-color: #f0f0f0; border:solid 1px #F77B1E; border-radius:15px;">
                             <div class="topic__head" style="align-items: center;">
                                 <!--<div class="topic__avatar">
                                     <a href="#" class="avatar"><img src="" alt="avatar"></a>
@@ -263,9 +269,9 @@
                                     <div class="topic__name">
                                         <a href="#" >{{ $commentaire->author }}</a>
                                     </div>
-                                    <div class="topic__date" style="margin-right: 10px;"><i class="fa fa-calendar"></i>
+                                    <div class="topic__date" style="margin-right: 10px;"><i class="fa fa-calendar" style="color:#F77B1E;"></i>
                                         {{ $commentaire->created_at->diffForHumans() }}
-                                        <i class="fa fa-clock" style="margin-left: 14px;"></i>
+                                        <i class="fa fa-clock" style="margin-left: 14px; color:#F77B1E;"></i>
                                     </div>
                                 </div>
                             </div>

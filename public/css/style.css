@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important; */
+    font-family: 'Montserrat', sans-serif;
 }
 :root {
     --primary: #6222CC;
@@ -817,6 +818,10 @@ footer h2{
 .post-recent-img{
     height: 7em !important;
     width: 7em !important;
+}
+
+.post-recent-title{
+    width: 200px;
 }
 
 .artfix{
